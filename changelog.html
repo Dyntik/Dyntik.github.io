@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Changelog of every Endless Crafting Defense commit and release note, past and upcoming, grouped by version.">
+  <meta name="theme-color" content="#10181d">
+  <title>Changelog | Endless Crafting Defense | Dynty</title>
+  <style>
+    :root { color-scheme: dark; font-family: Bahnschrift, "Segoe UI Variable", "Trebuchet MS", sans-serif; background: #10181d; color: #f2f0e7; }
+    * { box-sizing: border-box; }
+    [hidden] { display: none !important; }
+    body { margin: 0; min-width: 320px; background: #10181d; overflow-x: hidden; }
+    .site-header, main, footer { width: min(1180px, calc(100% - 40px)); margin-inline: auto; }
+    .site-header { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 20px; border-bottom: 1px solid #34434a; }
+    .brand { color: #f2f0e7; text-decoration: none; font-weight: 750; letter-spacing: .04em; }
+    .brand span { color: #c6e05d; }
+    .site-nav { display: flex; gap: 22px; }
+    a { color: #c6e05d; }
+    .site-nav a, footer a { color: #aab8b5; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+    .site-nav a[aria-current="page"] { color: #c6e05d; }
+    main { padding: 26px 0 56px; min-width: 0; }
+    .eyebrow { margin: 0 0 8px; color: #85c9c2; font-size: 12px; text-transform: uppercase; }
+    h1 { margin: 0; font-size: clamp(28px, 5vw, 42px); line-height: 1.08; }
+    .meta { margin: 10px 0 0; color: #bac5c0; line-height: 1.6; }
+    .controls { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; margin: 22px 0 14px; padding-bottom: 14px; border-bottom: 1px solid #34434a; }
+    .search { flex: 1 1 260px; max-width: 420px; }
+    .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+    .search input { width: 100%; min-height: 42px; padding: 10px 12px; border: 1px solid #526169; border-radius: 0; background: #070b0e; color: #f2f0e7; font: inherit; font-size: 16px; }
+    .search input:focus { outline: 2px solid #c6e05d; outline-offset: 1px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+    .chip { min-height: 32px; padding: 4px 10px; border: 1px solid #526169; background: transparent; color: #bac5c0; font: inherit; font-size: 13px; cursor: pointer; }
+    .chip[aria-pressed="true"] { border-color: #c6e05d; color: #c6e05d; }
+    .chip small { color: #839195; margin-left: 4px; }
+    .collapse-toggle { display: inline-flex; align-items: center; gap: 8px; min-height: 32px; color: #bac5c0; font-size: 14px; cursor: pointer; }
+    .collapse-toggle input { width: 18px; height: 18px; accent-color: #c6e05d; margin: 0; }
+    .status { margin: 28px 0; padding: 18px; border: 1px solid #34434a; color: #bac5c0; line-height: 1.6; }
+    .ver { border-bottom: 1px solid #22303a; }
+    .ver-sum { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; min-height: 52px; padding: 12px 0; cursor: pointer; list-style: none; }
+    .ver-sum::-webkit-details-marker { display: none; }
+    .ver-sum::before { content: "+"; width: 14px; color: #c6e05d; font-weight: 700; }
+    .ver[open] > .ver-sum::before { content: "-"; }
+    .ver-name { font-size: 20px; font-weight: 700; color: #f2f0e7; overflow-wrap: anywhere; }
+    .ver-date, .ver-count { color: #839195; font-size: 13px; }
+    .ver-body { padding: 0 0 14px 14px; }
+    .note-h { margin: 14px 0 4px; color: #f2f0e7; font-size: 14px; font-weight: 700; }
+    .notes { margin: 0; padding-left: 18px; color: #bac5c0; line-height: 1.55; }
+    .notes li { overflow-wrap: anywhere; padding: 1px 0; }
+    .day { margin: 14px 0 4px; color: #85c9c2; font-size: 12px; text-transform: uppercase; letter-spacing: .04em; }
+    .row { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; padding: 5px 0; min-width: 0; }
+    .badge { display: inline-block; min-width: 58px; padding: 1px 6px; border: 1px solid currentColor; font-size: 11px; line-height: 1.5; text-align: center; text-transform: uppercase; letter-spacing: .03em; }
+    .t-feat { color: #c6e05d; }
+    .t-fix { color: #f0a35e; }
+    .t-perf { color: #85c9c2; }
+    .t-docs { color: #9db4ff; }
+    .t-tools { color: #d7b8ff; }
+    .t-test { color: #aab8b5; }
+    .t-chore, .t-other { color: #839195; }
+    .t-release { color: #f2f0e7; }
+    .t-refactor { color: #e6c36b; }
+    .t-style { color: #ff9fb0; }
+    .scope { color: #85c9c2; font-size: 13px; }
+    .subject { flex: 1 1 200px; min-width: 0; color: #e6e4da; overflow-wrap: anywhere; }
+    .sha { color: #839195; font-family: Consolas, "Courier New", monospace; font-size: 12px; }
+    footer { display: flex; flex-wrap: wrap; gap: 18px; padding: 22px 0 30px; border-top: 1px solid #34434a; color: #839195; font-size: 13px; }
+    @media (max-width: 640px) {
+      .site-header, main, footer { width: calc(100% - 32px); }
+      .site-header { min-height: 62px; }
+      .site-nav { gap: 12px; font-size: 13px; }
+      .ver-body { padding-left: 10px; }
+      .ver-name { font-size: 18px; }
+    }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; } }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/">DYNTY <span>/ DEFENSE</span></a>
+    <nav class="site-nav" aria-label="Site navigation"><a href="/#game">Game</a><a href="/changelog.html" aria-current="page">Changelog</a><a href="/privacy.html">Privacy</a></nav>
+  </header>
+  <main>
+    <section aria-labelledby="page-title">
+      <p class="eyebrow">Dev log</p>
+      <h1 id="page-title">Changelog</h1>
+      <p class="meta" id="meta">Loading changelog...</p>
+    </section>
+    <section class="controls" aria-label="Filter changelog">
+      <label class="search"><span class="sr">Search changelog</span><input type="search" id="q" placeholder="Search subject, scope, sha or version" autocomplete="off"></label>
+      <div class="chips" id="chips" role="group" aria-label="Filter by type"></div>
+      <label class="collapse-toggle"><input type="checkbox" id="collapse" checked> Collapse older versions</label>
+    </section>
+    <div class="status" id="status" role="status" hidden></div>
+    <div id="list"></div>
+  </main>
+  <footer><span>DYNTY / DEFENSE</span><a href="/privacy.html">Privacy policy</a><a href="https://github.com/Dyntik/Dyntik.github.io/issues">Contact and support</a></footer>
+  <script>
+  (function () {
+    'use strict';
+    var TYPES = ['feat', 'fix', 'perf', 'docs', 'tools', 'test', 'chore', 'release', 'refactor', 'style', 'other'];
+    var OPEN_COUNT = 3;
+    var $ = function (id) { return document.getElementById(id); };
+    var listEl = $('list'), statusEl = $('status'), chipsEl = $('chips');
+    var qEl = $('q'), collapseEl = $('collapse'), metaEl = $('meta');
+    var state = { groups: [], type: 'all', query: '', collapse: true, open: {}, timer: 0 };
+
+    function el(tag, cls, text) {
+      var n = document.createElement(tag);
+      if (cls) n.className = cls;
+      if (text !== undefined && text !== null) n.textContent = String(text);
+      return n;
+    }
+
+    function fmtUtc(value) {
+      var d = new Date(value);
+      if (isNaN(d.getTime())) return String(value || 'unknown');
+      return d.toISOString().slice(0, 16).replace('T', ' ') + ' UTC';
+    }
+
+    function showError() {
+      metaEl.textContent = '';
+      listEl.textContent = '';
+      statusEl.textContent = 'Changelog data not published yet. Check back soon.';
+      statusEl.hidden = false;
+    }
+
+    function prepNotes(list) {
+      if (!Array.isArray(list)) return [];
+      return list.map(function (n) {
+        var section = String((n && n.section) || '');
+        var items = (n && Array.isArray(n.items) ? n.items : []).map(function (t) {
+          var text = String(t);
+          return { text: text, hay: (section + ' ' + text).toLowerCase() };
+        });
+        return { section: section, items: items };
+      }).filter(function (n) { return n.items.length; });
+    }
+
+    function prepare(data) {
+      if (!data || !Array.isArray(data.entries)) throw new Error('bad changelog data');
+      var byKey = {}, groups = [];
+      function group(version, date) {
+        if (!Object.prototype.hasOwnProperty.call(byKey, version)) {
+          byKey[version] = { key: version, version: version, date: date || '', entries: [], notes: [] };
+          groups.push(byKey[version]);
+        }
+        return byKey[version];
+      }
+      if (Array.isArray(data.versions)) {
+        data.versions.forEach(function (v) {
+          if (!v || typeof v.version !== 'string') return;
+          var g = group(v.version, String(v.date || ''));
+          g.notes = prepNotes(v.notes);
+        });
+      }
+      var unreleased = group('', '');
+      unreleased.notes = prepNotes(data.unreleased);
+      data.entries.forEach(function (raw, idx) {
+        var type = TYPES.indexOf(raw.type) === -1 ? 'other' : raw.type;
+        var e = {
+          idx: idx,
+          date: String(raw.date || ''),
+          sha: String(raw.sha || ''),
+          subject: String(raw.subject || ''),
+          type: type,
+          scope: String(raw.scope || ''),
+          version: String(raw.version || '')
+        };
+        e.hay = (e.subject + ' ' + e.scope + ' ' + e.sha + ' ' + e.version + ' ' + e.date).toLowerCase();
+        group(e.version, e.date).entries.push(e);
+      });
+      groups.forEach(function (g) {
+        g.entries.sort(function (a, b) {
+          return (a.date < b.date ? 1 : a.date > b.date ? -1 : 0) || a.idx - b.idx;
+        });
+        if (!g.date && g.entries[0]) g.date = g.entries[0].date;
+      });
+      // Unreleased group first; the rest keep data order (versions[] newest first, then leftovers).
+      var unIdx = groups.indexOf(unreleased);
+      if (unIdx > 0) { groups.splice(unIdx, 1); groups.unshift(unreleased); }
+      return {
+        groups: groups,
+        total: typeof data.total === 'number' ? data.total : data.entries.length,
+        generated: data.generated
+      };
+    }
+
+    function buildChips(groups) {
+      var counts = {}, total = 0;
+      groups.forEach(function (g) {
+        g.entries.forEach(function (e) { counts[e.type] = (counts[e.type] || 0) + 1; total++; });
+      });
+      chipsEl.textContent = '';
+      var all = ['all'].concat(TYPES.filter(function (t) { return counts[t] > 0; }));
+      all.forEach(function (t) {
+        var n = t === 'all' ? total : counts[t];
+        var b = el('button', 'chip');
+        b.type = 'button';
+        b.dataset.type = t;
+        b.setAttribute('aria-pressed', t === state.type ? 'true' : 'false');
+        b.appendChild(document.createTextNode(t === 'all' ? 'All' : t));
+        b.appendChild(el('small', null, n));
+        b.addEventListener('click', function () {
+          state.type = t;
+          Array.prototype.forEach.call(chipsEl.children, function (c) {
+            c.setAttribute('aria-pressed', c.dataset.type === t ? 'true' : 'false');
+          });
+          render();
+        });
+        chipsEl.appendChild(b);
+      });
+    }
+
+    function matches(e) {
+      if (state.type !== 'all' && e.type !== state.type) return false;
+      return !state.query || e.hay.indexOf(state.query) !== -1;
+    }
+
+    // Release notes are not typed, so they are hidden by a type filter and
+    // filtered by text when a search is active.
+    function visibleNotes(g) {
+      if (state.type !== 'all') return [];
+      if (!state.query) return g.notes;
+      var out = [];
+      g.notes.forEach(function (n) {
+        var items = n.items.filter(function (it) { return it.hay.indexOf(state.query) !== -1; });
+        if (items.length) out.push({ section: n.section, items: items });
+      });
+      return out;
+    }
+
+    function fill(det) {
+      if (det._rendered) return;
+      det._rendered = true;
+      var body = det.querySelector('.ver-body');
+      var frag = document.createDocumentFragment();
+      det._notes.forEach(function (n) {
+        if (n.section) frag.appendChild(el('div', 'note-h', n.section));
+        var ul = el('ul', 'notes');
+        n.items.forEach(function (it) { ul.appendChild(el('li', null, it.text)); });
+        frag.appendChild(ul);
+      });
+      var lastDate = null;
+      det._hits.forEach(function (e) {
+        if (e.date !== lastDate) {
+          frag.appendChild(el('div', 'day', e.date || 'undated'));
+          lastDate = e.date;
+        }
+        var row = el('div', 'row');
+        row.appendChild(el('span', 'badge t-' + e.type, e.type));
+        if (e.scope) row.appendChild(el('span', 'scope', e.scope));
+        row.appendChild(el('span', 'subject', e.subject));
+        row.appendChild(el('span', 'sha', e.sha));
+        frag.appendChild(row);
+      });
+      body.appendChild(frag);
+    }
+
+    function countLabel(g, hits, notesCount) {
+      if (!g.entries.length) return notesCount + (notesCount === 1 ? ' note' : ' notes');
+      if (hits.length === g.entries.length) return g.entries.length + (g.entries.length === 1 ? ' commit' : ' commits');
+      return hits.length + ' of ' + g.entries.length + ' commits';
+    }
+
+    function render() {
+      listEl.textContent = '';
+      var frag = document.createDocumentFragment();
+      var shown = 0;
+      state.groups.forEach(function (g, gi) {
+        var hits = g.entries.filter(matches);
+        var notes = visibleNotes(g);
+        var notesCount = notes.reduce(function (s, n) { return s + n.items.length; }, 0);
+        if (!hits.length && !notesCount) return;
+        shown += hits.length + notesCount;
+        var key = 'v:' + g.key;
+        var isOpen = Object.prototype.hasOwnProperty.call(state.open, key)
+          ? state.open[key]
+          : (!state.collapse || gi < OPEN_COUNT);
+        var det = el('details', 'ver');
+        det.dataset.key = key;
+        det._hits = hits;
+        det._notes = notes;
+        det._rendered = false;
+        var sum = el('summary', 'ver-sum');
+        sum.appendChild(el('span', 'ver-name', g.version || 'Unreleased'));
+        if (g.date) sum.appendChild(el('span', 'ver-date', g.date));
+        sum.appendChild(el('span', 'ver-count', countLabel(g, hits, notesCount)));
+        det.appendChild(sum);
+        det.appendChild(el('div', 'ver-body'));
+        det.addEventListener('toggle', function () {
+          state.open[key] = det.open;
+          if (det.open) fill(det);
+        });
+        det.open = isOpen;
+        if (isOpen) fill(det);
+        frag.appendChild(det);
+      });
+      listEl.appendChild(frag);
+      statusEl.textContent = shown ? '' : 'No commits or notes match this search and filter.';
+      statusEl.hidden = shown > 0;
+    }
+
+    function init(data) {
+      var p = prepare(data);
+      state.groups = p.groups;
+      metaEl.textContent = p.total + ' commits · last updated ' + fmtUtc(p.generated);
+      buildChips(p.groups);
+      render();
+    }
+
+    qEl.addEventListener('input', function () {
+      clearTimeout(state.timer);
+      state.timer = setTimeout(function () {
+        state.query = qEl.value.trim().toLowerCase();
+        render();
+      }, 150);
+    });
+
+    collapseEl.addEventListener('change', function () {
+      state.collapse = collapseEl.checked;
+      state.open = {};
+      render();
+    });
+
+    fetch('changelog.json', { cache: 'no-cache' })
+      .then(function (r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        return r.json();
+      })
+      .then(init)
+      .catch(showError);
+  })();
+  </script>
+</body>
+</html>
