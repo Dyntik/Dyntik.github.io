@@ -1,11 +1,11 @@
 {
- "generated": "2026-11-06T18:56:19Z",
- "total": 582,
+ "generated": "2026-11-06T19:38:22Z",
+ "total": 601,
  "versions": [
   {
    "version": "1.0.0",
    "date": "2026-11-06",
-   "count": 47,
+   "count": 66,
    "notes": [
     "Full 3D port of Dynty Tower Defense up to tin: towers, ores iron, copper and tin, with the same rules and balance as the 2D game.",
     "Wardens (spawners) that you control: raise or lower the pressure on your base with the spawn control.",
@@ -21,6 +21,158 @@
  ],
  "unreleased": [],
  "entries": [
+  {
+   "date": "2026-11-06",
+   "sha": "c9e34f49",
+   "subject": "docs(audio): W51 audio integration, gate result and leak check",
+   "type": "docs",
+   "scope": "audio",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "a8ff3112",
+   "subject": "chore(audio): bus layout in Godot's canonical form",
+   "type": "chore",
+   "scope": "audio",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "a9583c79",
+   "subject": "perf(audio): Sfx.play without callables, per-call dictionaries or repeated gain math",
+   "type": "perf",
+   "scope": "audio",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "70575c98",
+   "subject": "feat(audio): sound effects rendered with variants from the v2 pipeline",
+   "type": "feat",
+   "scope": "audio",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "ee36ad65",
+   "subject": "tools(audio): tonal line gate recalibrated, boss and confirm exemptions",
+   "type": "tools",
+   "scope": "audio",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "b14879d7",
+   "subject": "fix(audio): antishield zap and tail without a metallic ring",
+   "type": "fix",
+   "scope": "audio",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "8fe08631",
+   "subject": "fix(audio): antishield arc without rectangular crackle edges",
+   "type": "fix",
+   "scope": "audio",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "30bcb4ec",
+   "subject": "perf(ui): skip redraws and hover re-picks when nothing changed",
+   "type": "perf",
+   "scope": "ui",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "446a6b4a",
+   "subject": "perf(art): LOD chain export, LOD distances and asset budgets",
+   "type": "perf",
+   "scope": "art",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "078cce22",
+   "subject": "perf(render): bake the static sky nebula into a texture once",
+   "type": "perf",
+   "scope": "render",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "5438e307",
+   "subject": "perf(game): lower physics tick rate to 10 Hz (no physics in use)",
+   "type": "perf",
+   "scope": "game",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "6eef79b4",
+   "subject": "fix(ui): skip the menu prefetch on the headless renderer",
+   "type": "fix",
+   "scope": "ui",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "59b85b32",
+   "subject": "perf(menu): load arena models in the background while the menu is up",
+   "type": "perf",
+   "scope": "menu",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "21d5d5a7",
+   "subject": "perf(save): autosave writes in the background on desktop",
+   "type": "perf",
+   "scope": "save",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "3e8e784a",
+   "subject": "perf(game): flow field rebuilds use worker threads on desktop",
+   "type": "perf",
+   "scope": "game",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "96e4a460",
+   "subject": "perf(game): cheaper enemy index for tower targeting",
+   "type": "perf",
+   "scope": "game",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "382902ea",
+   "subject": "fix(render): rebuild the enemy type cache when the type list grows",
+   "type": "fix",
+   "scope": "render",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "4cdf71ed",
+   "subject": "perf(render): enemy views read the sim snapshot; shots leave the barrel tip",
+   "type": "perf",
+   "scope": "render",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "1d48ae73",
+   "subject": "perf(sim): flat enemy snapshot and faster enemy loop, seeded spawn rng",
+   "type": "perf",
+   "scope": "sim",
+   "version": "1.0.0"
+  },
   {
    "date": "2026-11-06",
    "sha": "1a1ea8c9",
