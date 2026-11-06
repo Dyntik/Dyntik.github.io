@@ -1,11 +1,11 @@
 {
- "generated": "2026-11-06T22:30:13Z",
- "total": 641,
+ "generated": "2026-11-06T22:35:42Z",
+ "total": 649,
  "versions": [
   {
    "version": "1.0.0",
    "date": "2026-11-06",
-   "count": 106,
+   "count": 114,
    "notes": [
     "Full 3D port of Dynty Tower Defense up to tin: towers, ores iron, copper and tin, with the same rules and balance as the 2D game.",
     "Wardens (spawners) that you control: raise or lower the pressure on your base with the spawn control.",
@@ -21,6 +21,70 @@
  ],
  "unreleased": [],
  "entries": [
+  {
+   "date": "2026-11-06",
+   "sha": "0a9805df",
+   "subject": "docs(release): W57-LKC leak check, windowed exit leak cause not found yet",
+   "type": "docs",
+   "scope": "release",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "ffffed4f",
+   "subject": "perf(render): merged enemy models draw in fewer calls",
+   "type": "perf",
+   "scope": "render",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "3bb09167",
+   "subject": "perf(arena): tower refresh check no longer walks every tower",
+   "type": "perf",
+   "scope": "arena",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "9ceaf116",
+   "subject": "perf(render): unit bob moved to a shader, idle units not rewritten",
+   "type": "perf",
+   "scope": "render",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "cab3626f",
+   "subject": "perf(sim): collector and hauler target search via pile buckets",
+   "type": "perf",
+   "scope": "sim",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "ed976660",
+   "subject": "perf(game): ground ore cap merge no longer rebuilds the pile index",
+   "type": "perf",
+   "scope": "game",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "c037045a",
+   "subject": "perf(ui): HUD level, talent and core label apply only when their values change",
+   "type": "perf",
+   "scope": "ui",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "daeab324",
+   "subject": "perf(sim): snapshot refill writes changed fields and cached projectile kinds",
+   "type": "perf",
+   "scope": "sim",
+   "version": "1.0.0"
+  },
   {
    "date": "2026-11-06",
    "sha": "df79d51c",
