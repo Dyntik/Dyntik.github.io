@@ -1,9 +1,25 @@
 {
- "generated": "2026-11-06T09:18:31Z",
- "total": 527,
+ "generated": "2026-11-06T09:27:26Z",
+ "total": 529,
  "versions": [],
  "unreleased": [],
  "entries": [
+  {
+   "date": "2026-11-06",
+   "sha": "1adcb306",
+   "subject": "fix(ui): spawner ghost no longer covers the built generator",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "438cd4b5",
+   "subject": "fix(art): ore generators stand as solid plinths",
+   "type": "fix",
+   "scope": "art",
+   "version": ""
+  },
   {
    "date": "2026-11-06",
    "sha": "33f24459",
