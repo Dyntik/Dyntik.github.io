@@ -1,9 +1,17 @@
 {
- "generated": "2026-11-06T10:33:40Z",
- "total": 532,
+ "generated": "2026-11-06T10:35:32Z",
+ "total": 533,
  "versions": [],
  "unreleased": [],
  "entries": [
+  {
+   "date": "2026-11-06",
+   "sha": "835d3587",
+   "subject": "fix(online): web build reads server answers the browser unpacked",
+   "type": "fix",
+   "scope": "online",
+   "version": ""
+  },
   {
    "date": "2026-11-06",
    "sha": "0275a8c7",
