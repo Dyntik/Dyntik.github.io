@@ -1,11 +1,11 @@
 {
- "generated": "2026-11-06T19:38:22Z",
- "total": 601,
+ "generated": "2026-11-06T21:21:55Z",
+ "total": 619,
  "versions": [
   {
    "version": "1.0.0",
    "date": "2026-11-06",
-   "count": 66,
+   "count": 84,
    "notes": [
     "Full 3D port of Dynty Tower Defense up to tin: towers, ores iron, copper and tin, with the same rules and balance as the 2D game.",
     "Wardens (spawners) that you control: raise or lower the pressure on your base with the spawn control.",
@@ -21,6 +21,150 @@
  ],
  "unreleased": [],
  "entries": [
+  {
+   "date": "2026-11-06",
+   "sha": "08dd883c",
+   "subject": "fix(render): tower shots start at the barrel tip of every head",
+   "type": "fix",
+   "scope": "render",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "dd504c4f",
+   "subject": "feat(game): F3 performance overlay in debug builds",
+   "type": "feat",
+   "scope": "game",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "5262ab06",
+   "subject": "tools(bench): fixed-scenario benchmark with headless and windowed modes",
+   "type": "tools",
+   "scope": "bench",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "ae60be00",
+   "subject": "perf(online): no per-frame online work while idle",
+   "type": "perf",
+   "scope": "online",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "612aa679",
+   "subject": "perf(art): merge model parts per material for fewer draw calls",
+   "type": "perf",
+   "scope": "art",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "f33001e5",
+   "subject": "perf(sim): flow field BFS on wall sentinels, cached occupancy bytes, packed A* heap",
+   "type": "perf",
+   "scope": "sim",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "a92ec383",
+   "subject": "perf(sim): skip idle tower picks while no enemy can reach range",
+   "type": "perf",
+   "scope": "sim",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "745f1c19",
+   "subject": "perf(game): HUD and hover refresh reuse their data each frame",
+   "type": "perf",
+   "scope": "game",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "f717c7a7",
+   "subject": "perf(ui): faster tooltip hover pick and cached UI pointer check",
+   "type": "perf",
+   "scope": "ui",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "1d629188",
+   "subject": "chore(tests): UID for the UI idle-cost test script",
+   "type": "chore",
+   "scope": "tests",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "1d09996b",
+   "subject": "perf(ui): toasts, notify badge, stats and cards skip unchanged work",
+   "type": "perf",
+   "scope": "ui",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "33323b4d",
+   "subject": "docs(audio): WAV switch, ceiling and web smoke findings",
+   "type": "docs",
+   "scope": "audio",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "4d20bfd5",
+   "subject": "feat(audio): sound effects load as 16-bit WAV, no decode per play",
+   "type": "feat",
+   "scope": "audio",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "39c012d1",
+   "subject": "tools(audio): render SFX as PCM WAV with a knee clip ceiling",
+   "type": "tools",
+   "scope": "audio",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "71149911",
+   "subject": "docs(release): W52 leak check record, no leak lines on the current head",
+   "type": "docs",
+   "scope": "release",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "def15ad1",
+   "subject": "perf(game): flow field built at run start, not in the first step",
+   "type": "perf",
+   "scope": "game",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "ff7562e0",
+   "subject": "perf(render): enemy model buffers filled in one pass",
+   "type": "perf",
+   "scope": "render",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "6c1e7f91",
+   "subject": "perf(render): baked sky nebula, idle CPU while paused, LOD from registry",
+   "type": "perf",
+   "scope": "render",
+   "version": "1.0.0"
+  },
   {
    "date": "2026-11-06",
    "sha": "c9e34f49",
