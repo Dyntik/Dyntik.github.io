@@ -1,9 +1,17 @@
 {
- "generated": "2026-11-06T10:44:05Z",
- "total": 534,
+ "generated": "2026-11-06T10:51:48Z",
+ "total": 535,
  "versions": [],
  "unreleased": [],
  "entries": [
+  {
+   "date": "2026-11-06",
+   "sha": "39853c9f",
+   "subject": "feat(web): loading screen with progress and fullscreen start",
+   "type": "feat",
+   "scope": "web",
+   "version": ""
+  },
   {
    "date": "2026-11-06",
    "sha": "975fa9fe",
