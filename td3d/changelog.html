@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Changelog of every Dynty TD 3D commit and release note, past and upcoming, grouped by version.">
+  <meta name="theme-color" content="#10181d" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f5f6f2" media="(prefers-color-scheme: light)">
+  <title>Changelog | Dynty TD 3D | Dynty</title>
+  <style>
+    :root {
+      color-scheme: dark light;
+      --bg: #10181d; --fg: #f2f0e7; --subject: #e6e4da; --muted: #bac5c0; --dim: #839195;
+      --line: #34434a; --line-soft: #22303a; --field: #070b0e; --field-line: #526169;
+      --accent: #c6e05d; --cyan: #85c9c2;
+      --t-feat: #c6e05d; --t-fix: #f0a35e; --t-perf: #85c9c2; --t-docs: #9db4ff; --t-tools: #d7b8ff;
+      --t-test: #aab8b5; --t-chore: #839195; --t-other: #839195; --t-release: #f2f0e7; --t-refactor: #e6c36b; --t-style: #ff9fb0;
+      font-family: Bahnschrift, "Segoe UI Variable", "Trebuchet MS", sans-serif;
+      background: var(--bg); color: var(--fg);
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f5f6f2; --fg: #14202a; --subject: #1d2a31; --muted: #3f4f57; --dim: #5d6b72;
+        --line: #c9d1cc; --line-soft: #dde2de; --field: #ffffff; --field-line: #8a979c;
+        --accent: #3f6200; --cyan: #13665f;
+        --t-feat: #3f6200; --t-fix: #9a4a00; --t-perf: #13665f; --t-docs: #2448b0; --t-tools: #6a2fa0;
+        --t-test: #4a5a60; --t-chore: #5d6b72; --t-other: #5d6b72; --t-release: #14202a; --t-refactor: #7a5a00; --t-style: #a1264a;
+      }
+    }
+    * { box-sizing: border-box; }
+    [hidden] { display: none !important; }
+    body { margin: 0; min-width: 320px; background: var(--bg); overflow-x: hidden; }
+    .site-header, main, footer { width: min(1180px, calc(100% - 40px)); margin-inline: auto; }
+    .site-header { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 20px; border-bottom: 1px solid var(--line); }
+    .brand { color: var(--fg); text-decoration: none; font-weight: 750; letter-spacing: .04em; }
+    .brand span { color: var(--accent); }
+    .site-nav { display: flex; gap: 22px; flex-wrap: wrap; justify-content: flex-end; }
+    a { color: var(--accent); }
+    .site-nav a, footer a { color: var(--muted); text-decoration-thickness: 1px; text-underline-offset: 4px; }
+    .site-nav a[aria-current="page"] { color: var(--accent); }
+    main { padding: 26px 0 56px; min-width: 0; }
+    .eyebrow { margin: 0 0 8px; color: var(--cyan); font-size: 12px; text-transform: uppercase; }
+    h1 { margin: 0; font-size: clamp(28px, 5vw, 42px); line-height: 1.08; }
+    .meta { margin: 10px 0 0; color: var(--muted); line-height: 1.6; }
+    .controls { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; margin: 22px 0 14px; padding-bottom: 14px; border-bottom: 1px solid var(--line); }
+    .search { flex: 1 1 260px; max-width: 420px; }
+    .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+    .search input { width: 100%; min-height: 42px; padding: 10px 12px; border: 1px solid var(--field-line); border-radius: 0; background: var(--field); color: var(--fg); font: inherit; font-size: 16px; }
+    .search input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+    .chip { min-height: 32px; padding: 4px 10px; border: 1px solid var(--field-line); background: transparent; color: var(--muted); font: inherit; font-size: 13px; cursor: pointer; }
+    .chip[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); }
+    .chip small { color: var(--dim); margin-left: 4px; }
+    .collapse-toggle { display: inline-flex; align-items: center; gap: 8px; min-height: 32px; color: var(--muted); font-size: 14px; cursor: pointer; }
+    .collapse-toggle input { width: 18px; height: 18px; accent-color: var(--accent); margin: 0; }
+    .status { margin: 28px 0; padding: 18px; border: 1px solid var(--line); color: var(--muted); line-height: 1.6; }
+    .ver { border-bottom: 1px solid var(--line-soft); }
+    .ver-sum { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; min-height: 52px; padding: 12px 0; cursor: pointer; list-style: none; }
+    .ver-sum::-webkit-details-marker { display: none; }
+    .ver-sum::before { content: "+"; width: 14px; color: var(--accent); font-weight: 700; }
+    .ver[open] > .ver-sum::before { content: "-"; }
+    .ver-name { font-size: 20px; font-weight: 700; color: var(--fg); overflow-wrap: anywhere; }
+    .ver-date, .ver-count { color: var(--dim); font-size: 13px; }
+    .ver-body { padding: 0 0 14px 14px; }
+    .note-h { margin: 14px 0 4px; color: var(--fg); font-size: 14px; font-weight: 700; }
+    .notes { margin: 0; padding-left: 18px; color: var(--muted); line-height: 1.55; }
+    .notes li { overflow-wrap: anywhere; padding: 1px 0; }
+    .day { margin: 14px 0 4px; color: var(--cyan); font-size: 12px; text-transform: uppercase; letter-spacing: .04em; }
+    .row { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; padding: 5px 0; min-width: 0; }
+    .badge { display: inline-block; min-width: 58px; padding: 1px 6px; border: 1px solid currentColor; font-size: 11px; line-height: 1.5; text-align: center; text-transform: uppercase; letter-spacing: .03em; }
+    .t-feat { color: var(--t-feat); }
+    .t-fix { color: var(--t-fix); }
+    .t-perf { color: var(--t-perf); }
+    .t-docs { color: var(--t-docs); }
+    .t-tools { color: var(--t-tools); }
+    .t-test { color: var(--t-test); }
+    .t-chore, .t-other { color: var(--t-chore); }
+    .t-release { color: var(--t-release); }
+    .t-refactor { color: var(--t-refactor); }
+    .t-style { color: var(--t-style); }
+    .scope { color: var(--cyan); font-size: 13px; }
+    .subject { flex: 1 1 200px; min-width: 0; color: var(--subject); overflow-wrap: anywhere; }
+    .sha { color: var(--dim); font-family: Consolas, "Courier New", monospace; font-size: 12px; }
+    footer { display: flex; flex-wrap: wrap; gap: 18px; padding: 22px 0 30px; border-top: 1px solid var(--line); color: var(--dim); font-size: 13px; }
+    @media (max-width: 640px) {
+      .site-header, main, footer { width: calc(100% - 32px); }
+      .site-header { min-height: 62px; }
+      .site-nav { gap: 12px; font-size: 13px; }
+      .ver-body { padding-left: 10px; }
+      .ver-name { font-size: 18px; }
+    }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; } }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/">DYNTY <span>/ TD 3D</span></a>
+    <nav class="site-nav" aria-label="Site navigation"><a href="/#td3d">Game</a><a href="/td3d/changelog.html" aria-current="page">Changelog</a><a href="/privacy.html">Privacy</a></nav>
+  </header>
+  <main>
+    <section aria-labelledby="page-title">
+      <p class="eyebrow">Dev log</p>
+      <h1 id="page-title">Dynty TD 3D changelog</h1>
+      <p class="meta" id="meta">Loading changelog...</p>
+    </section>
+    <section class="controls" aria-label="Filter changelog">
+      <label class="search"><span class="sr">Search changelog</span><input type="search" id="q" placeholder="Search subject, scope, sha or version" autocomplete="off"></label>
+      <div class="chips" id="chips" role="group" aria-label="Filter by type"></div>
+      <label class="collapse-toggle"><input type="checkbox" id="collapse" checked> Collapse older versions</label>
+    </section>
+    <div class="status" id="status" role="status" hidden></div>
+    <div id="list"></div>
+  </main>
+  <footer><span>DYNTY / TD 3D</span><a href="/privacy.html">Privacy policy</a><a href="https://github.com/Dyntik/Dyntik.github.io/issues">Contact and support</a></footer>
+  <script>
+  (function () {
+    'use strict';
+    var TYPES = ['feat', 'fix', 'perf', 'docs', 'tools', 'test', 'chore', 'release', 'refactor', 'style', 'other'];
+    var OPEN_COUNT = 3;
+    var $ = function (id) { return document.getElementById(id); };
+    var listEl = $('list'), statusEl = $('status'), chipsEl = $('chips');
+    var qEl = $('q'), collapseEl = $('collapse'), metaEl = $('meta');
+    var state = { groups: [], type: 'all', query: '', collapse: true, open: {}, timer: 0 };
+
+    function el(tag, cls, text) {
+      var n = document.createElement(tag);
+      if (cls) n.className = cls;
+      if (text !== undefined && text !== null) n.textContent = String(text);
+      return n;
+    }
+
+    function fmtUtc(value) {
+      var d = new Date(value);
+      if (isNaN(d.getTime())) return String(value || 'unknown');
+      return d.toISOString().slice(0, 16).replace('T', ' ') + ' UTC';
+    }
+
+    function showError() {
+      metaEl.textContent = '';
+      listEl.textContent = '';
+      statusEl.textContent = 'Changelog data not published yet. Check back soon.';
+      statusEl.hidden = false;
+    }
+
+    function prepNotes(list) {
+      if (!Array.isArray(list)) return [];
+      return list.map(function (n) {
+        var section = String((n && n.section) || '');
+        var items = (n && Array.isArray(n.items) ? n.items : []).map(function (t) {
+          var text = String(t);
+          return { text: text, hay: (section + ' ' + text).toLowerCase() };
+        });
+        return { section: section, items: items };
+      }).filter(function (n) { return n.items.length; });
+    }
+
+    function prepare(data) {
+      if (!data || !Array.isArray(data.entries)) throw new Error('bad changelog data');
+      var byKey = {}, groups = [];
+      function group(version, date) {
+        if (!Object.prototype.hasOwnProperty.call(byKey, version)) {
+          byKey[version] = { key: version, version: version, date: date || '', entries: [], notes: [] };
+          groups.push(byKey[version]);
+        }
+        return byKey[version];
+      }
+      if (Array.isArray(data.versions)) {
+        data.versions.forEach(function (v) {
+          if (!v || typeof v.version !== 'string') return;
+          var g = group(v.version, String(v.date || ''));
+          g.notes = prepNotes(v.notes);
+        });
+      }
+      var unreleased = group('', '');
+      unreleased.notes = prepNotes(data.unreleased);
+      data.entries.forEach(function (raw, idx) {
+        var type = TYPES.indexOf(raw.type) === -1 ? 'other' : raw.type;
+        var e = {
+          idx: idx,
+          date: String(raw.date || ''),
+          sha: String(raw.sha || ''),
+          subject: String(raw.subject || ''),
+          type: type,
+          scope: String(raw.scope || ''),
+          version: String(raw.version || '')
+        };
+        e.hay = (e.subject + ' ' + e.scope + ' ' + e.sha + ' ' + e.version + ' ' + e.date).toLowerCase();
+        group(e.version, e.date).entries.push(e);
+      });
+      groups.forEach(function (g) {
+        g.entries.sort(function (a, b) {
+          return (a.date < b.date ? 1 : a.date > b.date ? -1 : 0) || a.idx - b.idx;
+        });
+        if (!g.date && g.entries[0]) g.date = g.entries[0].date;
+      });
+      // Unreleased group first; the rest keep data order (versions[] newest first, then leftovers).
+      var unIdx = groups.indexOf(unreleased);
+      if (unIdx > 0) { groups.splice(unIdx, 1); groups.unshift(unreleased); }
+      return {
+        groups: groups,
+        total: typeof data.total === 'number' ? data.total : data.entries.length,
+        generated: data.generated
+      };
+    }
+
+    function buildChips(groups) {
+      var counts = {}, total = 0;
+      groups.forEach(function (g) {
+        g.entries.forEach(function (e) { counts[e.type] = (counts[e.type] || 0) + 1; total++; });
+      });
+      chipsEl.textContent = '';
+      var all = ['all'].concat(TYPES.filter(function (t) { return counts[t] > 0; }));
+      all.forEach(function (t) {
+        var n = t === 'all' ? total : counts[t];
+        var b = el('button', 'chip');
+        b.type = 'button';
+        b.dataset.type = t;
+        b.setAttribute('aria-pressed', t === state.type ? 'true' : 'false');
+        b.appendChild(document.createTextNode(t === 'all' ? 'All' : t));
+        b.appendChild(el('small', null, n));
+        b.addEventListener('click', function () {
+          state.type = t;
+          Array.prototype.forEach.call(chipsEl.children, function (c) {
+            c.setAttribute('aria-pressed', c.dataset.type === t ? 'true' : 'false');
+          });
+          render();
+        });
+        chipsEl.appendChild(b);
+      });
+    }
+
+    function matches(e) {
+      if (state.type !== 'all' && e.type !== state.type) return false;
+      return !state.query || e.hay.indexOf(state.query) !== -1;
+    }
+
+    // Release notes are not typed, so they are hidden by a type filter and
+    // filtered by text when a search is active.
+    function visibleNotes(g) {
+      if (state.type !== 'all') return [];
+      if (!state.query) return g.notes;
+      var out = [];
+      g.notes.forEach(function (n) {
+        var items = n.items.filter(function (it) { return it.hay.indexOf(state.query) !== -1; });
+        if (items.length) out.push({ section: n.section, items: items });
+      });
+      return out;
+    }
+
+    function fill(det) {
+      if (det._rendered) return;
+      det._rendered = true;
+      var body = det.querySelector('.ver-body');
+      var frag = document.createDocumentFragment();
+      det._notes.forEach(function (n) {
+        if (n.section) frag.appendChild(el('div', 'note-h', n.section));
+        var ul = el('ul', 'notes');
+        n.items.forEach(function (it) { ul.appendChild(el('li', null, it.text)); });
+        frag.appendChild(ul);
+      });
+      var lastDate = null;
+      det._hits.forEach(function (e) {
+        if (e.date !== lastDate) {
+          frag.appendChild(el('div', 'day', e.date || 'undated'));
+          lastDate = e.date;
+        }
+        var row = el('div', 'row');
+        row.appendChild(el('span', 'badge t-' + e.type, e.type));
+        if (e.scope) row.appendChild(el('span', 'scope', e.scope));
+        row.appendChild(el('span', 'subject', e.subject));
+        row.appendChild(el('span', 'sha', e.sha));
+        frag.appendChild(row);
+      });
+      body.appendChild(frag);
+    }
+
+    function countLabel(g, hits, notesCount) {
+      if (!g.entries.length) return notesCount + (notesCount === 1 ? ' note' : ' notes');
+      if (hits.length === g.entries.length) return g.entries.length + (g.entries.length === 1 ? ' commit' : ' commits');
+      return hits.length + ' of ' + g.entries.length + ' commits';
+    }
+
+    function render() {
+      listEl.textContent = '';
+      var frag = document.createDocumentFragment();
+      var shown = 0;
+      state.groups.forEach(function (g, gi) {
+        var hits = g.entries.filter(matches);
+        var notes = visibleNotes(g);
+        var notesCount = notes.reduce(function (s, n) { return s + n.items.length; }, 0);
+        if (!hits.length && !notesCount) return;
+        shown += hits.length + notesCount;
+        var key = 'v:' + g.key;
+        var isOpen = Object.prototype.hasOwnProperty.call(state.open, key)
+          ? state.open[key]
+          : (!state.collapse || gi < OPEN_COUNT);
+        var det = el('details', 'ver');
+        det.dataset.key = key;
+        det._hits = hits;
+        det._notes = notes;
+        det._rendered = false;
+        var sum = el('summary', 'ver-sum');
+        sum.appendChild(el('span', 'ver-name', g.version || 'Unreleased'));
+        if (g.date) sum.appendChild(el('span', 'ver-date', g.date));
+        sum.appendChild(el('span', 'ver-count', countLabel(g, hits, notesCount)));
+        det.appendChild(sum);
+        det.appendChild(el('div', 'ver-body'));
+        det.addEventListener('toggle', function () {
+          state.open[key] = det.open;
+          if (det.open) fill(det);
+        });
+        det.open = isOpen;
+        if (isOpen) fill(det);
+        frag.appendChild(det);
+      });
+      listEl.appendChild(frag);
+      statusEl.textContent = shown ? '' : 'No commits or notes match this search and filter.';
+      statusEl.hidden = shown > 0;
+    }
+
+    function init(data) {
+      var p = prepare(data);
+      state.groups = p.groups;
+      metaEl.textContent = p.total + ' commits · last updated ' + fmtUtc(p.generated);
+      buildChips(p.groups);
+      render();
+    }
+
+    qEl.addEventListener('input', function () {
+      clearTimeout(state.timer);
+      state.timer = setTimeout(function () {
+        state.query = qEl.value.trim().toLowerCase();
+        render();
+      }, 150);
+    });
+
+    collapseEl.addEventListener('change', function () {
+      state.collapse = collapseEl.checked;
+      state.open = {};
+      render();
+    });
+
+    // Relative URL: resolves to /td3d/changelog.json on the Pages site.
+    fetch('changelog.json', { cache: 'no-cache' })
+      .then(function (r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        return r.json();
+      })
+      .then(init)
+      .catch(showError);
+  })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,4032 @@
+{
+ "generated": "2026-11-06T08:40:21Z",
+ "total": 503,
+ "versions": [],
+ "unreleased": [],
+ "entries": [
+  {
+   "date": "2026-11-06",
+   "sha": "cabfbedf",
+   "subject": "feat(ui): statistics show your maze",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "7280b464",
+   "subject": "feat(sim): maze stats track path length and time in range",
+   "type": "feat",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "d608341f",
+   "subject": "fix(ui): talent detail drops the repeated effect line",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "210a8555",
+   "subject": "fix(ui): stats card opens under its button, stale cards close",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "9d178c8a",
+   "subject": "fix(ui): leaderboard keeps your row and footer in view",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "91ff6c30",
+   "subject": "fix(ui): profile window opens at full size",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "3a32cbd3",
+   "subject": "fix(ui): online cards sit at the HUD edge, not over the arena",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "f8f9d32a",
+   "subject": "tools(online): probe a wrong signature on the live server",
+   "type": "tools",
+   "scope": "online",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "783b0b11",
+   "subject": "docs(state): online goes live, waves W36 and W37",
+   "type": "docs",
+   "scope": "state",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "c53edebc",
+   "subject": "tools(showcase): online cards, board tabs and profile screens",
+   "type": "tools",
+   "scope": "showcase",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "dc53a51b",
+   "subject": "fix(ui): talent detail without empty space",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "60f94fc1",
+   "subject": "fix(ui): spawn mode list highlights the current mode",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "4c220b3f",
+   "subject": "fix(ui): visible scrollbars and larger sliders",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "778383e9",
+   "subject": "fix(art): generator running lights replace glowing tips",
+   "type": "fix",
+   "scope": "art",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "d3d49bfa",
+   "subject": "fix(art): hood rim hem strip widened to 0.01 m",
+   "type": "fix",
+   "scope": "art",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "16c4457e",
+   "subject": "fix(ui): open chat holds game keys; chat limit survives restart",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "2f8addd1",
+   "subject": "feat(ui): profile maze row counts your waves",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "850a73b5",
+   "subject": "docs(online): 3D Supabase project created; GitHub link is the next step",
+   "type": "docs",
+   "scope": "online",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "5c3af905",
+   "subject": "feat(online): connect the game to its own server",
+   "type": "feat",
+   "scope": "online",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "91ca33f0",
+   "subject": "fix(online): tests and captures never reach the live server",
+   "type": "fix",
+   "scope": "online",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "1216e754",
+   "subject": "fix(online): maze loads from the menu; quick chat gates as 2D",
+   "type": "fix",
+   "scope": "online",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "88513b69",
+   "subject": "test(online): challenge seed matches the 2D server",
+   "type": "test",
+   "scope": "online",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "2b636e2e",
+   "subject": "fix(ui): ore unlock hints fire at the first unlock wave",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "c8535659",
+   "subject": "fix(ui): locked build items read as in 2D",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "6960ee6d",
+   "subject": "style(sim): correct enemy damage and hauler magnet citations",
+   "type": "style",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "fc3da4fa",
+   "subject": "test(sim): every enemy type checked against 2D",
+   "type": "test",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "9f65c3f7",
+   "subject": "docs(state): lighting, ore flow and maze share wave W35",
+   "type": "docs",
+   "scope": "state",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "9cd4eb98",
+   "subject": "feat(render): lighting pass for metals and silhouettes",
+   "type": "feat",
+   "scope": "render",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "f1388c29",
+   "subject": "feat(render): lighting pass for metals and silhouettes",
+   "type": "feat",
+   "scope": "render",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "b28759c1",
+   "subject": "fix(ui): lift dark iron and steel text for readability",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "510b17d6",
+   "subject": "tools(showcase): ore lineup and swarm draw-call capture",
+   "type": "tools",
+   "scope": "showcase",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "a49a77b0",
+   "subject": "test(ui): drop the talent hint on-load check from the skill tree window tests",
+   "type": "test",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "e89ec215",
+   "subject": "fix(ui): locked build cards show a lock glyph and a muted price",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "2afba3e0",
+   "subject": "feat(online): maze share runs in the game and shows in the profile",
+   "type": "feat",
+   "scope": "online",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "0938419c",
+   "subject": "test(sim): ore flow from drop to core matches 2D",
+   "type": "test",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "1ee9f3a6",
+   "subject": "fix(sim): collectors scan their nearby box before the whole map",
+   "type": "fix",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "9d7a772e",
+   "subject": "fix(tools): agent clones refresh the class cache",
+   "type": "fix",
+   "scope": "tools",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "d9d11643",
+   "subject": "docs(skills): coordinator lessons from the W34 bursts",
+   "type": "docs",
+   "scope": "skills",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "8e2c4f5d",
+   "subject": "docs(state): online wiring waves W34 and W34b",
+   "type": "docs",
+   "scope": "state",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "864cf2f2",
+   "subject": "feat(online): maze snapshot and maze share",
+   "type": "feat",
+   "scope": "online",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "5e1fec86",
+   "subject": "fix(ui): talent tree hint only during a live run, as in 2D",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "aef135a6",
+   "subject": "feat(ui): help window reopens on the last tab, as in 2D",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "af635a34",
+   "subject": "fix(ui): opaque leaderboard with one offline line",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "c2b0a691",
+   "subject": "fix(online): rank and duel poll once per frame",
+   "type": "fix",
+   "scope": "online",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "ddb19ef1",
+   "subject": "fix(ui): HUD online cards follow the loaded slot",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "eeb0007a",
+   "subject": "feat(online): notify mode setting applies on load and change",
+   "type": "feat",
+   "scope": "online",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "04e78111",
+   "subject": "fix(sim): restored tower keeps its build cost",
+   "type": "fix",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "9a2dc5ec",
+   "subject": "fix(tools): lander strips a BOM from commit subjects",
+   "type": "fix",
+   "scope": "tools",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "1b190a00",
+   "subject": "test(ui): online tests count only their own requests",
+   "type": "test",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "7bf4f34c",
+   "subject": "feat(ui): profile, inbox and week card windows open by id",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "bded36b8",
+   "subject": "feat(ui): leaderboard window with offline board cache",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "3d968947",
+   "subject": "fix(ui): online HUD cards stack above the news toast",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "690e3569",
+   "subject": "feat(ui): notify centre, rank reminder and duel card in the HUD",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "3dfd24ab",
+   "subject": "feat(ui): online state saved with the slot",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "483afbc6",
+   "subject": "feat(sim): hauler store upgrades buy, income hook, exact restore",
+   "type": "feat",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "046ae7d7",
+   "subject": "feat(online): one online service drives the community modules",
+   "type": "feat",
+   "scope": "online",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "bcc23394",
+   "subject": "fix(online): news rows carry the applause count",
+   "type": "fix",
+   "scope": "online",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "b24938f2",
+   "subject": "chore(agents): allow routine dev commands, owner full authority",
+   "type": "chore",
+   "scope": "agents",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "8e94abc8",
+   "subject": "docs(state): tooling wave W34T",
+   "type": "docs",
+   "scope": "state",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "041d11f8",
+   "subject": "fix(tools): gdmap prints the kind once",
+   "type": "fix",
+   "scope": "tools",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "34f08371",
+   "subject": "fix(tools): wave status reads NOT LANDED",
+   "type": "fix",
+   "scope": "tools",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "d9c4437d",
+   "subject": "feat(tools): burst lander script and wave status",
+   "type": "feat",
+   "scope": "tools",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "78d6238a",
+   "subject": "feat(tools): compact test output, changed-only runs, fast agent clones",
+   "type": "feat",
+   "scope": "tools",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "d734f1af",
+   "subject": "feat(tools): GDScript outline and parse check for agents",
+   "type": "feat",
+   "scope": "tools",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "a29dc75a",
+   "subject": "feat(tools): 2D reference lookup for agents",
+   "type": "feat",
+   "scope": "tools",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "cafbc760",
+   "subject": "docs(agents): no stray python or Godot processes",
+   "type": "docs",
+   "scope": "agents",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "b4a7fc37",
+   "subject": "docs(state): correct W33 commit SHAs after the re-pick onto main",
+   "type": "docs",
+   "scope": "state",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "425c7c74",
+   "subject": "docs(history): wave notes W33 burst",
+   "type": "docs",
+   "scope": "history",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "9ebc83fe",
+   "subject": "docs(state): W33 burst landed, W34 integration next",
+   "type": "docs",
+   "scope": "state",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "e36099c4",
+   "subject": "docs(gaps): W33 online modules and hauler store upgrades in the 1.0 gap list",
+   "type": "docs",
+   "scope": "gaps",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "1e53e0ac",
+   "subject": "feat(tools): tin capture preset for the 1.0 stage",
+   "type": "feat",
+   "scope": "tools",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "c303e0ca",
+   "subject": "feat(online): notify center with toast budget and inbox",
+   "type": "feat",
+   "scope": "online",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "3fa26b49",
+   "subject": "feat(online): profile panel with public stats and name",
+   "type": "feat",
+   "scope": "online",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "cf8771b9",
+   "subject": "feat(online): week card and weekly challenge board",
+   "type": "feat",
+   "scope": "online",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "761ace17",
+   "subject": "feat(online): community goal, chronicle and pulse",
+   "type": "feat",
+   "scope": "online",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "ecfc86ff",
+   "subject": "feat(online): presence and online settings",
+   "type": "feat",
+   "scope": "online",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "2c7eb3fc",
+   "subject": "feat(online): gifts and inbox",
+   "type": "feat",
+   "scope": "online",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "39f7effd",
+   "subject": "feat(online): weekly duel and duel card",
+   "type": "feat",
+   "scope": "online",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "a521c29a",
+   "subject": "feat(online): rank reminder and rivals",
+   "type": "feat",
+   "scope": "online",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "70842f7f",
+   "subject": "feat(sim): hauler store upgrades as in 2D",
+   "type": "feat",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "1d277b13",
+   "subject": "fix(ui): news toast stays clear of the toast band",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "55795d86",
+   "subject": "feat(ui): online windows open from the pause menu and keys",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "a8defdc0",
+   "subject": "feat(online): online profile per save slot with run submits",
+   "type": "feat",
+   "scope": "online",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "1e5be87f",
+   "subject": "fix(online): reads are timed from the fetch, not process start",
+   "type": "fix",
+   "scope": "online",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "f1d2b98f",
+   "subject": "feat(online): weekly expedition with its ore bonus",
+   "type": "feat",
+   "scope": "online",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "28dc4ad2",
+   "subject": "docs(agents): token discipline and the owner's tool and MCP rules",
+   "type": "docs",
+   "scope": "agents",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "1c310484",
+   "subject": "docs(state): W33 burst in flight",
+   "type": "docs",
+   "scope": "state",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "38b5d91a",
+   "subject": "feat(online): quick chat panel with preset phrases and a send limit",
+   "type": "feat",
+   "scope": "online",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "7d2b5dd5",
+   "subject": "feat(online): news toast with reactions",
+   "type": "feat",
+   "scope": "online",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "6ede27a1",
+   "subject": "fix(ui): build cards show thumbnails, larger price and unit icons",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "070326f9",
+   "subject": "fix(ui): talent tree detail panel ends at LEARN",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "e7992144",
+   "subject": "fix(render): units draw their far LOD1 model beyond 16 units",
+   "type": "fix",
+   "scope": "render",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "bbee3b73",
+   "subject": "fix(render): range rings read clearly on the dark playfield",
+   "type": "fix",
+   "scope": "render",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "bb8d7947",
+   "subject": "fix(art): hood hem reads on the space background",
+   "type": "fix",
+   "scope": "art",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "d6a18a5c",
+   "subject": "fix(art): Warden socket clears the side plate",
+   "type": "fix",
+   "scope": "art",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "b4cf464a",
+   "subject": "feat(help): talent hints as in 2D",
+   "type": "feat",
+   "scope": "help",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "f8234a11",
+   "subject": "test(sim): refining stats through the world step, not the crafting tick",
+   "type": "test",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "66f5d80a",
+   "subject": "test(sim): circle enemies reach the core within 10 s of the orbit",
+   "type": "test",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "9e833e1c",
+   "subject": "test(sim): duel every enemy type against 2D stats and hits",
+   "type": "test",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "f38139b3",
+   "subject": "fix(build): mass replace sells nothing a refused tower cannot replace",
+   "type": "fix",
+   "scope": "build",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "204e3d01",
+   "subject": "test(achievements): Warden tier 5 and 10 achievements stay listed under the 1.0 cap",
+   "type": "test",
+   "scope": "achievements",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "38daa029",
+   "subject": "docs(gaps): close five partial gap rows checked against the 2D game",
+   "type": "docs",
+   "scope": "gaps",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "54ce12cd",
+   "subject": "test(sim): regression checks for refund, swept hits and pause quit",
+   "type": "test",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "72315421",
+   "subject": "docs(skills): lessons from W20-W32",
+   "type": "docs",
+   "scope": "skills",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "047721f3",
+   "subject": "docs(state): session handoff after W32",
+   "type": "docs",
+   "scope": "state",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "778618b4",
+   "subject": "feat(online): bug reports from the game through the signed queue",
+   "type": "feat",
+   "scope": "online",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "7dde2453",
+   "subject": "feat(online): quick chat phrases and feed through the signed queue",
+   "type": "feat",
+   "scope": "online",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "1ab82d27",
+   "subject": "feat(online): news feed and GG or applause reactions through the queue",
+   "type": "feat",
+   "scope": "online",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "4e559df4",
+   "subject": "feat(online): leaderboard submit and boards through the signed queue",
+   "type": "feat",
+   "scope": "online",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "4f765c81",
+   "subject": "feat(online): Online autoload registers the profile, offline without a backend",
+   "type": "feat",
+   "scope": "online",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "1318592d",
+   "subject": "fix(tools): tooltip capture screen works again",
+   "type": "fix",
+   "scope": "tools",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "3840df53",
+   "subject": "fix(ui): top bar spans the whole screen at any size",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "c6e5b7c1",
+   "subject": "fix(ui): mass replace never sells a tower it cannot rebuild",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "c589ab64",
+   "subject": "fix(sim): achievements stay within the 1.0 content",
+   "type": "fix",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "bb35f865",
+   "subject": "fix(sim): spawners unlock with their ingot's ore, as in the 2D game",
+   "type": "fix",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "d358ba9e",
+   "subject": "docs(history): wave notes W30-W32",
+   "type": "docs",
+   "scope": "history",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "8f0b0b5e",
+   "subject": "docs(state): W30-W31 and the 1.0 scope up to tin",
+   "type": "docs",
+   "scope": "state",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "f3b80abd",
+   "subject": "tools(showcase): mass action screens with a box selection",
+   "type": "tools",
+   "scope": "showcase",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "a40c142b",
+   "subject": "feat(ui): drag a box to select towers and sell or replace them together",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "73ce36fc",
+   "subject": "feat(ui): UI scale setting",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "18f79ab9",
+   "subject": "feat(ui): interface keeps its size on large screens",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "901c2c76",
+   "subject": "feat(online): signed offline queue for leaderboard submits",
+   "type": "feat",
+   "scope": "online",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "b800b4d7",
+   "subject": "feat(online): canonical JSON and request signing match the 2D client",
+   "type": "feat",
+   "scope": "online",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "9b40d7bf",
+   "subject": "feat(sim): auto refine like the 2D game",
+   "type": "feat",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "19e91bb2",
+   "subject": "feat(sim): export the dormant 2D collector types as data",
+   "type": "feat",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "96f51473",
+   "subject": "feat(sim): version 1.0 content ends at tin",
+   "type": "feat",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "b838ee67",
+   "subject": "feat(ui): waves run on their own clock, no speed-up or early start",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "238099f4",
+   "subject": "feat(render): energy core switches to its far-view model",
+   "type": "feat",
+   "scope": "render",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "ccaf14ee",
+   "subject": "tools(dev): debug-only time scale for testing",
+   "type": "tools",
+   "scope": "dev",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "9edd2cb9",
+   "subject": "perf(sim): grid occupancy in packed arrays",
+   "type": "perf",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "819a2591",
+   "subject": "feat(art): enemies stand on thin glowing rings instead of discs",
+   "type": "feat",
+   "scope": "art",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "f8b63dc5",
+   "subject": "docs(plan): 1.0 feature gap list up to tin",
+   "type": "docs",
+   "scope": "plan",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "0e4121b0",
+   "subject": "tools(dev): changelog feed built from commit subjects like the 2D game",
+   "type": "tools",
+   "scope": "dev",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "ad50f997",
+   "subject": "docs(history): archive of the wave notes",
+   "type": "docs",
+   "scope": "history",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "c1e48b85",
+   "subject": "tools(showcase): fleet screens show the Collectors and Haulers windows populated",
+   "type": "tools",
+   "scope": "showcase",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "e65f19e8",
+   "subject": "fix(ui): the empty ore strip shows only when there is no ore at all",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "c2cb294d",
+   "subject": "feat(ui): Stats, Collectors and Haulers buttons show when their window is open",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "51dacca9",
+   "subject": "fix(ui): the iron ore chip under ORE is gone, as in the 2D game",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "cabc7687",
+   "subject": "style(ui): toasts are neutral plates with a 2 px accent bar",
+   "type": "style",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "00b4d3e1",
+   "subject": "style(ui): tooltip top line and category chip cyan, pinned Sell in V2 plate",
+   "type": "style",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "6e55eccb",
+   "subject": "style(ui): refine costs muted with an ore swatch, thin talent bar",
+   "type": "style",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "f47ecf17",
+   "subject": "style(ui): core bar is cyan, amber below 30 % and red below 15 %",
+   "type": "style",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "dd87cf37",
+   "subject": "tools(showcase): build_<section>_armed screen shows the armed card",
+   "type": "tools",
+   "scope": "showcase",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "dfdd585e",
+   "subject": "fix(game): right click sells a tower under a pinned window",
+   "type": "fix",
+   "scope": "game",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "ee98e3c7",
+   "subject": "feat(ui): the selected build card gets an accent fill",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "f140f4db",
+   "subject": "feat(game): the R range overlay is saved with the run",
+   "type": "feat",
+   "scope": "game",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "3876cc1e",
+   "subject": "docs(ui): repeat buy keeps running after a failed attempt",
+   "type": "docs",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "752e280e",
+   "subject": "feat(game): quiet automatic retries in the UI bridge",
+   "type": "feat",
+   "scope": "game",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "87e25655",
+   "subject": "feat(game): auto-buy works for refining and stays quiet on failure",
+   "type": "feat",
+   "scope": "game",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "08fd3e4e",
+   "subject": "feat(render): Warden accents and core ring spin follow the V2 look",
+   "type": "feat",
+   "scope": "render",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "f4e5a9c7",
+   "subject": "feat(render): enemy halos become thin rings",
+   "type": "feat",
+   "scope": "render",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "cf49dd17",
+   "subject": "fix(sim): refining credits stop at the ore cap",
+   "type": "fix",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "492c8896",
+   "subject": "perf(sim): enemy wall checks and shot hits do less work per tick",
+   "type": "perf",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "79dbe6a3",
+   "subject": "test(sim): path to tin includes spawners and measured unit throughput",
+   "type": "test",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "1e001519",
+   "subject": "fix(data): poison upgrades unlock with copper ingots like the 2D game",
+   "type": "fix",
+   "scope": "data",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "599ac1e8",
+   "subject": "docs(state): W21-W29 art direction V2, bursts and the road to tin",
+   "type": "docs",
+   "scope": "state",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "8f52972b",
+   "subject": "fix(sim): a destroyed core is rebuilt and costs iron like the 2D game",
+   "type": "fix",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "fa2d5bc2",
+   "subject": "feat(render): R shows tower ranges as thin rings",
+   "type": "feat",
+   "scope": "render",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "dd9c83e2",
+   "subject": "test(sim): path-to-tin estimate tool with a short playtest smoke",
+   "type": "test",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "89e63a8a",
+   "subject": "fix(ui): repeat buy keeps running after a failed purchase",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "66c2e8f6",
+   "subject": "test(parity): every step on the way to tin matches the 2D game",
+   "type": "test",
+   "scope": "parity",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "e04199f5",
+   "subject": "test(ui): a whole run from menu to game over and back",
+   "type": "test",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "332d3a9e",
+   "subject": "feat(ui): build menu thumbnails in the new look",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "cf747b73",
+   "subject": "fix(ui): build card thumbnails load from the thumb key",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "2ad6b7bc",
+   "subject": "fix(ui): build cards show model thumbnails",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "14d0f198",
+   "subject": "fix(tools): window captures open their screens again",
+   "type": "fix",
+   "scope": "tools",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "0e74ad83",
+   "subject": "fix(ui): Collectors and Haulers buttons open their windows",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "927d67db",
+   "subject": "feat(render): wraith and colossus bosses use their own models",
+   "type": "feat",
+   "scope": "render",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "ca8e663a",
+   "subject": "feat(ui): monochrome line icons",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "e5ee5a6f",
+   "subject": "feat(ui): restrained high-tech theme with hairline buttons",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "2c0e7be8",
+   "subject": "feat(ui): save archive and ad overlay in the restrained high-tech style",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "669419c6",
+   "subject": "feat(ui): talent tree in the restrained high-tech style",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "a81c63b4",
+   "subject": "feat(ui): build menu cards in the restrained high-tech style",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "bc00257d",
+   "subject": "feat(ui): calmer HUD with hairline chips and flat panels",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "34c7913e",
+   "subject": "feat(ui): tooltips become slim dark cards with aligned stats",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "c08d1335",
+   "subject": "feat(fx): leaner tracers and impacts in muted colours",
+   "type": "feat",
+   "scope": "fx",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "d2581ceb",
+   "subject": "feat(render): subtler enemy tints and hairline rings",
+   "type": "feat",
+   "scope": "render",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "5d755a0b",
+   "subject": "feat(render): lower key light so walls and tin stop glowing brightest",
+   "type": "feat",
+   "scope": "render",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "890a997b",
+   "subject": "feat(render): darker calmer space with a fine cyan grid",
+   "type": "feat",
+   "scope": "render",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "7d24b20f",
+   "subject": "feat(art): ore piles and ingots get desaturated, restrained colours",
+   "type": "feat",
+   "scope": "art",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "508ef5f4",
+   "subject": "feat(art): enemies get dark hulls with glowing accents",
+   "type": "feat",
+   "scope": "art",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "309a34f1",
+   "subject": "feat(art): towers and structures in gunmetal with thin kind strips",
+   "type": "feat",
+   "scope": "art",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "bfa33316",
+   "subject": "test(data): guard data files against long decimal numbers",
+   "type": "test",
+   "scope": "data",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "c160b9bc",
+   "subject": "fix(sim): ore and score totals saturate at the cap",
+   "type": "fix",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "a763154c",
+   "subject": "perf(sim): swept shots check only enemies near their path",
+   "type": "perf",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "e6ae83b2",
+   "subject": "fix(sim): shots hit every enemy they cross",
+   "type": "fix",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "70725832",
+   "subject": "perf(sim): effect towers look up nearby enemies only",
+   "type": "perf",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "eafd85e1",
+   "subject": "docs(art): restrained high-tech art direction",
+   "type": "docs",
+   "scope": "art",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "e00289e3",
+   "subject": "fix(art): shield ring reads as separate segments",
+   "type": "fix",
+   "scope": "art",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "24208806",
+   "subject": "fix(art): antishield tower gets a proper emitter in front of its ring",
+   "type": "fix",
+   "scope": "art",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "73086a3a",
+   "subject": "fix(art): resource mobs carry bigger ore crystals",
+   "type": "fix",
+   "scope": "art",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "3bc44eb8",
+   "subject": "fix(art): far-view spawn marker keeps its chevrons",
+   "type": "fix",
+   "scope": "art",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "8480e678",
+   "subject": "fix(art): far-view spawner keeps its glowing pylon tips",
+   "type": "fix",
+   "scope": "art",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "d1fc5e24",
+   "subject": "fix(art): tin towers sit a shade darker",
+   "type": "fix",
+   "scope": "art",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "0a04b737",
+   "subject": "fix(art): wraith boss cloak gets folds and longer arm blades",
+   "type": "fix",
+   "scope": "art",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "f47b2b95",
+   "subject": "fix(art): Warden furnace glows brighter",
+   "type": "fix",
+   "scope": "art",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "321890f8",
+   "subject": "fix(art): tin and bronze ingots no longer look like iron and copper",
+   "type": "fix",
+   "scope": "art",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "aec44a4b",
+   "subject": "fix(art): wall tower light strip glows softer",
+   "type": "fix",
+   "scope": "art",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "a844f563",
+   "subject": "feat(ui): fresh build menu thumbnails for every model",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "370b3c02",
+   "subject": "tools(art): thumbnail renders with rim light and clean framing",
+   "type": "tools",
+   "scope": "art",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "24082d6d",
+   "subject": "fix(ui): save archive trims long names, locked leaderboard says so",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "2f367b0d",
+   "subject": "refactor(ui): reward ad progress bar height is a named constant",
+   "type": "refactor",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "d6636662",
+   "subject": "fix(ui): statistics rows use the 8 px spacing grid",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "bc422a51",
+   "subject": "fix(ui): help SHOW TIPS toggle is visible when the window opens",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "79bb06bf",
+   "subject": "fix(ui): settings window labels follow the caps style",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "8d0f10a4",
+   "subject": "feat(ui): Collectors and Haulers windows open from the HUD",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "d9f52276",
+   "subject": "feat(render): camera zoom glides and panning stays over the arena",
+   "type": "feat",
+   "scope": "render",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "389d0681",
+   "subject": "feat(render): flying, teleporting and shield bosses get their own models",
+   "type": "feat",
+   "scope": "render",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "e42d81fa",
+   "subject": "feat(ui): panels get chamfered corners, brackets and clearer sliders",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "bac59fc9",
+   "subject": "perf(render): enemies drawn in batches",
+   "type": "perf",
+   "scope": "render",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "5a652638",
+   "subject": "feat(art): ingot models and icons for all eight ores",
+   "type": "feat",
+   "scope": "art",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "d381519f",
+   "subject": "feat(art): tin tower and tin buffer share a forged tin look",
+   "type": "feat",
+   "scope": "art",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "533c92fc",
+   "subject": "feat(art): far-view model for the energy core",
+   "type": "feat",
+   "scope": "art",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "e27ada12",
+   "subject": "fix(ui): long achievement toasts stay clear of the core bar",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "bb367451",
+   "subject": "fix(ui): pinned windows sit right under the top bar",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "d6dc8eb9",
+   "subject": "feat(ui): sharper icons for damage, fire rate, ore and Reklamium",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "3fb110f0",
+   "subject": "feat(ui): main menu shows the whole core and pauses the arena behind it",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "90fec8ba",
+   "subject": "feat(ui): build ghost shows how much longer the enemy path gets",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "7782fd7e",
+   "subject": "fix(ui): talent tree learn flash is softer and colours come from named constants",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "8d896396",
+   "subject": "feat(art): war machine boss wears the crimson boss crown",
+   "type": "feat",
+   "scope": "art",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "14bf7e08",
+   "subject": "test(sim): pathing build guard is 80 ms, twice the measured build",
+   "type": "test",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "10883e58",
+   "subject": "test(sim): pathing timing guard tolerates a loaded machine",
+   "type": "test",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "aa5c53b0",
+   "subject": "feat(art): colossus boss model for shielded tank bosses",
+   "type": "feat",
+   "scope": "art",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "67c71cd7",
+   "subject": "fix(art): grunt under-disc is softer and less bright",
+   "type": "fix",
+   "scope": "art",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "bedfb169",
+   "subject": "feat(art): poison tower carries a glowing toxin canister",
+   "type": "feat",
+   "scope": "art",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "bf0da90e",
+   "subject": "feat(art): rapid tower gets a rotary cannon and the sniper a long rifle",
+   "type": "feat",
+   "scope": "art",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "e902700d",
+   "subject": "feat(art): projectile shapes for each tower kind",
+   "type": "feat",
+   "scope": "art",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "b4996885",
+   "subject": "feat(art): wraith boss model for teleporting bosses",
+   "type": "feat",
+   "scope": "art",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "f8b31226",
+   "subject": "docs(skills): burst protocol keeps agent work on branches until lander",
+   "type": "docs",
+   "scope": "skills",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "70cbb7ea",
+   "subject": "feat(art): Wardens become walking forges",
+   "type": "feat",
+   "scope": "art",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "f4c543a0",
+   "subject": "docs(ui): hud comments match the live buttons",
+   "type": "docs",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "c4b6b7a9",
+   "subject": "fix(ui): build cards show full tower names",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "cefe15f7",
+   "subject": "fix(art): haulers and buffer units match their 2D size",
+   "type": "fix",
+   "scope": "art",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "7bbfaa64",
+   "subject": "feat(art): far-view models for refiner and tin warrior",
+   "type": "feat",
+   "scope": "art",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "974807d0",
+   "subject": "feat(art): Sky Seraph boss model with swept wings",
+   "type": "feat",
+   "scope": "art",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "9be8edf0",
+   "subject": "feat(ui): main menu floats over the energy core in deep space",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "1ca9028f",
+   "subject": "docs(plan): asteroid mines as a passive ore source for later",
+   "type": "docs",
+   "scope": "plan",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "5ec2d428",
+   "subject": "feat(art): glowing spawn marker where waves enter the arena",
+   "type": "feat",
+   "scope": "art",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "e641b5c4",
+   "subject": "feat(art): edge beacons and derelict hull wrecks for the arena",
+   "type": "feat",
+   "scope": "art",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "8276f12e",
+   "subject": "feat(art): asteroids to drift around the arena",
+   "type": "feat",
+   "scope": "art",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "89f9afc6",
+   "subject": "feat(art): each ore pile has its own crystal shape",
+   "type": "feat",
+   "scope": "art",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "2610cb7e",
+   "subject": "test(ui): cover the UI polish tokens and one-line titles",
+   "type": "test",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "ef2ff328",
+   "subject": "fix(ui): accordion arrows and window close buttons are icons",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "ae3e5dd0",
+   "subject": "fix(ui): build card titles stay on one line",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "a9b683d7",
+   "subject": "fix(ui): selected ghost buttons use the navy selection fill",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "f166be16",
+   "subject": "fix(ui): achievement toasts centred on the screen under the top bar",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "a8da7043",
+   "subject": "feat(art): shield ring accent for shielded enemies",
+   "type": "feat",
+   "scope": "art",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "d2c1960d",
+   "subject": "feat(art): forged detail on Wardens and a glowing hem on summoners",
+   "type": "feat",
+   "scope": "art",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "fe22dd83",
+   "subject": "feat(art): Warden spawner gets pylons and energy arcs",
+   "type": "feat",
+   "scope": "art",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "27d2d847",
+   "subject": "fix(art): frost tower glows ice blue and the wall sits darker",
+   "type": "fix",
+   "scope": "art",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "ed011fbe",
+   "subject": "test(render): showcase tests cover route and small enemy roles",
+   "type": "test",
+   "scope": "render",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "59a9e944",
+   "subject": "tools(render): route capture preset; enemies row for small roles",
+   "type": "tools",
+   "scope": "render",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "7f32fd35",
+   "subject": "fix(sim): fast projectiles no longer pass through enemies",
+   "type": "fix",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "f9eb0139",
+   "subject": "fix(sim): ore and score stop at a cap instead of overflowing",
+   "type": "fix",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "1882a74e",
+   "subject": "feat(sim): wave bosses follow the 2D schedule and multipliers",
+   "type": "feat",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "89c82faf",
+   "subject": "feat(art): frost, antishield and wall towers are easier to tell apart",
+   "type": "feat",
+   "scope": "art",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "bbc9e36d",
+   "subject": "feat(fx): teleporting enemies blink out and in",
+   "type": "feat",
+   "scope": "fx",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "713461b7",
+   "subject": "feat(render): enemies turn to face where they move",
+   "type": "feat",
+   "scope": "render",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "ea43ee94",
+   "subject": "feat(render): healers, summoners, Wardens, resource mobs get own models",
+   "type": "feat",
+   "scope": "render",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "e14f3c4c",
+   "subject": "docs(skills): art specs use front +Y",
+   "type": "docs",
+   "scope": "skills",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "3c3db5c9",
+   "subject": "docs(state): W20 targeting effects, movement types and enemy roles",
+   "type": "docs",
+   "scope": "state",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "dfbc588a",
+   "subject": "feat(sim): enemies circle and fly like the 2D game",
+   "type": "feat",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "59f004ad",
+   "subject": "feat(sim): frost and poison towers spread effects like the 2D game",
+   "type": "feat",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "87b00e18",
+   "subject": "feat(art): healer and summoner enemy models",
+   "type": "feat",
+   "scope": "art",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "c9cfbffe",
+   "subject": "feat(art): Warden and resource mob enemy models",
+   "type": "feat",
+   "scope": "art",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "983b56da",
+   "subject": "docs(state): W19 overkill and line prices",
+   "type": "docs",
+   "scope": "state",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "eac7e726",
+   "subject": "feat(sim): towers skip targets already doomed by shots in flight like the 2D game",
+   "type": "feat",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "173bd778",
+   "subject": "feat(ui): tower line preview shows the exact price of each tower",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "d2e7879e",
+   "subject": "docs(skills): coordinator rules from W17-W18",
+   "type": "docs",
+   "scope": "skills",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "8bae4e68",
+   "subject": "docs(state): W17-W18 pathing, armor and placement tools",
+   "type": "docs",
+   "scope": "state",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "d3ae4030",
+   "subject": "feat(ui): drag a line of towers and preview the enemy path like the 2D game",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "01255ec7",
+   "subject": "test(sim): drop roll parity with the 2D game",
+   "type": "test",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "7f2078fb",
+   "subject": "test(sim): duel parity with the 2D game",
+   "type": "test",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "f51b6a65",
+   "subject": "feat(sim): enemies follow A* routes like the 2D game",
+   "type": "feat",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "29ca3c28",
+   "subject": "fix(sim): A* no longer crashes next to towers",
+   "type": "fix",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "49caee3a",
+   "subject": "fix(sim): wave enemies spawn with their wave armor",
+   "type": "fix",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "e0cb9516",
+   "subject": "feat(ui): build ghost shows when a tower would block the path",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "d39af68b",
+   "subject": "fix(sim): placement check skips when no spawns like the 2D game",
+   "type": "fix",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "b9fa8272",
+   "subject": "perf(sim): flow field builds in packed arrays",
+   "type": "perf",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "7745e74e",
+   "subject": "docs(skills): coordinator rules from W16",
+   "type": "docs",
+   "scope": "skills",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "7b1988ab",
+   "subject": "docs(state): W14-W16 pathing, abilities and armor",
+   "type": "docs",
+   "scope": "state",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "3bb7cba9",
+   "subject": "chore(tools): spawner export matches the current data",
+   "type": "chore",
+   "scope": "tools",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "79339716",
+   "subject": "feat(sim): enemies path around towers like the 2D game",
+   "type": "feat",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "9324e807",
+   "subject": "fix(sim): Warden bosses keep their abilities",
+   "type": "fix",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "46aa3231",
+   "subject": "feat(sim): A* pathfinder and placement checks like the 2D game",
+   "type": "feat",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "3629c9db",
+   "subject": "fix(sim): wave enemies gain armor over the waves like the 2D game",
+   "type": "fix",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "c4928815",
+   "subject": "feat(sim): flow field pathing like the 2D game",
+   "type": "feat",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "ee00a8f5",
+   "subject": "feat(sim): shield, teleport, summon and split enemy abilities like the 2D game",
+   "type": "feat",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-05",
+   "sha": "0d1f73ca",
+   "subject": "fix(ui): talent tree is a full modal with tier frames like the 2D game",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "fdae4023",
+   "subject": "docs(state): W12-W13 achievements and talent tree",
+   "type": "docs",
+   "scope": "state",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "4245c258",
+   "subject": "fix(ui): talent tree uses the 2D ring layout and camera",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "07dc42d5",
+   "subject": "feat(ui): talent tree node, edge and background art like the 2D game",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "23d8b6a6",
+   "subject": "feat(ui): talent tree radial layout with pan, zoom and minimap like the 2D game",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "0424e730",
+   "subject": "fix(sim): haulers take the collector_speed talent like the 2D game",
+   "type": "fix",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "c917853b",
+   "subject": "feat(sim): achievements unlock during play like the 2D game",
+   "type": "feat",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "7c329686",
+   "subject": "feat(ui): achievement unlock toasts like the 2D game",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "7142ab09",
+   "subject": "docs(skills): coordinator rules from W9-W11",
+   "type": "docs",
+   "scope": "skills",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "07320365",
+   "subject": "docs(state): W10-W11 progression, talents and achievements",
+   "type": "docs",
+   "scope": "state",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "d5cdc6c4",
+   "subject": "feat(sim): learned talents boost towers, income and crafting like the 2D game",
+   "type": "feat",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "dcb8297a",
+   "subject": "chore(tools): progression export keeps the difficulty factor",
+   "type": "chore",
+   "scope": "tools",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "c5282a55",
+   "subject": "feat(ui): talent tree window like the 2D game",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "106cf0b0",
+   "subject": "feat(sim): achievements like the 2D game",
+   "type": "feat",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "cf96fa3a",
+   "subject": "fix(ui): toasts no longer cover the ore counter",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "7b686f97",
+   "subject": "feat(ui): level and XP bar on the HUD with level-up toasts",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "0b29d600",
+   "subject": "feat(sim): enemies scale with the player level like the 2D game",
+   "type": "feat",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "a87d0fff",
+   "subject": "fix(sim): each Runner zigzags in its own rhythm",
+   "type": "fix",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "f8bf5239",
+   "subject": "feat(sim): talent tree like the 2D game",
+   "type": "feat",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "aea72e0d",
+   "subject": "docs(state): W8-W9 challenge, hints, Runner and XP",
+   "type": "docs",
+   "scope": "state",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "daddbe5d",
+   "subject": "feat(sim): player XP and levels like the 2D game",
+   "type": "feat",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "6c293e33",
+   "subject": "feat(sim): Runner zigzags and bursts like the 2D original",
+   "type": "feat",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "03e68e84",
+   "subject": "feat(ui): CHALLENGE RUN toggle starts the weekly seeded run",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "edffc1f1",
+   "subject": "docs(skills): challenge module in the sim map",
+   "type": "docs",
+   "scope": "skills",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "97360235",
+   "subject": "fix(ui): help window is opaque and readable",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "11e41ddd",
+   "subject": "feat(ui): help window lists seen tips",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "8bc9e853",
+   "subject": "feat(sim): weekly challenge run with a seeded wave mix",
+   "type": "feat",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "f0168993",
+   "subject": "docs(state): W7 bug fixes and hint cards",
+   "type": "docs",
+   "scope": "state",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "c89a2c7e",
+   "subject": "feat(ui): in-game hint cards like the 2D game",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "23e3db55",
+   "subject": "fix(stats): Resources Collected counts all ore collected",
+   "type": "fix",
+   "scope": "stats",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "f3bcea37",
+   "subject": "fix(sim): hauler magnet upgrade pulls ore",
+   "type": "fix",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "a16f0d17",
+   "subject": "fix(sim): Poison Tower shield penetration now applies",
+   "type": "fix",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "257301ad",
+   "subject": "fix(sim): parties spawn the Runner enemy again",
+   "type": "fix",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "6df353ec",
+   "subject": "docs(state): U5 milestone handoff",
+   "type": "docs",
+   "scope": "state",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "c1777123",
+   "subject": "fix(ui): main menu full screen and one pause menu like the 2D game",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "a9b38983",
+   "subject": "feat(sim): statistics count refining jobs, ingots and ore spent",
+   "type": "feat",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "26ff0fa6",
+   "subject": "docs(skills): coordinator rules from the U5 waves",
+   "type": "docs",
+   "scope": "skills",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "587f31e0",
+   "subject": "docs(state): U5 screens and save system landed",
+   "type": "docs",
+   "scope": "state",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "dfb6be20",
+   "subject": "feat(ui): the game opens at a main menu with save slots, pause, help and stats",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "ce47b119",
+   "subject": "feat(ui): statistics window with the run's numbers",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "8a579e15",
+   "subject": "fix(sim): drops roll at the wave of the kill like the 2D game",
+   "type": "fix",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "367abcc7",
+   "subject": "fix(ui): pause and main menu match the 2D buttons and name rules",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "20597d96",
+   "subject": "feat(sim): the run keeps game statistics",
+   "type": "feat",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "f5e9ad4a",
+   "subject": "fix(sim): wave bosses pay the 2D boss drop total",
+   "type": "fix",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "a24f8b13",
+   "subject": "feat(ui): main menu, save archive, new run prompt and pause menu",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "70e51fa4",
+   "subject": "feat(ui): bridge saves, loads and lists the six slots",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "2f4dd435",
+   "subject": "feat(sim): the world saves and loads its full run state",
+   "type": "feat",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "60dfead9",
+   "subject": "feat(ui): help window with the game's topics and tips",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "aad15719",
+   "subject": "feat(sim): pickups, units, tin, crafting, upgrades and ads save and load",
+   "type": "feat",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "b781ab22",
+   "subject": "feat(ui): settings window and saved settings",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "a0b089e8",
+   "subject": "feat(save): six save slots with backup and damaged-file recovery",
+   "type": "feat",
+   "scope": "save",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "c2129a38",
+   "subject": "docs(state): W1 and W2 closed, U5 screens next",
+   "type": "docs",
+   "scope": "state",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "907fc41f",
+   "subject": "feat(ui): sell spawners by right click with the 2D ingot refund",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "0f8b36d7",
+   "subject": "fix(ui): hover and sell use the sim tower id",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "59e42f5f",
+   "subject": "feat(ui): tin window shows the sell refund",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "a16d9509",
+   "subject": "fix(sim): wave bosses carry the live wave boss flag",
+   "type": "fix",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "b7315116",
+   "subject": "feat(ui): sell towers and structures by right click and from the tin window",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "1c672460",
+   "subject": "fix(ui): wave chip shows Waves off while the wave clock is frozen",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "31d48430",
+   "subject": "docs(state): U4d closed, countdown bug and sell UI next",
+   "type": "docs",
+   "scope": "state",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "9f6630e8",
+   "subject": "fix(game): haulers, refiners and tin units wired live at their 2D size",
+   "type": "fix",
+   "scope": "game",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "0de0bde4",
+   "subject": "docs(state): milestone handoff after the store and economy GUI",
+   "type": "docs",
+   "scope": "state",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "ad09fc1c",
+   "subject": "feat(sim): haulers, refining and tin towers live in the world and store",
+   "type": "feat",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "8eca932d",
+   "subject": "feat(render): haulers, refiners and tin units in the arena",
+   "type": "feat",
+   "scope": "render",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "e95cd40c",
+   "subject": "feat(ui): refine queue panel and refine strip",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "9af66f82",
+   "subject": "docs(skills): token economy - shallow clones, finish-in-one, short skills",
+   "type": "docs",
+   "scope": "skills",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "f941c599",
+   "subject": "chore(tools): run_game.bat launcher in the repo root",
+   "type": "chore",
+   "scope": "tools",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "ce86af22",
+   "subject": "feat(sim): tin towers, warriors and buffers ported from the 2D game",
+   "type": "feat",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "b3e5e6dc",
+   "subject": "feat(art): hauler, refiner and tin unit models",
+   "type": "feat",
+   "scope": "art",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "430c5a11",
+   "subject": "feat(sim): haulers ported from the 2D game",
+   "type": "feat",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-04",
+   "sha": "a1e79b08",
+   "subject": "feat(sim): refining and crafting ported from the 2D game",
+   "type": "feat",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-10-31",
+   "sha": "55125dd3",
+   "subject": "docs(skills): U4 lessons for store, sim modules, scale and review tools",
+   "type": "docs",
+   "scope": "skills",
+   "version": ""
+  },
+  {
+   "date": "2026-10-31",
+   "sha": "99578850",
+   "subject": "fix(render): collectors and spawners drawn from the live game",
+   "type": "fix",
+   "scope": "render",
+   "version": ""
+  },
+  {
+   "date": "2026-10-31",
+   "sha": "c209f77c",
+   "subject": "feat(sim): collectors and spawner structures live in the world and store",
+   "type": "feat",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-10-31",
+   "sha": "1fee834b",
+   "subject": "feat(render): collectors and spawner structures in the arena",
+   "type": "feat",
+   "scope": "render",
+   "version": ""
+  },
+  {
+   "date": "2026-10-31",
+   "sha": "31cbfa59",
+   "subject": "feat(ui): spawn control to set or switch off enemy spawning",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-10-31",
+   "sha": "b99cff50",
+   "subject": "fix(tools): preview sheets keep the reference out of the review tiles",
+   "type": "fix",
+   "scope": "tools",
+   "version": ""
+  },
+  {
+   "date": "2026-10-31",
+   "sha": "7457cad5",
+   "subject": "test(assets): family budgets for unit and structure models",
+   "type": "test",
+   "scope": "assets",
+   "version": ""
+  },
+  {
+   "date": "2026-10-31",
+   "sha": "01f50035",
+   "subject": "feat(art): collector drone and spawner, generator structure models",
+   "type": "feat",
+   "scope": "art",
+   "version": ""
+  },
+  {
+   "date": "2026-10-31",
+   "sha": "c54cd747",
+   "subject": "fix(render): ore piles at their 2D size and a cached pile view",
+   "type": "fix",
+   "scope": "render",
+   "version": ""
+  },
+  {
+   "date": "2026-10-31",
+   "sha": "dead859a",
+   "subject": "fix(ui): build cards never clip names or prices",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-10-31",
+   "sha": "8ba7f2f4",
+   "subject": "feat(sim): collectors module ported from the 2D game",
+   "type": "feat",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-10-31",
+   "sha": "9574da04",
+   "subject": "fix(render): pile models fitted to the pile radius",
+   "type": "fix",
+   "scope": "render",
+   "version": ""
+  },
+  {
+   "date": "2026-10-31",
+   "sha": "529caf0a",
+   "subject": "feat(render): ground ore piles drawn with MultiMesh",
+   "type": "feat",
+   "scope": "render",
+   "version": ""
+  },
+  {
+   "date": "2026-10-31",
+   "sha": "56cd83df",
+   "subject": "feat(sim): ore drops land as piles and spawners run in the world",
+   "type": "feat",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-10-31",
+   "sha": "102246d3",
+   "subject": "feat(art): ore pile crystal models for eight ores",
+   "type": "feat",
+   "scope": "art",
+   "version": ""
+  },
+  {
+   "date": "2026-10-31",
+   "sha": "e7225ff2",
+   "subject": "fix(ui): build menu cards with larger thumbnails and live upgrades",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-10-31",
+   "sha": "91c0965b",
+   "subject": "feat(ui): accordion build and store menu from the catalogue",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-10-31",
+   "sha": "967a23b3",
+   "subject": "test(ui): store menu tests follow the real upgrade and sell rules",
+   "type": "test",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-10-31",
+   "sha": "1c424048",
+   "subject": "fix(sim): tower upgrades buy by id from the bound run",
+   "type": "fix",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-10-31",
+   "sha": "fcd82afd",
+   "subject": "feat(sim): tower upgrades and selling ported from the 2D game",
+   "type": "feat",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-10-31",
+   "sha": "e9dfa63f",
+   "subject": "feat(sim): spawners and Wardens module ported from the 2D game",
+   "type": "feat",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-10-31",
+   "sha": "b9c0d0ae",
+   "subject": "feat(sim): ground ore piles that never disappear, with merging",
+   "type": "feat",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-10-31",
+   "sha": "df4e909e",
+   "subject": "feat(ui): store catalogue view models and card tooltips",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-10-31",
+   "sha": "5899b791",
+   "subject": "fix(ui): free UI caches on exit so the game closes without leaks",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-10-31",
+   "sha": "91a121dd",
+   "subject": "docs(skills): U3 HUD lessons and state",
+   "type": "docs",
+   "scope": "skills",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "ca47a716",
+   "subject": "fix(ui): ads keep the game paused and the ad overlay is opaque",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "23204151",
+   "subject": "feat(ui): HUD on the bridge with score, feedback toasts, exact pickups",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "f9f850c4",
+   "subject": "feat(ui): View Ad button and the Reklamium rewarded ad overlay",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "00c5f623",
+   "subject": "feat(ui): HUD rebuilt from widgets with ore strip and stat cluster",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "8556462c",
+   "subject": "feat(ui): floating ore pickup text and the pause backdrop",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "755e7a32",
+   "subject": "feat(sim): Reklamium rewarded ads with a simulated provider",
+   "type": "feat",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "d2d5c414",
+   "subject": "feat(sim): score from kills and ingot containers",
+   "type": "feat",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "81149d29",
+   "subject": "fix(ui): enemy speed in tooltips and base clause with units",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "64500f07",
+   "subject": "docs(skills): U2 tooltip lessons and the silent-skip test trap",
+   "type": "docs",
+   "scope": "skills",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "e6938d93",
+   "subject": "fix(tools): fail the quiet test run on skipped or broken test scripts",
+   "type": "fix",
+   "scope": "tools",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "c40d2ab4",
+   "subject": "feat(ui): live tooltips and pinned windows in the arena",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "8073d4d9",
+   "subject": "feat(ui): tooltip content for towers, enemies, core and ore piles",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "ca152e44",
+   "subject": "feat(ui): tooltip card, hover picking and the hover layer",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "672c01f4",
+   "subject": "feat(ui): pinned tooltip windows with live enemy health",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "fe910ab1",
+   "subject": "feat(ui): icon set and model thumbnails for the interface",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "f716cd0f",
+   "subject": "docs(skills): U1 lessons, GUI state and polish list",
+   "type": "docs",
+   "scope": "skills",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "0f6a3b01",
+   "subject": "fix(ui): showcase finds the HUD under UiRoot",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "f5c5cbf0",
+   "subject": "feat(ui): UiRoot with window stack, layers and pointer ownership",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "a3e15f20",
+   "subject": "feat(ui): chips, bars, item cards and toast queue components",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "e42cec7a",
+   "subject": "feat(ui): window, tabs, accordion and form components",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "f6b112f1",
+   "subject": "docs(skills): metres in the UI, no craft mode, Reklamium rewarded ads",
+   "type": "docs",
+   "scope": "skills",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "fe2b81a7",
+   "subject": "feat(ui): keyboard shortcuts and the store catalogue as data",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "020ec916",
+   "subject": "tools(ui): ui capture preset with a mid-game demo state",
+   "type": "tools",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "0ac93ce1",
+   "subject": "feat(ui): UiBridge view models and intents for the GUI",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "aafac8a1",
+   "subject": "docs(skills): GUI skill set and UI plan for full 2D parity",
+   "type": "docs",
+   "scope": "skills",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "63eb46c8",
+   "subject": "docs(ui): inventory of 2D tooltips, controls and UI kit",
+   "type": "docs",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "4a372319",
+   "subject": "docs(ui): inventory of the 2D screens and windows",
+   "type": "docs",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "14ec9f39",
+   "subject": "docs(ui): inventory of the 2D HUD and live widgets",
+   "type": "docs",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "fcc596d9",
+   "subject": "docs(ui): inventory of the 2D build menu, store and build tools",
+   "type": "docs",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "de68d1d5",
+   "subject": "docs(skills): SPEC-first art generators, cheaper reviews, auto Godot path",
+   "type": "docs",
+   "scope": "skills",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "a46f87e4",
+   "subject": "feat(render): enemy variants share role models with tinted glow",
+   "type": "feat",
+   "scope": "render",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "059a4de1",
+   "subject": "fix(render): boss role model owned by boss_destroyer, not a non-id key",
+   "type": "fix",
+   "scope": "render",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "3b596298",
+   "subject": "feat(render): enemy role models with per-id tint and scale",
+   "type": "feat",
+   "scope": "render",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "c94a41a9",
+   "subject": "feat(tools): preview contact sheet with game-scale reference and asset lint",
+   "type": "feat",
+   "scope": "tools",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "160b0bea",
+   "subject": "docs(skills): token-lean art pipeline, quiet tests, commit standard",
+   "type": "docs",
+   "scope": "skills",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "63dc7bc6",
+   "subject": "feat(tools): Blender parts library - reusable hard-surface building blocks",
+   "type": "feat",
+   "scope": "tools",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "86074357",
+   "subject": "feat(tools): run_tests -Quiet summary and -Select filter",
+   "type": "feat",
+   "scope": "tools",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "d0d8a3ac",
+   "subject": "feat(tools): export --only, preview views/bg, showcase capture presets",
+   "type": "feat",
+   "scope": "tools",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "7e7c3554",
+   "subject": "assets(enemy): tank v2 and fast interceptor",
+   "type": "other",
+   "scope": "enemy",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "23c23d90",
+   "subject": "assets(enemy): exploder and splitter",
+   "type": "other",
+   "scope": "enemy",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "a660f78a",
+   "subject": "feat(ui): sci-fi HUD - stat cluster, build panel, theme",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "773d7f45",
+   "subject": "assets(enemy): boss war machine",
+   "type": "other",
+   "scope": "enemy",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "952504f7",
+   "subject": "docs(skills): td3d-render - arena rendering, registry, fx, lighting",
+   "type": "docs",
+   "scope": "skills",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "09d53a37",
+   "subject": "docs(skills): art pipeline lessons, token-efficient review, MCP use",
+   "type": "docs",
+   "scope": "skills",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "8b407624",
+   "subject": "docs(state): track G progress, decisions and next steps",
+   "type": "docs",
+   "scope": "state",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "d766df65",
+   "subject": "assets(enemy): enemy roster plan and tank model",
+   "type": "other",
+   "scope": "enemy",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "22f3241a",
+   "subject": "fix(render): LOD1 heads aim, tower-coloured tracers, bigger sparks",
+   "type": "fix",
+   "scope": "render",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "78eb8225",
+   "subject": "test(render): keep enemy glb load check in the visuals test",
+   "type": "test",
+   "scope": "render",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "2ea00329",
+   "subject": "feat(render): register all seven tower models",
+   "type": "feat",
+   "scope": "render",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "409ff7b7",
+   "subject": "assets(enemy): grunt v3 hard-surface arrowhead drone",
+   "type": "other",
+   "scope": "enemy",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "841689d2",
+   "subject": "assets(tower): antishield full ring, darker armoured wall",
+   "type": "other",
+   "scope": "tower",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "ae626e25",
+   "subject": "feat(render): enemy models in the arena, stronger tracers and sparks",
+   "type": "feat",
+   "scope": "render",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "d19ea006",
+   "subject": "fix(render): use model muzzle positions for tower halos",
+   "type": "fix",
+   "scope": "render",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "c7b86fad",
+   "subject": "assets(enemy): enemy family generators and grunt drone",
+   "type": "other",
+   "scope": "enemy",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "d1763a30",
+   "subject": "assets(tower): frost and poison towers",
+   "type": "other",
+   "scope": "tower",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "a75da42b",
+   "subject": "assets(tower): antishield tower and wall",
+   "type": "other",
+   "scope": "tower",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "272d7812",
+   "subject": "fix(render): tower halos sit on the muzzle and follow the head yaw",
+   "type": "fix",
+   "scope": "render",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "415ea4c6",
+   "subject": "feat(render): glowing tracers, muzzle flashes, hit and death bursts",
+   "type": "feat",
+   "scope": "render",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "7a8efe1f",
+   "subject": "assets(tower): rapid v2 and sniper tower",
+   "type": "other",
+   "scope": "tower",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "7e9a9d27",
+   "subject": "feat(render): rim lighting, halo glow and closer default camera",
+   "type": "feat",
+   "scope": "render",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "5ae67e64",
+   "subject": "assets(tower): per-kind tower generators, rapid tower",
+   "type": "other",
+   "scope": "tower",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "c3b85aea",
+   "subject": "assets(core): core v5 - symmetric claws and clean halo",
+   "type": "other",
+   "scope": "core",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "57250236",
+   "subject": "feat(render): model registry, core and tower models in the arena",
+   "type": "feat",
+   "scope": "render",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "2f6b47d6",
+   "subject": "assets(tower): basic tower v3 - detailed low-poly pass",
+   "type": "other",
+   "scope": "tower",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "7a9896e4",
+   "subject": "assets(core): core v4 - energy lattice heart, orbit rings, detailed plinth",
+   "type": "other",
+   "scope": "core",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "f4d2efd2",
+   "subject": "feat(render): calmer starfield, moire-free grid, richer nebula, arena edge",
+   "type": "feat",
+   "scope": "render",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "526b5c01",
+   "subject": "docs(ui): own sci-fi HUD language; budgets follow decision 4",
+   "type": "docs",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "2fc13363",
+   "subject": "assets(core): energy orb core with cog ring, matching the 2D look",
+   "type": "other",
+   "scope": "core",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "8ba081d2",
+   "subject": "test(assets): budgets for detailed low-poly (decision 4)",
+   "type": "test",
+   "scope": "assets",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "77382df5",
+   "subject": "feat(render): space playfield - nebula sky and glowing grid",
+   "type": "feat",
+   "scope": "render",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "01f357c5",
+   "subject": "docs(art): decision 4 - own sci-fi space look, detailed low-poly",
+   "type": "docs",
+   "scope": "art",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "1aef5d5d",
+   "subject": "assets(tower): basic tower v2 - blue turret with readable barrel",
+   "type": "other",
+   "scope": "tower",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "48d4733d",
+   "subject": "assets(tower): tower family generator and basic tower with LOD1",
+   "type": "other",
+   "scope": "tower",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "497f0d61",
+   "subject": "assets(core): core centrepiece model",
+   "type": "other",
+   "scope": "core",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "f16eb6bf",
+   "subject": "fix(sim): skip unknown enemy ids with one warning, as the 2D game does",
+   "type": "fix",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "28278351",
+   "subject": "feat(game): playable arena - SimWorld view, tower placement and HUD wiring",
+   "type": "feat",
+   "scope": "game",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "b98f12e9",
+   "subject": "feat(tools): per-asset glb export, palette materials and asset budget test",
+   "type": "feat",
+   "scope": "tools",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "90ce2d5e",
+   "subject": "feat(sim): boss waves and automatic wave countdown",
+   "type": "feat",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "98fe0443",
+   "subject": "feat(tools): scene capture and Blender preview renders for visual review",
+   "type": "feat",
+   "scope": "tools",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "6cd4b8d3",
+   "subject": "docs(roadmap): graphics track G - Blender assets with visual verification",
+   "type": "docs",
+   "scope": "roadmap",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "930aec2c",
+   "subject": "docs(art): scripted Blender workflow and art style proposal",
+   "type": "docs",
+   "scope": "art",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "2f9a9da9",
+   "subject": "docs(skills): visual verification for art and rendering work",
+   "type": "docs",
+   "scope": "skills",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "81b956f9",
+   "subject": "feat(sim): SimWorld - waves, spawning, combat, core damage and ore",
+   "type": "feat",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "abc5a416",
+   "subject": "docs(skills): coordinator lessons, td3d-sim index, desktop-first",
+   "type": "docs",
+   "scope": "skills",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "196390af",
+   "subject": "docs(skills): port and 2D reference lessons from P1 waves 1-3",
+   "type": "docs",
+   "scope": "skills",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "ff927aad",
+   "subject": "docs(state): P1 progress, desktop-first decision, 2D bugs for decision 6",
+   "type": "docs",
+   "scope": "state",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "3bfeca70",
+   "subject": "docs(skills): td3d-sim - simulation architecture and interfaces",
+   "type": "docs",
+   "scope": "skills",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "1b825ce2",
+   "subject": "docs(skills): godot, verify and commit lessons from P1 waves 1-3",
+   "type": "docs",
+   "scope": "skills",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "b9b25317",
+   "subject": "feat(sim): SimEnemy with movement, damage, slow, poison and shield rules",
+   "type": "feat",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "fc373f37",
+   "subject": "feat(sim): wave tables and scaling ported with golden tests",
+   "type": "feat",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "d82c73c1",
+   "subject": "feat(ui): desktop HUD with top bar and build bar",
+   "type": "feat",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "c6a6c7d5",
+   "subject": "feat(sim): towers, targeting and projectiles",
+   "type": "feat",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "3c4b91ee",
+   "subject": "feat(sim): building grid ported from the 2D game",
+   "type": "feat",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "cc6ecfe6",
+   "subject": "feat(sim): ore types and drop tables ported with golden tests",
+   "type": "feat",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "4e7abfba",
+   "subject": "feat(data): tower stats exported from the 2D game",
+   "type": "feat",
+   "scope": "data",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "942190e8",
+   "subject": "feat(sim): economy cost functions with golden parity tests",
+   "type": "feat",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "cc0bf124",
+   "subject": "build: ship data/*.json in every export preset",
+   "type": "other",
+   "scope": "",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "4ba4853e",
+   "subject": "feat(sim): Data autoload, fixed-step sim clock and GameState",
+   "type": "feat",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "a387a4aa",
+   "subject": "feat(game): 3D arena shell with core and camera rig",
+   "type": "feat",
+   "scope": "game",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "4a23dbd4",
+   "subject": "docs(roadmap): new game from zero - full 3D port, P0 closed, P1 started",
+   "type": "docs",
+   "scope": "roadmap",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "f75683a8",
+   "subject": "feat(data): enemy table exported from the 2D game",
+   "type": "feat",
+   "scope": "data",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "cf850aa9",
+   "subject": "docs(rules): new game from zero - mechanics ported, RNG replay optional",
+   "type": "docs",
+   "scope": "rules",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "6f5a95e6",
+   "subject": "docs(roadmap): start step 0 - owner setup checklist and open decisions",
+   "type": "docs",
+   "scope": "roadmap",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "65433126",
+   "subject": "docs(rules): owner autonomy - push and deploy to production automatically once checks pass",
+   "type": "docs",
+   "scope": "rules",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "d8ca4e9c",
+   "subject": "ci: create build/web before the Web export",
+   "type": "other",
+   "scope": "",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "142f240d",
+   "subject": "chore(godot): commit the generated .uid files",
+   "type": "chore",
+   "scope": "godot",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "89eced09",
+   "subject": "docs(state): session state after the setup wave (2026-10-30)",
+   "type": "docs",
+   "scope": "state",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "9e5d737d",
+   "subject": "build: GUT addon as plain files, Windows and Android presets, read-only allow rules",
+   "type": "other",
+   "scope": "",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "60cf7215",
+   "subject": "docs(skills): td3d online, live-ops, release, verify, mobile and UI skills",
+   "type": "docs",
+   "scope": "skills",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "2e79eef4",
+   "subject": "feat(online): client config placeholder, Supabase check tool, push rule",
+   "type": "feat",
+   "scope": "online",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "6a1c5e9f",
+   "subject": "feat(backend): Supabase baseline copied from Dynty_TD, placeholder project",
+   "type": "feat",
+   "scope": "backend",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "e741a4a3",
+   "subject": "docs(port): port plan, roadmap, implementation plan, Supabase steps",
+   "type": "docs",
+   "scope": "port",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "5db76226",
+   "subject": "docs(rules): reference game Dynty_TD (2D) section and skill index line",
+   "type": "docs",
+   "scope": "rules",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "0369d19c",
+   "subject": "feat(skills): td3d-reference-2d, how to use the 2D game as reference",
+   "type": "feat",
+   "scope": "skills",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "7771e6d0",
+   "subject": "docs(reference): read-only snapshot of Dynty_TD 2D docs and skills",
+   "type": "docs",
+   "scope": "reference",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "d6cc3b3b",
+   "subject": "docs(tools): project MCP config for Blender and Godot (owner-approved)",
+   "type": "docs",
+   "scope": "tools",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "df3dabcf",
+   "subject": "docs(rules): project rules, Haiku-only subagents, td3d skills, game vision",
+   "type": "docs",
+   "scope": "rules",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "724e1f1a",
+   "subject": "build(tools): headless test runner, Blender export, CI workflow",
+   "type": "other",
+   "scope": "tools",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "579144b0",
+   "subject": "chore(test): vendor GUT 9.6.1 addon with smoke test",
+   "type": "chore",
+   "scope": "test",
+   "version": ""
+  },
+  {
+   "date": "2026-10-30",
+   "sha": "6fa1aa6f",
+   "subject": "chore(project): Godot 4.7.2 skeleton with main scene and GameVersion",
+   "type": "chore",
+   "scope": "project",
+   "version": ""
+  }
+ ]
+}
