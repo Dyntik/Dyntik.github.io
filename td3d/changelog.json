@@ -1,11 +1,11 @@
 {
- "generated": "2026-11-06T18:53:35Z",
- "total": 574,
+ "generated": "2026-11-06T18:56:19Z",
+ "total": 582,
  "versions": [
   {
    "version": "1.0.0",
    "date": "2026-11-06",
-   "count": 39,
+   "count": 47,
    "notes": [
     "Full 3D port of Dynty Tower Defense up to tin: towers, ores iron, copper and tin, with the same rules and balance as the 2D game.",
     "Wardens (spawners) that you control: raise or lower the pressure on your base with the spawn control.",
@@ -21,6 +21,70 @@
  ],
  "unreleased": [],
  "entries": [
+  {
+   "date": "2026-11-06",
+   "sha": "1a1ea8c9",
+   "subject": "feat(audio): tactile feedback sounds without beeps",
+   "type": "feat",
+   "scope": "audio",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "cc7ce1e9",
+   "subject": "feat(audio): tactile interface and feedback sound recipes",
+   "type": "feat",
+   "scope": "audio",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "36cba950",
+   "subject": "feat(audio): smooth tails and a heavier boss arrival",
+   "type": "feat",
+   "scope": "audio",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "aeaa9572",
+   "subject": "feat(audio): physical layered impacts and explosions",
+   "type": "feat",
+   "scope": "audio",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "78ec15a8",
+   "subject": "feat(audio): cleaner punch and no ringing in weapon sounds",
+   "type": "feat",
+   "scope": "audio",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "cc41431b",
+   "subject": "feat(audio): kinetic layered weapon sound recipes",
+   "type": "feat",
+   "scope": "audio",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "9185f120",
+   "subject": "feat(audio): mix with space, glue and variants",
+   "type": "feat",
+   "scope": "audio",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "472fffee",
+   "subject": "tools(audio): v2 sound render core and reference gate",
+   "type": "tools",
+   "scope": "audio",
+   "version": "1.0.0"
+  },
   {
    "date": "2026-11-06",
    "sha": "550b9b50",
