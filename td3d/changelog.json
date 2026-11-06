@@ -1,9 +1,49 @@
 {
- "generated": "2026-11-06T09:05:26Z",
- "total": 522,
+ "generated": "2026-11-06T09:18:31Z",
+ "total": 527,
  "versions": [],
  "unreleased": [],
  "entries": [
+  {
+   "date": "2026-11-06",
+   "sha": "33f24459",
+   "subject": "fix(art): ore generators read as hover units, not floor plates",
+   "type": "fix",
+   "scope": "art",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "837f5318",
+   "subject": "docs(release): leak check with a scripted run and quit",
+   "type": "docs",
+   "scope": "release",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "6d356e0d",
+   "subject": "fix(sim): free the world on exit (level-up lambda leak)",
+   "type": "fix",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "67eaddac",
+   "subject": "tools(release): debug smoke run flag for the leak check",
+   "type": "tools",
+   "scope": "release",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "2c9a2afa",
+   "subject": "docs(state): changelog publishing and polish wave W40",
+   "type": "docs",
+   "scope": "state",
+   "version": ""
+  },
   {
    "date": "2026-11-06",
    "sha": "1a567fb7",
