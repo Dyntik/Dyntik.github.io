@@ -1,9 +1,33 @@
 {
- "generated": "2026-11-06T09:27:26Z",
- "total": 529,
+ "generated": "2026-11-06T10:33:40Z",
+ "total": 532,
  "versions": [],
  "unreleased": [],
  "entries": [
+  {
+   "date": "2026-11-06",
+   "sha": "0275a8c7",
+   "subject": "feat(save): one browser tab owns the save, as in 2D",
+   "type": "feat",
+   "scope": "save",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "2b94b578",
+   "subject": "tools(web): web export and browser smoke test",
+   "type": "tools",
+   "scope": "web",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "1a58b1d9",
+   "subject": "tools(online): check browser access to the live server",
+   "type": "tools",
+   "scope": "online",
+   "version": ""
+  },
   {
    "date": "2026-11-06",
    "sha": "1adcb306",
