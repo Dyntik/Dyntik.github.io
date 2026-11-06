@@ -1,9 +1,17 @@
 {
- "generated": "2026-11-06T10:35:32Z",
- "total": 533,
+ "generated": "2026-11-06T10:44:05Z",
+ "total": 534,
  "versions": [],
  "unreleased": [],
  "entries": [
+  {
+   "date": "2026-11-06",
+   "sha": "975fa9fe",
+   "subject": "tools(web): publish the web build to the game site",
+   "type": "tools",
+   "scope": "web",
+   "version": ""
+  },
   {
    "date": "2026-11-06",
    "sha": "835d3587",
