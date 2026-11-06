@@ -1,11 +1,11 @@
 {
- "generated": "2026-11-06T21:21:55Z",
- "total": 619,
+ "generated": "2026-11-06T21:54:05Z",
+ "total": 624,
  "versions": [
   {
    "version": "1.0.0",
    "date": "2026-11-06",
-   "count": 84,
+   "count": 89,
    "notes": [
     "Full 3D port of Dynty Tower Defense up to tin: towers, ores iron, copper and tin, with the same rules and balance as the 2D game.",
     "Wardens (spawners) that you control: raise or lower the pressure on your base with the spawn control.",
@@ -21,6 +21,46 @@
  ],
  "unreleased": [],
  "entries": [
+  {
+   "date": "2026-11-06",
+   "sha": "5269be05",
+   "subject": "fix(web): stop the audio reverb bus from crashing the browser build",
+   "type": "fix",
+   "scope": "web",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "2a572a08",
+   "subject": "fix(ui): the pause menu stays centred",
+   "type": "fix",
+   "scope": "ui",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "797a117d",
+   "subject": "perf(sim): enemy steps reuse the cell lookup and skip idle ability reads",
+   "type": "perf",
+   "scope": "sim",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "445a730a",
+   "subject": "perf(sim): collectors, haulers and economy read their tables from Data",
+   "type": "perf",
+   "scope": "sim",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "577b12de",
+   "subject": "tools(dev): agent runs open on the second screen without focus",
+   "type": "tools",
+   "scope": "dev",
+   "version": "1.0.0"
+  },
   {
    "date": "2026-11-06",
    "sha": "08dd883c",
