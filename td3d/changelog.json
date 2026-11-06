@@ -1,11 +1,11 @@
 {
- "generated": "2026-11-06T22:01:28Z",
- "total": 634,
+ "generated": "2026-11-06T22:03:24Z",
+ "total": 638,
  "versions": [
   {
    "version": "1.0.0",
    "date": "2026-11-06",
-   "count": 99,
+   "count": 103,
    "notes": [
     "Full 3D port of Dynty Tower Defense up to tin: towers, ores iron, copper and tin, with the same rules and balance as the 2D game.",
     "Wardens (spawners) that you control: raise or lower the pressure on your base with the spawn control.",
@@ -21,6 +21,38 @@
  ],
  "unreleased": [],
  "entries": [
+  {
+   "date": "2026-11-06",
+   "sha": "1e94c30e",
+   "subject": "perf(arena): placement ghost is not rewritten while the hover is unchanged",
+   "type": "perf",
+   "scope": "arena",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "3f000b77",
+   "subject": "perf(arena): unit and pile views read data tables once and skip static writes",
+   "type": "perf",
+   "scope": "arena",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "931cf8fd",
+   "subject": "perf(arena): tower muzzle halos rebuilt only when the sim changes",
+   "type": "perf",
+   "scope": "arena",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "b0c87f81",
+   "subject": "perf(sim): fused flow-field BFS and cheaper grid rounding",
+   "type": "perf",
+   "scope": "sim",
+   "version": "1.0.0"
+  },
   {
    "date": "2026-11-06",
    "sha": "fe84b813",
