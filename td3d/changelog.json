@@ -1,11 +1,11 @@
 {
- "generated": "2026-11-06T21:54:05Z",
- "total": 624,
+ "generated": "2026-11-06T21:56:08Z",
+ "total": 630,
  "versions": [
   {
    "version": "1.0.0",
    "date": "2026-11-06",
-   "count": 89,
+   "count": 95,
    "notes": [
     "Full 3D port of Dynty Tower Defense up to tin: towers, ores iron, copper and tin, with the same rules and balance as the 2D game.",
     "Wardens (spawners) that you control: raise or lower the pressure on your base with the spawn control.",
@@ -21,6 +21,54 @@
  ],
  "unreleased": [],
  "entries": [
+  {
+   "date": "2026-11-06",
+   "sha": "c45ea07e",
+   "subject": "docs(release): W55 leak check, same 71 windowed leaks at every probed commit",
+   "type": "docs",
+   "scope": "release",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "09d498e8",
+   "subject": "perf(game): faster tower targeting with an incremental enemy index",
+   "type": "perf",
+   "scope": "game",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "aa44dd1d",
+   "subject": "fix(ui): screens grow from the centre and stay centred on resize",
+   "type": "fix",
+   "scope": "ui",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "b5ed41a7",
+   "subject": "perf(ui): build menu re-sets only the cards whose item changed",
+   "type": "perf",
+   "scope": "ui",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "ee11a4ad",
+   "subject": "perf(ui): build menu view rebuilds only when its inputs change",
+   "type": "perf",
+   "scope": "ui",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "e05ce371",
+   "subject": "perf(game): reuse tooltip card nodes on hover, about 10x cheaper",
+   "type": "perf",
+   "scope": "game",
+   "version": "1.0.0"
+  },
   {
    "date": "2026-11-06",
    "sha": "5269be05",
