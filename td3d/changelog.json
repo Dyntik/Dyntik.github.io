@@ -1,11 +1,11 @@
 {
- "generated": "2026-11-06T22:03:24Z",
- "total": 638,
+ "generated": "2026-11-06T22:30:13Z",
+ "total": 641,
  "versions": [
   {
    "version": "1.0.0",
    "date": "2026-11-06",
-   "count": 103,
+   "count": 106,
    "notes": [
     "Full 3D port of Dynty Tower Defense up to tin: towers, ores iron, copper and tin, with the same rules and balance as the 2D game.",
     "Wardens (spawners) that you control: raise or lower the pressure on your base with the spawn control.",
@@ -21,6 +21,30 @@
  ],
  "unreleased": [],
  "entries": [
+  {
+   "date": "2026-11-06",
+   "sha": "df79d51c",
+   "subject": "fix(online): automated and agent runs stay offline",
+   "type": "fix",
+   "scope": "online",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "ecb9f500",
+   "subject": "perf(web): arena shaders and models load while the menu is up",
+   "type": "perf",
+   "scope": "web",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "df8dd073",
+   "subject": "tools(web): smoke test can start a New Run and sample arena frames",
+   "type": "tools",
+   "scope": "web",
+   "version": "1.0.0"
+  },
   {
    "date": "2026-11-06",
    "sha": "1e94c30e",
