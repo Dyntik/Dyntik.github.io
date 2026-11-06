@@ -1,11 +1,11 @@
 {
- "generated": "2026-11-06T13:47:53Z",
- "total": 545,
+ "generated": "2026-11-06T18:53:35Z",
+ "total": 574,
  "versions": [
   {
    "version": "1.0.0",
    "date": "2026-11-06",
-   "count": 10,
+   "count": 39,
    "notes": [
     "Full 3D port of Dynty Tower Defense up to tin: towers, ores iron, copper and tin, with the same rules and balance as the 2D game.",
     "Wardens (spawners) that you control: raise or lower the pressure on your base with the spawn control.",
@@ -21,6 +21,238 @@
  ],
  "unreleased": [],
  "entries": [
+  {
+   "date": "2026-11-06",
+   "sha": "550b9b50",
+   "subject": "perf(render): combat effects run on the GPU, no per-frame rewrites",
+   "type": "perf",
+   "scope": "render",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "a76825c1",
+   "subject": "perf(sim): flow field patches on placement instead of a full rebuild",
+   "type": "perf",
+   "scope": "sim",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "fc24dda2",
+   "subject": "perf(web): compile shader variants off-screen behind the main menu",
+   "type": "perf",
+   "scope": "web",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "f72c4266",
+   "subject": "tools(web): frame-time sampler for the web smoke test (--fps)",
+   "type": "tools",
+   "scope": "web",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "42a75aa9",
+   "subject": "perf(sim): tower targeting and enemy hot path trimmed, same results",
+   "type": "perf",
+   "scope": "sim",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "59431f1c",
+   "subject": "perf(game): enemy and pile drawing with bulk buffers and shader motion",
+   "type": "perf",
+   "scope": "game",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "3f811063",
+   "subject": "perf(arena): skip unchanged placement label and drag-select rebuilds",
+   "type": "perf",
+   "scope": "arena",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "2ba21f79",
+   "subject": "feat(audio): curated CC0 source layers for the sound generator",
+   "type": "feat",
+   "scope": "audio",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "c205b59c",
+   "subject": "tools(audio): reference profiles of modern game sounds",
+   "type": "tools",
+   "scope": "audio",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "af6b65c4",
+   "subject": "tools(audio): advanced sound design library",
+   "type": "tools",
+   "scope": "audio",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "59c6ca7f",
+   "subject": "tools(dev): agent game windows open on the second monitor",
+   "type": "tools",
+   "scope": "dev",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "a0bae599",
+   "subject": "perf(sim): late-game step about 3 ms: towers, piles and units",
+   "type": "perf",
+   "scope": "sim",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "4ea7dd9c",
+   "subject": "fix(sim): enemies steer by the flow field after contact, as 2D",
+   "type": "fix",
+   "scope": "sim",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "195459b4",
+   "subject": "perf(ui): tooltip hover re-picks on a timer, not on every mouse move",
+   "type": "perf",
+   "scope": "ui",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "83a8289e",
+   "subject": "perf(ui): spawn control re-renders only when its state changes",
+   "type": "perf",
+   "scope": "ui",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "f05e2bab",
+   "subject": "perf(ui): build menu redraws item cards only when they change",
+   "type": "perf",
+   "scope": "ui",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "81dd7fdb",
+   "subject": "perf(ui): store views refresh at 10 Hz and are cached per section",
+   "type": "perf",
+   "scope": "ui",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "e28a6393",
+   "subject": "perf(render): towers and piles redraw only what changed",
+   "type": "perf",
+   "scope": "render",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "083117c9",
+   "subject": "perf(sim): enemies reuse their route search when the inputs repeat",
+   "type": "perf",
+   "scope": "sim",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "d63608a7",
+   "subject": "fix(tools): the launcher refreshes game files before every start",
+   "type": "fix",
+   "scope": "tools",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "4c60a2af",
+   "subject": "docs(state): W45 wave end",
+   "type": "docs",
+   "scope": "state",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "1e095670",
+   "subject": "fix(save): confirm a slot take-over with a toast",
+   "type": "fix",
+   "scope": "save",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "03076857",
+   "subject": "docs(web): fix the deploy size note and changelog status",
+   "type": "docs",
+   "scope": "web",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "ac1a73e2",
+   "subject": "fix(render): free the two textures that leaked at exit",
+   "type": "fix",
+   "scope": "render",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "33d4d3d8",
+   "subject": "feat(save): ask before taking over a slot open in another tab",
+   "type": "feat",
+   "scope": "save",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "2e90b5ae",
+   "subject": "fix(audio): boss spawn sound no longer replays after loading a save",
+   "type": "fix",
+   "scope": "audio",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "48ce9911",
+   "subject": "feat(audio): dropdowns and sliders make sounds",
+   "type": "feat",
+   "scope": "audio",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "aa00dcda",
+   "subject": "docs(state): session handoff after the 1.0.0 release and sound effects",
+   "type": "docs",
+   "scope": "state",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "bc17301a",
+   "subject": "chore(tools): keep docs out of the game build",
+   "type": "chore",
+   "scope": "tools",
+   "version": "1.0.0"
+  },
   {
    "date": "2026-11-06",
    "sha": "0a08aabf",
