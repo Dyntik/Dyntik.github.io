@@ -1,11 +1,11 @@
 {
- "generated": "2026-11-06T21:56:08Z",
- "total": 630,
+ "generated": "2026-11-06T22:01:28Z",
+ "total": 634,
  "versions": [
   {
    "version": "1.0.0",
    "date": "2026-11-06",
-   "count": 95,
+   "count": 99,
    "notes": [
     "Full 3D port of Dynty Tower Defense up to tin: towers, ores iron, copper and tin, with the same rules and balance as the 2D game.",
     "Wardens (spawners) that you control: raise or lower the pressure on your base with the spawn control.",
@@ -21,6 +21,38 @@
  ],
  "unreleased": [],
  "entries": [
+  {
+   "date": "2026-11-06",
+   "sha": "fe84b813",
+   "subject": "fix(render): restore tower and enemy shadows and per-kind materials",
+   "type": "fix",
+   "scope": "render",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "bcf7b5bb",
+   "subject": "feat(tools): flash showcase preset writes one muzzle flash crop per tower kind",
+   "type": "feat",
+   "scope": "tools",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "d87df8f8",
+   "subject": "perf(render): shared enemy and flat materials, tower and enemy shadows off",
+   "type": "perf",
+   "scope": "render",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "2e6d6c38",
+   "subject": "fix(render): muzzle flash glows at the barrel tip in its tower colour",
+   "type": "fix",
+   "scope": "render",
+   "version": "1.0.0"
+  },
   {
    "date": "2026-11-06",
    "sha": "c45ea07e",
