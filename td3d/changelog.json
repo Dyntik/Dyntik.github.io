@@ -1,9 +1,50 @@
 {
- "generated": "2026-11-06T10:51:48Z",
- "total": 535,
- "versions": [],
+ "generated": "2026-11-06T12:06:57Z",
+ "total": 538,
+ "versions": [
+  {
+   "version": "1.0.0",
+   "date": "2026-11-06",
+   "count": 3,
+   "notes": [
+    "Full 3D port of Dynty Tower Defense up to tin: towers, ores iron, copper and tin, with the same rules and balance as the 2D game.",
+    "Wardens (spawners) that you control: raise or lower the pressure on your base with the spawn control.",
+    "Collectors and haulers that gather ore and bring it to the core, with calm collection as a core feature.",
+    "Refining and crafting: smelt ore into ingots and craft from them, with a refine queue in the HUD.",
+    "Talent tree and achievements that carry across runs in your profile.",
+    "Online leaderboard, profile save slots (no login), gifts, duels, quick chat and news; the game runs offline and syncs when online.",
+    "Maze share: send your maze layout to other players.",
+    "Web version with a loading screen and fullscreen start, playable in the browser without installing anything.",
+    "Windows desktop build with a 3D arena, build menu, HUD and hover tooltips for towers, ores and enemies."
+   ]
+  }
+ ],
  "unreleased": [],
  "entries": [
+  {
+   "date": "2026-11-06",
+   "sha": "c566b03e",
+   "subject": "docs(changelog): regenerate feed with the 1.0.0 version boundary",
+   "type": "docs",
+   "scope": "changelog",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "9c82ccd8",
+   "subject": "release: 1.0.0",
+   "type": "release",
+   "scope": "",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "af97abfe",
+   "subject": "docs(state): web version live as production, deployed on the owner's command",
+   "type": "docs",
+   "scope": "state",
+   "version": "1.0.0"
+  },
   {
    "date": "2026-11-06",
    "sha": "39853c9f",
