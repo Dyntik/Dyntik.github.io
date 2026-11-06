@@ -1,220 +1,503 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
-		<title>Dynty TD 3D</title>
-		<style>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#07090C">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Dynty TD 3D</title>
+<style>
+/* Loader for the Web export. Palette: Nova V2 tokens of game/ui/theme/hud_tokens.gd (VOID, PANEL, BORDER,
+   TEXT, TEXT_MUTED, GOLD = cyan edge, AMBER = primary action, DANGER). Layout follows the 2D web loader. */
 html, body, #canvas {
 	margin: 0;
 	padding: 0;
 	border: 0;
 }
-
 body {
-	color: white;
-	background-color: black;
+	background-color: #07090C;
+	color: #C9D1D9;
 	overflow: hidden;
 	touch-action: none;
+	-webkit-user-select: none;
+	user-select: none;
+	font-family: "Bahnschrift", "Segoe UI Variable", "Trebuchet MS", Arial, sans-serif;
 }
-
 #canvas {
 	display: block;
-}
-
-#canvas:focus {
-	outline: none;
-}
-
-#status, #status-splash, #status-progress {
 	position: absolute;
-	left: 0;
-	right: 0;
-}
-
-#status, #status-splash {
 	top: 0;
-	bottom: 0;
-}
-
-#status {
-	background-color: #242424;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	visibility: hidden;
-}
-
-#status-splash {
-	max-height: 100%;
-	max-width: 100%;
-	margin: auto;
-}
-
-#status-splash.show-image--false {
-	display: none;
-}
-
-#status-splash.fullsize--true {
-	height: 100%;
+	left: 0;
 	width: 100%;
-	object-fit: contain;
+	height: 100%;
 }
+#canvas:focus { outline: none; }
+[hidden] { display: none !important; }
 
-#status-splash.use-filter--false {
-	image-rendering: pixelated;
-}
-
-#status-progress, #status-notice {
-	display: none;
-}
-
-#status-progress {
-	bottom: 10%;
-	width: 50%;
-	margin: 0 auto;
-}
-
-#status-notice {
-	background-color: #5b3943;
-	border-radius: 0.5rem;
-	border: 1px solid #9b3943;
-	color: #e0e0e0;
-	font-family: 'Noto Sans', 'Droid Sans', Arial, sans-serif;
-	line-height: 1.3;
-	margin: 0 2rem;
+#dynty-loader {
+	position: fixed;
+	inset: 0;
+	z-index: 2147483647;
+	display: grid;
+	place-items: center;
 	overflow: hidden;
-	padding: 1rem;
-	text-align: center;
-	z-index: 1;
+	background: #07090C;
+	transition: opacity 420ms ease, visibility 420ms ease;
 }
-		</style>
-		<link id="-gd-engine-icon" rel="icon" type="image/png" href="index.icon.png" />
+#dynty-loader.is-hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+#dynty-loader::before {
+	position: absolute;
+	inset: 0;
+	z-index: -1;
+	content: "";
+	background-image:
+		linear-gradient(rgba(79, 195, 217, 0.045) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(79, 195, 217, 0.045) 1px, transparent 1px),
+		linear-gradient(115deg, transparent 0 67%, rgba(217, 164, 65, 0.035) 67.1%, transparent 67.3%);
+	background-size: 48px 48px, 48px 48px, 100% 100%;
+	mask-image: linear-gradient(to bottom, transparent, #000 22%, #000 78%, transparent);
+}
+#dynty-loader::after {
+	position: absolute;
+	inset: 0;
+	z-index: 3;
+	content: "";
+	pointer-events: none;
+	background: repeating-linear-gradient(to bottom, rgba(0, 0, 0, 0.18) 0 1px, transparent 1px 3px);
+}
+.dl-wrap {
+	position: relative;
+	width: min(720px, calc(100vw - 56px));
+	padding: 28px 0;
+	animation: dl-arrive 520ms ease both;
+}
+.dl-corner {
+	position: absolute;
+	box-sizing: border-box;
+	width: 14px;
+	height: 14px;
+	border: 0 solid #4FC3D9;
+	opacity: 0.6;
+	pointer-events: none;
+}
+.dl-corner.tl { top: -18px; left: -18px; border-width: 1px 0 0 1px; }
+.dl-corner.tr { top: -18px; right: -18px; border-width: 1px 1px 0 0; }
+.dl-corner.bl { bottom: -18px; left: -18px; border-width: 0 0 1px 1px; }
+.dl-corner.br { bottom: -18px; right: -18px; border-width: 0 1px 1px 0; }
+.dl-header, .dl-meta, .dl-footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.dl-header {
+	padding-bottom: 18px;
+	border-bottom: 1px solid #2A333D;
+}
+.dl-brand { display: flex; align-items: center; gap: 12px; }
+.dl-mark {
+	display: grid;
+	width: 34px;
+	height: 34px;
+	place-items: center;
+	border: 1px solid #4FC3D9;
+	color: #4FC3D9;
+	font-size: 13px;
+	font-weight: 800;
+	letter-spacing: 0.04em;
+}
+.dl-name { font-size: 14px; font-weight: 700; color: #C9D1D9; letter-spacing: 0.02em; }
+.dl-name span { color: #7D8894; font-weight: 400; }
+.dl-edition { color: #7D8894; font-size: 11px; letter-spacing: 0.04em; }
+.dl-edition b { margin-left: 8px; color: #4FC3D9; font-weight: 600; }
+.dl-led {
+	display: inline-block;
+	width: 6px;
+	height: 6px;
+	margin-right: 8px;
+	border-radius: 50%;
+	background: #4FC3D9;
+	box-shadow: 0 0 8px #4FC3D9;
+	vertical-align: middle;
+	animation: dl-led 2s ease-in-out infinite;
+}
+.dl-copy { padding: 66px 0 40px; }
+.dl-kicker { margin: 0 0 18px; color: #4FC3D9; font-size: 12px; letter-spacing: 0.06em; }
+.dl-kicker span { color: #7D8894; }
+.dl-copy h1 { margin: 0; font-size: 44px; line-height: 1.08; font-weight: 650; color: #C9D1D9; }
+.dl-copy h1 span { color: #D9A441; }
+.dl-stage-row { display: flex; align-items: center; gap: 10px; margin-top: 22px; }
+.dl-pulse {
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	background: #D9A441;
+	box-shadow: 0 0 14px rgba(217, 164, 65, 0.55);
+	animation: dl-pulse 1.4s ease-in-out infinite;
+}
+#dynty-stage { color: #7D8894; font-size: 14px; }
+.dl-log {
+	height: 48px;
+	margin-top: 14px;
+	overflow: hidden;
+	color: #7D8894;
+	font-family: "Cascadia Mono", Consolas, "Courier New", monospace;
+	font-size: 11px;
+	line-height: 16px;
+	letter-spacing: 0.04em;
+}
+.dl-log-line { height: 16px; overflow: hidden; white-space: pre; }
+.dl-log-line.is-old { opacity: 0.45; }
+.dl-log-line.is-new { color: #C9D1D9; }
+.dl-cursor { animation: dl-blink 1s steps(2) infinite; }
+.dl-track {
+	height: 7px;
+	overflow: hidden;
+	background: #1B2630;
+	-webkit-mask-image: repeating-linear-gradient(90deg, #000 0 6px, transparent 6px 8px);
+	mask-image: repeating-linear-gradient(90deg, #000 0 6px, transparent 6px 8px);
+}
+#dynty-bar {
+	position: relative;
+	width: 0;
+	height: 100%;
+	background: linear-gradient(90deg, #2E7F8F, #4FC3D9, #9ADDEA);
+	transition: width 300ms cubic-bezier(0.2, 0.75, 0.2, 1);
+}
+#dynty-bar::after {
+	position: absolute;
+	inset: 0;
+	content: "";
+	background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.55), transparent);
+	animation: dl-sheen 1.5s ease-in-out infinite;
+}
+.dl-meta { margin-top: 12px; color: #7D8894; font-size: 11px; letter-spacing: 0.04em; }
+#dynty-mb { font-variant-numeric: tabular-nums; }
+#dynty-percent { color: #C9D1D9; font-size: 13px; font-variant-numeric: tabular-nums; }
+.dl-extra { margin-top: 18px; color: #7D8894; font-size: 12px; }
+#dynty-elapsed { font-variant-numeric: tabular-nums; }
+#dynty-hint { margin: 10px 0 0; color: #D9A441; font-size: 12px; }
+#dynty-notice {
+	margin: 16px 0 0;
+	padding: 12px 14px;
+	border: 1px solid #C2453B;
+	color: #E8C4C0;
+	font-size: 13px;
+	line-height: 1.4;
+	background: rgba(194, 69, 59, 0.12);
+}
+.dl-start {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	margin-top: 26px;
+}
+#dynty-start {
+	height: 44px;
+	padding: 0 26px;
+	border: 1px solid #D9A441;
+	border-radius: 2px;
+	background: rgba(217, 164, 65, 0.12);
+	color: #D9A441;
+	font: 700 14px "Bahnschrift", "Segoe UI", sans-serif;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	cursor: pointer;
+	box-shadow: 0 0 18px rgba(217, 164, 65, 0.18);
+}
+#dynty-start:hover, #dynty-start:focus-visible { background: rgba(217, 164, 65, 0.24); outline: none; }
+#dynty-start:disabled { opacity: 0.6; cursor: default; }
+.dl-start-hint { color: #7D8894; font-size: 12px; line-height: 1.4; }
+#dynty-diag { margin-top: 14px; padding-top: 10px; border-top: 1px solid #2A333D; }
+#dynty-diag summary { cursor: pointer; color: #C9D1D9; }
+#dynty-diag summary.has-errors { color: #C2453B; }
+#dynty-diag-log {
+	max-height: 140px;
+	overflow: auto;
+	margin: 8px 0;
+	padding: 8px;
+	background: rgba(0, 0, 0, 0.35);
+	color: #7D8894;
+	font: 11px/1.4 "Cascadia Mono", Consolas, "Courier New", monospace;
+	white-space: pre-wrap;
+	word-break: break-word;
+	-webkit-user-select: text;
+	user-select: text;
+}
+#dynty-copy {
+	height: 26px;
+	padding: 0 10px;
+	border: 1px solid #4FC3D9;
+	border-radius: 2px;
+	background: transparent;
+	color: #4FC3D9;
+	font: 600 11px "Bahnschrift", "Segoe UI", sans-serif;
+	cursor: pointer;
+}
+.dl-footer { margin-top: 48px; color: #7D8894; font-size: 10px; letter-spacing: 0.04em; }
+.dl-footer-left, .dl-footer-status { display: flex; align-items: center; }
+.dl-build { font-family: "Cascadia Mono", Consolas, "Courier New", monospace; color: #4FC3D9; }
+.dl-divider { width: 1px; height: 14px; margin: 0 12px; background: #2A333D; }
+@keyframes dl-arrive { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes dl-pulse { 50% { opacity: 0.35; transform: scale(0.78); } }
+@keyframes dl-led { 50% { opacity: 0.35; } }
+@keyframes dl-blink { to { opacity: 0; } }
+@keyframes dl-sheen { from { transform: translateX(-110%); } to { transform: translateX(110%); } }
+@media (max-width: 560px) {
+	.dl-wrap { width: calc(100vw - 40px); }
+	.dl-copy { padding: 54px 0 32px; }
+	.dl-copy h1 { font-size: 34px; }
+	.dl-edition { font-size: 0; }
+	.dl-footer { margin-top: 38px; font-size: 9px; }
+}
+@media (prefers-reduced-motion: reduce) {
+	#dynty-loader, .dl-wrap, .dl-pulse, .dl-led, .dl-cursor, #dynty-bar::after { animation: none; transition-duration: 0ms; }
+}
+</style>
+<link id="-gd-engine-icon" rel="icon" type="image/png" href="index.icon.png" />
 <link rel="apple-touch-icon" href="index.apple-touch-icon.png"/>
 
-	</head>
-	<body>
-		<canvas id="canvas">
-			Your browser does not support the canvas tag.
-		</canvas>
+</head>
+<body>
+<canvas id="canvas">Your browser does not support the canvas tag.</canvas>
+<noscript>Your browser does not support JavaScript. Dynty TD 3D needs it to run.</noscript>
 
-		<noscript>
-			Your browser does not support JavaScript.
-		</noscript>
-
-		<div id="status">
-			<img id="status-splash" class="show-image--true fullsize--true use-filter--true" src="index.png" alt="">
-			<progress id="status-progress"></progress>
-			<div id="status-notice"></div>
+<main id="dynty-loader" role="status" aria-live="polite">
+	<div class="dl-wrap">
+		<i class="dl-corner tl" aria-hidden="true"></i>
+		<i class="dl-corner tr" aria-hidden="true"></i>
+		<i class="dl-corner bl" aria-hidden="true"></i>
+		<i class="dl-corner br" aria-hidden="true"></i>
+		<header class="dl-header">
+			<div class="dl-brand">
+				<span class="dl-mark" aria-hidden="true">3D</span>
+				<span class="dl-name">DYNTY <span>/ TD 3D</span></span>
+			</div>
+			<div class="dl-edition"><span class="dl-led" aria-hidden="true"></span>TOWER DEFENSE <b>WEB EDITION</b></div>
+		</header>
+		<section class="dl-copy">
+			<p class="dl-kicker">SYSTEM STARTUP <span>/ 01</span></p>
+			<h1>Building your world<span>.</span></h1>
+			<div class="dl-stage-row">
+				<span class="dl-pulse" aria-hidden="true"></span>
+				<span id="dynty-stage">Preparing browser runtime</span>
+			</div>
+			<div id="dynty-log" class="dl-log" aria-hidden="true"></div>
+			<p id="dynty-notice" hidden></p>
+			<div class="dl-start" id="dynty-start-row" hidden>
+				<button type="button" id="dynty-start">Click to play</button>
+				<span class="dl-start-hint">Full screen starts with this click.<br>Esc leaves full screen.</span>
+			</div>
+			<div class="dl-extra">
+				<div id="dynty-elapsed">Elapsed 0 s</div>
+				<p id="dynty-hint" hidden>Slow connection? Keep waiting. Wi-Fi is recommended for the first load (about 42 MB).</p>
+				<details id="dynty-diag"><summary id="dynty-diag-summary">Diagnostics · 0 errors</summary>
+					<pre id="dynty-diag-log"></pre>
+					<button type="button" id="dynty-copy">Copy details</button>
+				</details>
+			</div>
+		</section>
+		<div role="progressbar" aria-label="Game loading progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+			<div class="dl-track"><div id="dynty-bar"></div></div>
+			<div class="dl-meta"><span id="dynty-phase">PREPARING</span><span id="dynty-mb">0.0 / 0.0 MB</span><span id="dynty-percent">00%</span></div>
 		</div>
+		<footer class="dl-footer">
+			<span class="dl-footer-left"><span class="dl-build">BUILD 0.0.1</span><span class="dl-divider"></span><span>GODOT 4.7 WEBASSEMBLY</span></span>
+			<span class="dl-footer-status"><span class="dl-divider"></span>LOCAL SAVE STORAGE</span>
+		</footer>
+	</div>
+</main>
 
-		<script src="index.js"></script>
-		<script>
+<script src="index.js"></script>
+<script>
 const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":4650224,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
 const GODOT_THREADS_ENABLED = false;
-const engine = new Engine(GODOT_CONFIG);
 
 (function () {
-	const statusOverlay = document.getElementById('status');
-	const statusProgress = document.getElementById('status-progress');
-	const statusNotice = document.getElementById('status-notice');
+	var MB = 1048576;
+	var t0 = performance.now();
+	var state = "loading"; // loading -> ready -> starting -> running | error
+	var lastProgress = Date.now();
+	var logLines = [];
+	var logMax = 3;
+	var diagLines = [];
+	var errorCount = 0;
 
-	let initializing = true;
-	let statusMode = '';
+	function el(id) { return document.getElementById(id); }
+	var loader = el("dynty-loader"), stage = el("dynty-stage"), logBox = el("dynty-log");
+	var bar = el("dynty-bar"), percent = el("dynty-percent"), mbText = el("dynty-mb"), phase = el("dynty-phase");
+	var startRow = el("dynty-start-row"), startBtn = el("dynty-start"), notice = el("dynty-notice");
+	var elapsed = el("dynty-elapsed"), hint = el("dynty-hint"), diag = el("dynty-diag");
+	var diagSummary = el("dynty-diag-summary"), diagBox = el("dynty-diag-log"), copyBtn = el("dynty-copy");
 
-	function setStatusMode(mode) {
-		if (statusMode === mode || !initializing) {
-			return;
+	function seconds() { return Math.floor((performance.now() - t0) / 1000); }
+	function mb(bytes) { return (bytes / MB).toFixed(1); }
+	function stamp() { return "[" + ((performance.now() - t0) / 1000).toFixed(2).padStart(5, "0") + "]"; }
+
+	function renderLog() {
+		logBox.textContent = "";
+		var shown = logLines.slice(-logMax);
+		for (var i = 0; i < logMax; i++) {
+			var entry = shown[i - (logMax - shown.length)];
+			var newest = i === logMax - 1;
+			var row = document.createElement("div");
+			row.className = "dl-log-line " + (newest ? "is-new" : "is-old");
+			if (entry) row.textContent = entry.stamp + " " + entry.label;
+			if (newest && entry) {
+				var cursor = document.createElement("span");
+				cursor.className = "dl-cursor";
+				cursor.textContent = "▮";
+				row.appendChild(cursor);
+			}
+			logBox.appendChild(row);
 		}
-		if (mode === 'hidden') {
-			statusOverlay.remove();
-			initializing = false;
-			return;
-		}
-		statusOverlay.style.visibility = 'visible';
-		statusProgress.style.display = mode === 'progress' ? 'block' : 'none';
-		statusNotice.style.display = mode === 'notice' ? 'block' : 'none';
-		statusMode = mode;
+	}
+	function logAdd(label) {
+		var last = logLines[logLines.length - 1];
+		if (last && last.label === label) return;
+		logLines.push({ label: label, stamp: stamp() });
+		renderLog();
+	}
+	function setStage(text) { stage.textContent = text; logAdd(text); }
+	function setPhase(text) { phase.textContent = text; }
+
+	function diagAdd(text, isError) {
+		diagLines.push(stamp() + " " + text);
+		if (isError) errorCount += 1;
+		diagBox.textContent = diagLines.slice(-200).join("\n");
+		diagSummary.textContent = "Diagnostics · " + errorCount + (errorCount === 1 ? " error" : " errors");
+		diagSummary.classList.toggle("has-errors", errorCount > 0);
 	}
 
-	function setStatusNotice(text) {
-		while (statusNotice.lastChild) {
-			statusNotice.removeChild(statusNotice.lastChild);
-		}
-		const lines = text.split('\n');
-		lines.forEach((line) => {
-			statusNotice.appendChild(document.createTextNode(line));
-			statusNotice.appendChild(document.createElement('br'));
-		});
+	function setProgress(current, total) {
+		lastProgress = Date.now();
+		if (!(total > 0)) return;
+		var fraction = Math.min(Math.max(current / total, 0), 1);
+		bar.style.width = (fraction * 100).toFixed(1) + "%";
+		percent.textContent = String(Math.floor(fraction * 100)).padStart(2, "0") + "%";
+		mbText.textContent = mb(current) + " / " + mb(total) + " MB";
+		el("dynty-loader").querySelector("[role=progressbar]").setAttribute("aria-valuenow", String(Math.floor(fraction * 100)));
 	}
 
-	function displayFailureNotice(err) {
+	function fail(title, err) {
+		state = "error";
+		var text = (err && err.message) || (typeof err === "string" ? err : "") || "An unknown error occurred.";
 		console.error(err);
-		if (err instanceof Error) {
-			setStatusNotice(err.message);
-		} else if (typeof err === 'string') {
-			setStatusNotice(err);
-		} else {
-			setStatusNotice('An unknown error occurred.');
-		}
-		setStatusMode('notice');
-		initializing = false;
+		diagAdd(text, true);
+		loader.setAttribute("data-state", "error");
+		setPhase("ERROR");
+		stage.textContent = title;
+		notice.textContent = text;
+		notice.hidden = false;
+		startRow.hidden = true;
+		diag.open = true;
 	}
 
-	const missing = Engine.getMissingFeatures({
-		threads: GODOT_THREADS_ENABLED,
+	copyBtn.addEventListener("click", function () {
+		var text = ["Dynty TD 3D loader diagnostics", "build: 0.0.1", "user agent: " + navigator.userAgent,
+			"viewport: " + window.innerWidth + "x" + window.innerHeight + " dpr " + window.devicePixelRatio,
+			"stage: " + stage.textContent, "elapsed: " + seconds() + "s", "", diagLines.join("\n")].join("\n");
+		var done = function () { copyBtn.textContent = "Copied"; };
+		var failed = function () { copyBtn.textContent = "Copy failed - select the text above"; };
+		if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, failed);
+		else failed();
 	});
 
-	if (missing.length !== 0) {
-		if (GODOT_CONFIG['serviceWorker'] && GODOT_CONFIG['ensureCrossOriginIsolationHeaders'] && 'serviceWorker' in navigator) {
-			let serviceWorkerRegistrationPromise;
-			try {
-				serviceWorkerRegistrationPromise = navigator.serviceWorker.getRegistration();
-			} catch (err) {
-				serviceWorkerRegistrationPromise = Promise.reject(new Error('Service worker registration failed.'));
-			}
-			// There's a chance that installing the service worker would fix the issue
-			Promise.race([
-				serviceWorkerRegistrationPromise.then((registration) => {
-					if (registration != null) {
-						return Promise.reject(new Error('Service worker already exists.'));
-					}
-					return registration;
-				}).then(() => engine.installServiceWorker()),
-				// For some reason, `getRegistration()` can stall
-				new Promise((resolve) => {
-					setTimeout(() => resolve(), 2000);
-				}),
-			]).then(() => {
-				// Reload if there was no error.
-				window.location.reload();
-			}).catch((err) => {
-				console.error('Error while registering service worker:', err);
-			});
-		} else {
-			// Display the message as usual
-			const missingMsg = 'Error\nThe following features required to run Godot projects on the Web are missing:\n';
-			displayFailureNotice(missingMsg + missing.join('\n'));
-		}
-	} else {
-		setStatusMode('progress');
-		engine.startGame({
-			'onProgress': function (current, total) {
-				if (current > 0 && total > 0) {
-					statusProgress.value = current;
-					statusProgress.max = total;
-				} else {
-					statusProgress.removeAttribute('value');
-					statusProgress.removeAttribute('max');
-				}
-			},
-		}).then(() => {
-			setStatusMode('hidden');
-		}, displayFailureNotice);
+	// Full screen from the start click. Godot's web display reports full screen only when the canvas itself is the
+	// full-screen element (GodotDisplayScreen.isFullscreen), so the request targets the canvas: the game's own
+	// first-gesture request (ui_root.gd) then sees full screen already and does nothing.
+	function enterFullscreen() {
+		var doc = document;
+		if (doc.fullscreenElement || doc.webkitFullscreenElement) return;
+		var canvas = el("canvas");
+		var request = canvas.requestFullscreen || canvas.webkitRequestFullscreen;
+		if (!request) return;
+		try {
+			var promise = request.call(canvas, { navigationUI: "hide" });
+			if (promise && promise.catch) promise.catch(function () {});
+		} catch (error) { /* refused: the game asks again on its first gesture */ }
 	}
-}());
-		</script>
-	</body>
+
+	function start() {
+		if (state !== "ready") return;
+		state = "starting";
+		startBtn.disabled = true;
+		enterFullscreen();
+		setPhase("STARTING");
+		setStage("Starting engine");
+		engine.start().then(function () {
+			state = "running";
+			loader.classList.add("is-hidden");
+		}, function (err) { fail("Could not start the game", err); });
+	}
+
+	// Missing WebGL 2 or other engine features: the same error card as any failure.
+	var missing = [];
+	try { missing = Engine.getMissingFeatures({ threads: GODOT_THREADS_ENABLED }); } catch (error) { missing = ["engine check"]; }
+	if (missing.length !== 0) {
+		fail("Browser not supported", "This game needs WebGL 2, which this browser does not provide. Try a current Chrome, Edge, Firefox or Safari, and turn on hardware acceleration. Missing: " + missing.join(", "));
+		return;
+	}
+
+	// Download labels: the engine (.wasm) and the game data (.pck) are fetched by the engine; the labels follow those
+	// requests, the bar follows the real byte counts from the engine's progress callback.
+	var nativeFetch = window.fetch;
+	if (nativeFetch) {
+		window.fetch = function (input, init) {
+			var url = typeof input === "string" ? input : (input && input.url) || "";
+			if (/\.wasm(\?|#|$)/i.test(url)) { setPhase("ENGINE DOWNLOAD"); setStage("Downloading engine"); }
+			else if (/\.pck(\?|#|$)/i.test(url)) { setPhase("GAME DATA"); setStage("Downloading game data"); }
+			return nativeFetch.apply(this, arguments);
+		};
+	}
+
+	// The same as Engine.startGame does: the main pack goes in as the first argument (see the export's index.js).
+	var pack = GODOT_CONFIG.mainPack || (GODOT_CONFIG.executable + ".pck");
+	var engine;
+	try {
+		engine = new Engine(Object.assign({}, GODOT_CONFIG, {
+			args: ["--main-pack", pack].concat(GODOT_CONFIG.args || []),
+			onProgress: setProgress,
+			onPrint: function () { console.log.apply(console, arguments); },
+			onPrintError: function () {
+				var parts = Array.prototype.slice.call(arguments).map(String);
+				diagAdd(parts.join(" "), true);
+				console.error.apply(console, arguments);
+			}
+		}));
+	} catch (error) {
+		fail("Could not start the game", error);
+		return;
+	}
+	var totalBytes = 0;
+	Object.keys(GODOT_CONFIG.fileSizes || {}).forEach(function (name) { totalBytes += GODOT_CONFIG.fileSizes[name]; });
+	mbText.textContent = "0.0 / " + mb(totalBytes) + " MB";
+	setStage("Preparing browser runtime");
+
+	// Load the engine and the game data; the game does not run until the player clicks.
+	Promise.all([engine.init(GODOT_CONFIG.executable), engine.preloadFile(pack, pack)]).then(function () {
+		state = "ready";
+		setPhase("READY");
+		percent.textContent = "100%";
+		bar.style.width = "100%";
+		setStage("Ready to start");
+		startRow.hidden = false;
+		startBtn.addEventListener("click", start);
+		startBtn.focus({ preventScroll: true });
+	}, function (err) { fail("Could not load the game", err); });
+
+	// Watchdog, as in the 2D loader: a hint after 60 s, a stall note after 30 s without bytes.
+	var timer = window.setInterval(function () {
+		if (state === "running" || state === "error") { window.clearInterval(timer); return; }
+		elapsed.textContent = "Elapsed " + seconds() + " s";
+		if (seconds() >= 60) hint.hidden = false;
+		if (state === "loading" && Date.now() - lastProgress >= 30000) {
+			lastProgress = Date.now();
+			setStage("Still waiting for the browser runtime. Check console or network access.");
+		}
+	}, 1000);
+})();
+</script>
+</body>
 </html>
 
