@@ -1,11 +1,11 @@
 {
- "generated": "2026-11-06T13:39:10Z",
- "total": 542,
+ "generated": "2026-11-06T13:47:53Z",
+ "total": 545,
  "versions": [
   {
    "version": "1.0.0",
    "date": "2026-11-06",
-   "count": 7,
+   "count": 10,
    "notes": [
     "Full 3D port of Dynty Tower Defense up to tin: towers, ores iron, copper and tin, with the same rules and balance as the 2D game.",
     "Wardens (spawners) that you control: raise or lower the pressure on your base with the spawn control.",
@@ -21,6 +21,30 @@
  ],
  "unreleased": [],
  "entries": [
+  {
+   "date": "2026-11-06",
+   "sha": "0a08aabf",
+   "subject": "docs(audio): zoom and focus dB table, sound leak check",
+   "type": "docs",
+   "scope": "audio",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "b69287da",
+   "subject": "feat(audio): every button, tab and toast makes a sound",
+   "type": "feat",
+   "scope": "audio",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "d3ffb032",
+   "subject": "fix(audio): sounds stay audible when zoomed out",
+   "type": "fix",
+   "scope": "audio",
+   "version": "1.0.0"
+  },
   {
    "date": "2026-11-06",
    "sha": "51675e05",
