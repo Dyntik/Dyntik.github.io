@@ -1,9 +1,65 @@
 {
- "generated": "2026-11-06T08:57:30Z",
- "total": 515,
+ "generated": "2026-11-06T09:05:26Z",
+ "total": 522,
  "versions": [],
  "unreleased": [],
  "entries": [
+  {
+   "date": "2026-11-06",
+   "sha": "1a567fb7",
+   "subject": "release(tools): game icon and Windows file details",
+   "type": "release",
+   "scope": "tools",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "45979f68",
+   "subject": "tools(showcase): tin capture shows the HUD",
+   "type": "tools",
+   "scope": "showcase",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "2e8588fb",
+   "subject": "fix(ui): opaque inbox and week card, gift amounts as in 2D",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "89e77f4c",
+   "subject": "tools(changelog): lander publishes the 3D changelog",
+   "type": "tools",
+   "scope": "changelog",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "de17f92d",
+   "subject": "docs(state): polish and landing page wave W39",
+   "type": "docs",
+   "scope": "state",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "b1c84557",
+   "subject": "docs(history): archive the W39 wave notes",
+   "type": "docs",
+   "scope": "history",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "ed1c203f",
+   "subject": "fix(ui): repeat refining starts on the same tick as in 2D",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
   {
    "date": "2026-11-06",
    "sha": "0fb0afb2",
