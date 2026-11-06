@@ -1,9 +1,105 @@
 {
- "generated": "2026-11-06T08:40:21Z",
- "total": 503,
+ "generated": "2026-11-06T08:57:30Z",
+ "total": 515,
  "versions": [],
  "unreleased": [],
  "entries": [
+  {
+   "date": "2026-11-06",
+   "sha": "0fb0afb2",
+   "subject": "fix(ui): leaderboard offline footer uses the 2D hyphen",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "9836e9dc",
+   "subject": "fix(ui): settings hint describes what Apply really does",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "dcb8eaa3",
+   "subject": "fix(ui): inbox and week card layout",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "7c5f32ea",
+   "subject": "tools(showcase): inbox and week card captures, own row in top 50",
+   "type": "tools",
+   "scope": "showcase",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "cddb1de6",
+   "subject": "fix(ui): your leaderboard row lights up in the top 50",
+   "type": "fix",
+   "scope": "ui",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "8a5aaff2",
+   "subject": "tools(changelog): publish the 3D changelog to the game site",
+   "type": "tools",
+   "scope": "changelog",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "99d0df32",
+   "subject": "docs(release): Windows desktop build check",
+   "type": "docs",
+   "scope": "release",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "41396e5f",
+   "subject": "release(tools): Windows desktop preset saved with editor fields",
+   "type": "release",
+   "scope": "tools",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "fb83e29c",
+   "subject": "fix(art): tin warriors and buffer units read at close zoom",
+   "type": "fix",
+   "scope": "art",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "f816f477",
+   "subject": "perf(sim): achievements check only what changed",
+   "type": "perf",
+   "scope": "sim",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "3ec9874c",
+   "subject": "test(render): pin unit LOD1, ore generator tints, no unit HP row",
+   "type": "test",
+   "scope": "render",
+   "version": ""
+  },
+  {
+   "date": "2026-11-06",
+   "sha": "dbcea9e0",
+   "subject": "docs(state): online polish wave W38",
+   "type": "docs",
+   "scope": "state",
+   "version": ""
+  },
   {
    "date": "2026-11-06",
    "sha": "cabfbedf",
