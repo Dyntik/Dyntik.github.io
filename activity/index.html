@@ -189,6 +189,9 @@ html,body{background:#132d35!important}
                 <button class="qs-chip" data-mode="act">🎭 Pantomima</button>
                 <button class="qs-chip" data-mode="draw">✏️ Kreslení</button>
             </div>
+            <label class="mobile-label">Kdo moderuje <small>(klepni a poslechni si)</small></label>
+            <div class="qs-chips" id="qs-hosts"></div>
+            <div id="qs-voice-row" hidden><label class="mobile-label">Hlas</label><div class="qs-chips" id="qs-voices"></div></div>
             <label class="mobile-label">Témata <button class="qs-link" id="qs-all">vše</button> <button class="qs-link" id="qs-none">nic</button></label>
             <div class="qs-chips" id="qs-themes"></div>
             <label class="mobile-label">Kdo hraje</label>
@@ -224,22 +227,162 @@ html,body{background:#132d35!important}
     if(!mobile)return;
     const start=document.getElementById('mobile-start');
     const show=id=>document.querySelectorAll('#mobile-start .mobile-section').forEach(section=>section.classList.toggle('active',section.id===id));
-    document.getElementById('mobile-master').onclick=()=>{show('mobile-setup');speakText('Jste Game Master. Nastavíte režim a spustíte partii. Potom telefon předáte týmu.','instruction')};
-    document.getElementById('mobile-player').onclick=()=>{show('mobile-player-wait');speakText('Jste hráč. Počkejte, až Game Master spustí partii, a potom si telefon převezměte.','instruction')};
-    document.getElementById('mobile-role-back').onclick=()=>{show('mobile-role');speakText('Vyberte, zda partii nastavujete, nebo ji právě hrajete.','instruction')};
-    document.getElementById('mobile-player-back').onclick=()=>{show('mobile-role');speakText('Vracíme se k volbě role.','instruction')};
+    document.getElementById('mobile-master').onclick=()=>{show('mobile-setup');speakText('Ahoj, šéfe! Vyber moderátora, témata a čas. Pak telefon předej prvnímu týmu.','instruction')};
+    document.getElementById('mobile-player').onclick=()=>{show('mobile-player-wait');speakText('Ahoj, hráči! Počkej, až Game Master hru spustí. Do té doby se tvař nenápadně.','instruction')};
+    document.getElementById('mobile-role-back').onclick=()=>{show('mobile-role');speakText('Tak kdo tu velí?','instruction')};
+    document.getElementById('mobile-player-back').onclick=()=>{show('mobile-role');speakText('Tak kdo tu velí?','instruction')};
     document.querySelectorAll('[data-mobile-mode]').forEach(button=>button.onclick=()=>{document.querySelectorAll('[data-mobile-mode]').forEach(item=>item.classList.remove('selected'));button.classList.add('selected');speakModeInstruction(button.dataset.mobileMode)});
+    // Game hosts: what the game says and how it sounds (rate/pitch go to the Web Speech API).
+    // Kinds: start (Start pressed), correct (short, the turn goes on), streak (3+ in a turn), fast (< 3.5 s),
+    // miss / timeout (turn over), timeoutZero / timeoutGreat (0 or 4+ points in the turn), warning (10 s left),
+    // handoff (next team), lead / tie (score comment on handoff, {team} {n}).
+    const L=s=>s.split('|');
+    const QS_HOSTS={
+        moderator:{label:'🎤 Moderátor',rate:1.1,pitch:1.0,
+            intro:'Vítejte v show! Jeden předvádí, jeho tým hádá. Za každou trefu bod. A slovo z karty se neříká!',
+            team:c=>`${c} tým, na scénu!`,
+            modes:{describe:'Popisuj, ale slovo nevyslov!',act:'Pantomima! Ani muk!',draw:'Kreslení! Tužky do ruky!'},
+            win:w=>`A vítězem dnešní show je ${w}! Velký potlesk!`,tie:'Remíza! Diváci chtějí odvetu.',none:'Nula bodů. Takovou show tu ještě nikdo neviděl.',
+            start:L('Světla, kamera, akce!|Minuta slávy začíná!|Dámy a pánové, čas běží!|Publikum ztichlo. Jedeme!|Mikrofon je tvůj!|Kamery běží!|Show začíná!|Jedeme naživo!|Režisér kývl. Teď!|Opona jde nahoru!|Vysíláme! Nemávej do kamery!|Tvůj velký okamžik!|Ticho v sále, hvězda nastupuje!|Jdeme na to, sledovanost stoupá!|Tři, dva, jedna, vysíláme!|Scéna patří tobě!|Žádná zkouška, tohle je ostrá show!'),
+            correct:L('Bod!|Výborně!|Bravo!|To je ono!|Přesně!|Paráda!|Ano!|Trefa!|Krása!|Potlesk!|Senzace!|Super!|Bomba!|Šampioni!|Excelentní!|Nádhera!|Sedí!|Výtečně!'),
+            streak:L('Série pokračuje!|Nezastavitelní!|Diváci stojí!|Rekordní sledovanost!|Oni snad čtou myšlenky!|To je telepatie!|Někdo jim napovídá?|Jako po másle!'),
+            fast:L('To bylo bleskové!|Rychlost světla!|Ani nemrkli!|Okamžitě!|To byl blesk!|Rekord!'),
+            miss:L('Au. To bolelo i diváky.|Bohužel, karta vyhrála.|Vedle jak ta jedle.|Tohle vystřihneme.|Režie pláče.|Publikum mlčí. Trapně.|Skoro. Ale jen skoro.|A teď rychle reklama.|Tohle do upoutávky nedáme.|Moderátor nemá slov.|Kamera to raději nesnímala.|Zvukař si sundal sluchátka.|Divák u televize křičí správnou odpověď. Pozdě.'),
+            warning:L('Deset vteřin!|Zrychlit!|Poslední šance!|Teď nebo nikdy!|Hoří to!|Finiš!|Rychle, rychle!|Poslední rovinka!|Tik tak!'),
+            timeout:L('Čas! Konec vysílání.|Stop! Reklamní přestávka.|Konec tahu, děkujeme.|Čas vypršel. Kamery vypnout!|A to je pro tento tah vše!|Gong!|Konec! Režie volá střih.|Stopka! Hvězdy, uvolněte pódium.|Čas! Teď prosím znělku.|Hodiny řekly dost.'),
+            timeoutZero:L('Nula bodů. Ale charisma bylo.|Ani jeden bod. Herecký výkon ale skvělý.|Nula. Divákům se to i tak líbilo.|Bez bodu. Příště to bude lepší, slibujeme.'),
+            timeoutGreat:L('Čas! To byl tah jako z učebnice!|Konec! Taková jízda!|Stop! Tohle si pustíme ještě jednou ze záznamu!|Čas vypršel, ale tohle byla legenda!'),
+            handoff:L('Telefon dál, hvězdy čekají.|Máte slovo!|Vaše chvíle slávy přichází.|Kamera je na vás.|Kdo dnes bude hvězda?|Publikum čeká.'),
+            lead:L('{team} tým vede o {n}!|Průběžně vede {team} tým o {n}.|V čele je {team} tým, náskok {n}.'),
+            tieScore:L('Stav je vyrovnaný!|Je to plichta, napětí stoupá!')},
+        sport:{label:'⚽ Komentátor',rate:1.3,pitch:1.15,
+            intro:'Vítejte na stadionu! Jeden hráč předvádí, jeho tým střílí odpovědi. Každá trefa je gól. Vyslovit slovo z karty je faul!',
+            team:c=>`Na hřiště nastupuje ${c.toLowerCase()} tým!`,
+            modes:{describe:'Komentuj, ale jméno neříkej!',act:'Pantomima! Hrajeme bez řečí!',draw:'Kreslení! Taktická tabule ve hře!'},
+            win:w=>`Konec zápasu! Pohár zvedá ${w}! Neuvěřitelný výkon!`,tie:'Remíza! Bude se kopat penaltový rozstřel!',none:'Bezgólová remíza. Fanoušci odcházejí domů.',
+            start:L('Výkop! Míč je ve hře!|Rozhodčí píská, začínáme!|A jdeme do toho!|Startovní výstřel, běží se!|Úvodní hvizd!|Tempo je vražedné!|Útok začíná!|Hráči vybíhají!|Jde se na věc!|Trenér křičí: Teď!|A je to tady, zápas začíná!|Míč je u vás!|Fanoušci řvou, jedeme!|Ostrá hra začíná!'),
+            correct:L('Góóól!|Gól!|Do sítě!|Trefa!|Paráda!|Zásah!|Šibenice!|Stadion bouří!|Učebnicová akce!|Neuvěřitelné!|A je tam!|Čistě!|Hlavičkou, gól!|Bez šance pro brankáře!|Skóre se mění!|Přesná přihrávka!'),
+            streak:L('Hattrick!|Další gól, to je kanonáda!|Oni nemůžou přestat!|Brankář pláče!|Totální dominance!|Fanoušci skandují!|To je rekordní série!|Tohle bude v sestřihu týdne!'),
+            fast:L('Gól z první!|Bleskový protiútok!|Gól v první vteřině!|To ani kamera nezachytila!'),
+            miss:L('Tyčka! Škoda!|Vedle branky!|Ofsajd!|Žlutá karta za tuhle odpověď!|Ztráta míče!|Brankář to chytil!|Tohle letělo do tribuny.|Rozhodčí to neuznal!|Střela do autu!|Míč skončil na parkovišti.|Video rozhodčí říká ne.|Trenér si zakrývá oči.'),
+            warning:L('Nastavený čas!|Závěrečný tlak!|Deset vteřin!|Finiš!|Poslední útok!|Teď, teď, teď!|Všichni do útoku!|Brankář jde dopředu!'),
+            timeout:L('Konec poločasu!|Rozhodčí píská konec!|Čas vypršel, střídání!|Míč má soupeř!|A je dohráno!|Konečný hvizd!|Časomíra je neúprosná!|Konec akce!'),
+            timeoutZero:L('Bez gólu. Ale bojovali!|Nula. Trenér zuří.|Žádný gól. Tribuny pískají.|Bezbrankový tah. Taktika? Asi ne.'),
+            timeoutGreat:L('Konec! To byla gólová smršť!|Hvizd! Takový útok tu dlouho nebyl!|Stop! Tohle chce medaili!'),
+            handoff:L('Střídání!|Nový útok, nové šance!|Trenér posílá nové hráče!|Míč je váš!|Rozcvička skončila!|Kapitáne, převezměte pásku!|Fanoušci čekají na gól!|Hráči na pozice!'),
+            lead:L('Průběžné skóre: vede {team} tým o {n}!|{team} tým drží náskok {n}!|Na tabulce vede {team} tým o {n}.'),
+            tieScore:L('Skóre je vyrovnané!|Na tabulce remíza!')},
+        granny:{label:'👵 Babička',rate:0.9,pitch:1.35,
+            intro:'Tak děti, jeden předvádí a ostatní hádají. Za každé uhodnuté slovíčko je bod. A nepodvádět, babička všechno vidí!',
+            team:c=>`${c} tým, zlatíčka, teď vy!`,
+            modes:{describe:'Hezky to popiš, ale to slovíčko neříkej!',act:'Pantomima! Ani slovíčko!',draw:'Kreslení! Kde mám brýle?'},
+            win:w=>`Vyhrál ${w}! Ti dostanou největší kus buchty!`,tie:'Remíza! Buchta se rozdělí napůl.',none:'Nikdo nic? Nevadí, buchty jsou pro všechny.',
+            start:L('Tak, děti, začínáme!|No tak šup, šup!|Ať vám to pěkně jde!|Hezky nahlas, ať babička slyší!|Začínáme, než mi vystydne čaj!|Pěkně zvesela!|Tak se ukažte, broučci!|Honem, ať stihneme večeři!|No tak do toho, zlatíčko!|Babička drží palce!'),
+            correct:L('Šikulky!|No to je dobře!|Jéžiškovy oči, ono to vyšlo!|Chytrá hlavička!|Za tohle je buchta!|Výborně, zlatíčka!|Babička je pyšná!|Ty jsi ale číslo!|No vidíš!|Krásně!|Šikovní!|Bravo, děti!'),
+            streak:L('Jedna za druhou, jako buchty z trouby!|Vy jste dneska ale šikovní!|To vám jde jako po másle!|Tohle řeknu sousedce!|Vy mi snad čtete myšlenky!'),
+            fast:L('No ty jsi rychlík!|To bylo hned!|Ani jsem nestihla nasadit brýle!|Jak blesk!'),
+            miss:L('Nevadí, broučku.|To nic, to se stane.|Jejda. Ale pěkně jste se snažili.|No, to jste trochu ujeli.|Ach jo. Dáme si čaj a jedeme dál.|Však vy to příště dáte.|Dědeček by to taky nevěděl.|Nevadí, za snahu je jednička.|Ale no tak, hlavu vzhůru!|To se stane i v nejlepší rodině.|Bylo to blízko. Asi jako lednička od kuchyně.'),
+            warning:L('Pospěšte si, děti!|Už jen kousíček!|Honem, honem!|Deset vteřin, broučci!|Šup, šup, šup!'),
+            timeout:L('Konec, děti, odložte to.|Tak a dost, je čas!|Čas vypršel, jako za mlada.|Konec kola. Kdo chce buchtu?|Hotovo, předejte to dál.|Konec, jako u večerníčku.|Čas je pryč, jako moje mládí.'),
+            timeoutZero:L('Nic? Nevadí, hlavně že jste zdraví.|Nula, ale babička vás má ráda stejně.|Nevyšlo to, ale snažili jste se moc hezky.'),
+            timeoutGreat:L('To jste mi udělali radost!|Konec! A tolik bodů!'),
+            handoff:L('Nebojte se, babička drží palce.|Hezky popořádku.|Teď ukažte, co umíte.'),
+            lead:L('{team} tým vede o {n}, šikulky!|Zatím vede {team} tým o {n}. Ostatní nepláčou!|{team} tým má o {n} víc. Ale nikdo se nehádá!'),
+            tieScore:L('Všichni mají stejně, jak to má být!|Remíza, nikdo nebude smutný!')},
+        pirate:{label:'🏴‍☠️ Pirát',rate:0.95,pitch:0.6,
+            intro:'Arrr, posádko! Jeden předvádí, ostatní hádají. Každá trefa je zlaťák do truhly. Kdo vysloví slovo z karty, jde po prkně!',
+            team:c=>`${c} tým, na palubu!`,
+            modes:{describe:'Popisuj, námořníku, ale slovo nevyslov!',act:'Pantomima! Ani zvuk, ať nás neslyší!',draw:'Kreslení! Nakresli mapu k pokladu!'},
+            win:w=>`Truhlu s pokladem bere ${w}! Jo ho ho!`,tie:'Remíza! Poklad se dělí napůl, arrr.',none:'Žádný poklad? Tisíc hromů!',
+            start:L('Arrr! Vyplouváme!|Kotvy vzhůru!|Plné plachty!|Do boje, suchozemské krysy!|Ahoj, posádko! Teď!|Vítr do plachet!|Zvednout vlajku!|Na abordáž!|Kormidlo pevně, jedeme!|Tisíc hromů, start!|Kurz na poklad!'),
+            correct:L('Arrr! Poklad!|Zlaťák!|Trefa jako z děla!|Jo ho ho!|Dukát!|Tisíc hromů, správně!|Do truhly!|Bum! Zásah!|Arrr, výborně!|Kapitán je spokojen!|Zlato!|Pěkně, námořníku!'),
+            streak:L('Truhla už přetéká!|Tolik zlata jsem neviděl ani v Karibiku!|Papoušek tleská křídly!|Celá flotila vám závidí!|Takovou kořist mají jen legendy!'),
+            fast:L('Rychlejší než dělová koule!|Dřív, než papoušek mrkl!|Bleskové jako žralok!'),
+            miss:L('Arrr, vedle!|Celá posádka přes palubu!|Tisíc kotev, to nevyšlo!|Žraloci se smějí.|Na tohle by nepřišel ani papoušek.|Do vody s tou odpovědí!|Prázdná truhla!|Kanón minul loď!|Loď narazila na útes.|Arrr, mapa byla vzhůru nohama!'),
+            warning:L('Bouře se blíží!|Loď se potápí!|Deset vteřin, námořníci!|Veslovat!|Rychle, kraken!|Vlna se blíží!'),
+            timeout:L('Konec, spustit kotvy!|Přesýpací hodiny došly!|Čas! Na palubu jde jiná posádka.|Konec plavby, arrr!|Zvon odbil!|Hodiny vypršely, hromy a blesky!'),
+            timeoutZero:L('Ani dukát. Bude se drhnout paluba.|Prázdné kapsy. Arrr.|Žádná kořist. Papoušek je zklamaný.'),
+            timeoutGreat:L('Truhla plná zlata! Jo ho ho!|To byla plavba pro legendy!|Arrr, o téhle kořisti se budou zpívat písně!'),
+            handoff:L('Kormidlo je vaše!|Nová posádka, nové poklady!|Arrr, vaše řada!|Kapitáne, převezměte loď!|Nalodit se!|Mapa je vaše!'),
+            lead:L('{team} tým má o {n} víc!|Nejvíc dukátů má {team} tým, náskok {n}.|{team} tým vede o {n}, arrr!'),
+            tieScore:L('Truhly jsou stejně plné!|Vyrovnaná bitva, arrr!')},
+        robot:{label:'🤖 Robot',rate:0.95,pitch:0.3,
+            intro:'Dobrý den, lidé. Jeden předvádí, ostatní hádají. Za správnou odpověď přidělím bod. Vyslovení slova z karty je zakázáno. Bip.',
+            team:c=>`${c} tým. Připojen.`,
+            modes:{describe:'Režim popis. Slovo nevyslovovat.',act:'Režim pantomima. Zvuk vypnut.',draw:'Režim kreslení. Tiskárna nenalezena, kreslete ručně.'},
+            win:w=>`Analýza dokončena. Vítěz: ${w}. Gratuluji, lidé.`,tie:'Remíza. To nedává smysl. Restartuji.',none:'Nula bodů. To bych uhodl i já.',
+            start:L('Spouštím odpočet.|Systém aktivován.|Bip bup. Start.|Režim hádání zapnut.|Načítám zábavu. Sto procent.|Proces zahájen.|Instaluji soutěživost.|Zapínám turbo.'),
+            correct:L('Bod přičten.|Správně. Bip.|Výsledek pozitivní.|Bip bup. Trefa.|Úspěch.|Ukládám.|Potvrzeno.|Bip.|Plus jedna.|Data souhlasí.|Logické.'),
+            streak:L('Detekuji sérii.|Výkon nad očekávání.|Lidská inteligence potvrzena.|Přehřívám se z nadšení.|Varování: příliš mnoho úspěchu.'),
+            fast:L('Reakční doba vynikající.|Rychlejší než můj procesor.|Milisekundy. Působivé.'),
+            miss:L('Chyba. Chyba.|Nesprávný vstup.|Chyba čtyři sta čtyři. Odpověď nenalezena.|Bip. Vedle.|Detekuji zklamání.|Neplatný příkaz.|Tato odpověď není v databázi.|Restartujte mozek.|Odpověď zamítnuta.'),
+            warning:L('Varování. Deset sekund.|Kritický stav času.|Zrychlete procesor.|Baterie času dochází.|Přetaktovat. Ihned.'),
+            timeout:L('Čas vypršel. Vypínám.|Odpočet dokončen.|Konec tahu. Restartujte tým.|Systém říká dost.|Časový limit překročen.|Ukládám a ukončuji.'),
+            timeoutZero:L('Nula bodů. Doporučuji aktualizaci.|Výsledek nula. Zajímavé.|Žádná data. Zkuste to znovu.'),
+            timeoutGreat:L('Výkon zaznamenán do historie.|Výsledek přesahuje výpočty.|Lidé, jsem ohromen. Bip.'),
+            handoff:L('Nový uživatel detekován.|Přenos zařízení zahájen.|Čekám na vstup.|Předávám kontrolu.|Synchronizace s dalším týmem.'),
+            lead:L('{team} tým vede o {n}.|Analýza: {team} tým má náskok {n}.'),
+            tieScore:L('Skóre vyrovnané. Výpočet nejistý.')},
+        silent:{label:'🔇 Ticho',silent:true}
+    };
+    const qsBags={},qsLast={};
+    const qsTurn={count:0,last:0,handoffs:0};
+    window.__host=()=>QS_HOSTS[qs.host]||QS_HOSTS.moderator;
+    function qsTake(kind){
+        const host=window.__host();const items=host[kind];if(!items||!items.length)return '';
+        const key=qs.host+':'+kind;const bag=qsBags[key]||(qsBags[key]=[]);
+        if(!bag.length)bag.push(...items);
+        let phrase=bag.splice(Math.floor(Math.random()*bag.length),1)[0];
+        if(bag.length&&phrase===qsLast[key]){bag.push(phrase);phrase=bag.splice(Math.floor(Math.random()*bag.length),1)[0]}
+        qsLast[key]=phrase;return phrase;
+    }
+    function qsScoreLine(){
+        const list=Object.entries(scores).filter(([t])=>Number(t)<=qs.teams).sort((a,b)=>b[1]-a[1]);
+        if(!list.length||list[0][1]===0)return '';
+        if(list[0][1]===list[1][1])return qsTake('tieScore');
+        const name=teamVoice[Number(list[0][0])].color.toLowerCase();
+        const line=qsTake('lead').replace('{team}',name).replace('{n}',scoreLabel(list[0][1]-list[1][1]));
+        return line.charAt(0).toUpperCase()+line.slice(1);
+    }
+    // Context-aware phrase choice: streaks, lightning answers, empty and great turns, score comments.
+    window.__phrase=function(kind){
+        const now=Date.now();
+        if(kind==='start'){qsTurn.count=0;qsTurn.last=now;return qsTake('start')}
+        if(kind==='correct'){
+            qsTurn.count++;const quick=now-qsTurn.last<3000;qsTurn.last=now;
+            if(quick&&Math.random()<.4)return qsTake('fast');
+            if(qsTurn.count>=3&&Math.random()<.55)return qsTake('streak');
+            return qsTake('correct');
+        }
+        if(kind==='timeout'){
+            if(qsTurn.count===0)return qsTake('timeoutZero');
+            if(qsTurn.count>=4)return qsTake('timeoutGreat');
+            return qsTake('timeout');
+        }
+        return qsTake(kind);
+    };
+    function qsCzechVoices(){try{return speechSynthesis.getVoices().filter(v=>v.lang.toLowerCase().replace('_','-').startsWith('cs'))}catch(e){return []}}
+    function qsVoiceLabel(v){return v.name.replace(/Microsoft |Google |Online \(Natural\)|\(.*?\)| - .*$/g,'').trim()||v.name}
+    window.__pickVoice=function(){const voices=qsCzechVoices();return voices.find(v=>v.name===qs.voice)||voices.find(v=>/Natural/i.test(v.name))||voices[0]||null};
+    window.__scoreLine=()=>{qsTurn.handoffs++;return qsTurn.handoffs%2===0?qsScoreLine():''};
+    window.__sample=()=>`${qsTake('start')} ${qsTake('correct')}`;
+    window.__teamName=t=>`${teamVoice[Number(t)].color.toLowerCase()} tým`;
+    window.__teamCall=c=>{const h=window.__host();return h.team?h.team(c):''};
+    window.__hostIntro=()=>window.__host().intro||'';
+    window.__winLine=function(){const h=window.__host();if(h.silent)return '';const w=window.__winners();return w.length===1?h.win(window.__teamName(w[0])):w.length?h.tie:h.none};
     const QS_THEMES=[{"value": "theme-crazy", "label": "🤪 Bláznivinky"}, {"value": "starter-cz", "label": "🦸 Postavičky a slavní"}, {"value": "theme-family", "label": "🏠 Rodina"}, {"value": "theme-fairy", "label": "👑 Pohádky"}, {"value": "theme-fantasy", "label": "🐉 Fantazie"}, {"value": "theme-nature", "label": "🌲 Příroda"}, {"value": "theme-city", "label": "🚋 Město"}, {"value": "theme-food", "label": "🥟 Jídlo"}, {"value": "theme-sport", "label": "⚽ Sport"}, {"value": "theme-jobs", "label": "🔧 Povolání"}, {"value": "theme-teen", "label": "🎧 Teen svět"}, {"value": "theme-adults", "label": "☕ Dospělí"}];
     const QS_AGE={kids:6,family:10,adults:99};
-    const QS_MODE_SAY={describe:'Popisuj, slovo nevyslovuj!',act:'Pantomima, ani slovo!',draw:'Kreslení, tužku do ruky!'};
-    const QS_MODE_ICON={describe:'🗣️',act:'🎭',draw:'✏️'};
-    const qsDefaults={modes:['describe','act'],themes:QS_THEMES.map(t=>t.value),who:'family',time:45,teams:2,count:40};
+        const QS_MODE_ICON={describe:'🗣️',act:'🎭',draw:'✏️'};
+    const qsDefaults={modes:['describe','act'],themes:QS_THEMES.map(t=>t.value),who:'family',time:45,teams:2,count:40,host:'moderator',voice:''};
     let qs=Object.assign({},qsDefaults,localLoad('setup',{}));
     qs.themes=qs.themes.filter(v=>QS_THEMES.some(t=>t.value===v));
+    if(!QS_HOSTS[qs.host])qs.host='moderator';
     function qsPool(){return LOCAL_PROMPTS.filter(r=>qs.themes.includes(r.source)&&r.age_min<=QS_AGE[qs.who])}
     function qsRender(){
         document.querySelectorAll('#qs-modes .qs-chip').forEach(b=>b.classList.toggle('on',qs.modes.includes(b.dataset.mode)));
         document.querySelectorAll('#qs-themes .qs-chip').forEach(b=>b.classList.toggle('on',qs.themes.includes(b.dataset.theme)));
+        document.querySelectorAll('#qs-hosts .qs-chip').forEach(b=>b.classList.toggle('on',qs.host===b.dataset.host));
+        qsRenderVoices();
         [['qs-who','who'],['qs-time','time'],['qs-teams','teams'],['qs-count','count']].forEach(([id,key])=>document.querySelectorAll(`#${id} button`).forEach(b=>b.classList.toggle('on',String(qs[key])===b.dataset.v)));
         const pool=qsPool().length;const summary=$('qs-summary');const ok=pool>=5&&qs.modes.length;
         summary.classList.toggle('bad',!ok);
@@ -248,11 +391,22 @@ html,body{background:#132d35!important}
         localSave('setup',qs);
     }
     $('qs-themes').innerHTML=QS_THEMES.map(t=>`<button class="qs-chip" data-theme="${t.value}">${t.label}</button>`).join('');
-    document.querySelectorAll('#qs-modes .qs-chip').forEach(b=>b.onclick=()=>{const m=b.dataset.mode;qs.modes=qs.modes.includes(m)?qs.modes.filter(x=>x!==m):[...qs.modes,m];qsRender();if(qs.modes.includes(m))speakText(QS_MODE_SAY[m],'instruction')});
+    document.querySelectorAll('#qs-modes .qs-chip').forEach(b=>b.onclick=()=>{const m=b.dataset.mode;qs.modes=qs.modes.includes(m)?qs.modes.filter(x=>x!==m):[...qs.modes,m];qsRender();if(qs.modes.includes(m))speakText((window.__host().modes||{})[m]||'','instruction')});
     document.querySelectorAll('#qs-themes .qs-chip').forEach(b=>b.onclick=()=>{const v=b.dataset.theme;qs.themes=qs.themes.includes(v)?qs.themes.filter(x=>x!==v):[...qs.themes,v];qsRender()});
     $('qs-all').onclick=()=>{qs.themes=QS_THEMES.map(t=>t.value);qsRender()};
     $('qs-none').onclick=()=>{qs.themes=[];qsRender()};
     [['qs-who','who',String],['qs-time','time',Number],['qs-teams','teams',Number],['qs-count','count',Number]].forEach(([id,key,cast])=>document.querySelectorAll(`#${id} button`).forEach(b=>b.onclick=()=>{qs[key]=cast(b.dataset.v);qsRender()}));
+    $('qs-hosts').innerHTML=Object.entries(QS_HOSTS).map(([k,h])=>`<button class="qs-chip" data-host="${k}">${h.label}</button>`).join('');
+    document.querySelectorAll('#qs-hosts .qs-chip').forEach(b=>b.onclick=()=>{qs.host=b.dataset.host;qsRender();const h=window.__host();if(!h.silent)speakText(window.__sample(),'start');else{try{speechSynthesis.cancel()}catch(e){}}});
+    function qsRenderVoices(){
+        const voices=qsCzechVoices();const row=$('qs-voice-row');if(!row)return;
+        row.hidden=voices.length<2||window.__host().silent;
+        const box=$('qs-voices');const names=voices.map(v=>v.name).join('|');
+        if(box.dataset.names!==names){box.dataset.names=names;box.innerHTML=voices.map(v=>`<button class="qs-chip" data-voice="${v.name.replace(/"/g,'&quot;')}">${qsVoiceLabel(v)}</button>`).join('');
+            box.querySelectorAll('.qs-chip').forEach(b=>b.onclick=()=>{qs.voice=b.dataset.voice;qsRender();speakText(window.__phrase('correct'),'correct')})}
+        const current=window.__pickVoice();box.querySelectorAll('.qs-chip').forEach(b=>b.classList.toggle('on',!!current&&current.name===b.dataset.voice));
+    }
+    try{speechSynthesis.addEventListener('voiceschanged',()=>qsRenderVoices())}catch(e){}
     qsRender();
     let qsLastModes=[];
     window.__newTurn=function(){
@@ -261,7 +415,7 @@ html,body{background:#132d35!important}
         window.__turnMode=options[Math.floor(Math.random()*options.length)];
         qsLastModes=[window.__turnMode,...qsLastModes].slice(0,2);
     };
-    window.__modeSay=()=>QS_MODE_SAY[window.__turnMode]||'';
+    window.__modeSay=()=>(window.__host().modes||{})[window.__turnMode]||'';
     window.__modeLabel=card=>{const m=window.__turnMode||card.mode;$('phone-mode').dataset.mode=m;return `${QS_MODE_ICON[m]||''} ${(LOCAL_MODE_NAMES[m]||m).toUpperCase()}`};
     window.__winners=function(){const list=Object.entries(scores).filter(([t])=>Number(t)<=qs.teams);const best=Math.max(...list.map(([,s])=>s));return best>0?list.filter(([,s])=>s===best).map(([t])=>t):[]};
     document.getElementById('mobile-start-game').onclick=()=>{
@@ -335,26 +489,22 @@ html,body{background:#132d35!important}
     };
     const speechBags=Object.fromEntries(Object.entries(freshQuickSpeechBanks).map(([key,items])=>[key,[...items]]));
     const lastSpeechPhrase={};
-    function takeSpeechPhrase(kind){
-        const bag=speechBags[kind]||[];
-        if(!bag.length)bag.push(...freshQuickSpeechBanks[kind]);
-        let phrase=bag.splice(Math.floor(Math.random()*bag.length),1)[0];
-        if(bag.length&&phrase===lastSpeechPhrase[kind]){bag.push(phrase);phrase=bag.splice(Math.floor(Math.random()*bag.length),1)[0]}
-        lastSpeechPhrase[kind]=phrase;
-        return phrase;
-    }
+    function takeSpeechPhrase(kind){return window.__phrase(kind)}
     function speakText(phrase,kind='start'){
-        if(!('speechSynthesis' in window)||!('SpeechSynthesisUtterance' in window))return;
-        const synthesizer=window.speechSynthesis;
-        synthesizer.cancel();
-        synthesizer.resume();
-        const speech=new SpeechSynthesisUtterance(phrase);
-        speech.lang='cs-CZ';
-        speech.rate=kind==='warning'?1.16:1.08;
-        speech.pitch=1.08;
-        const czechVoice=synthesizer.getVoices().find(voice=>voice.lang.toLowerCase().startsWith('cs'));
-        if(czechVoice)speech.voice=czechVoice;
-        synthesizer.speak(speech);
+        // Speech must never break the game flow: every failure is swallowed.
+        try{
+            const host=window.__host();
+            if(host.silent||!phrase||!('speechSynthesis' in window)||!('SpeechSynthesisUtterance' in window))return;
+            const synthesizer=window.speechSynthesis;
+            synthesizer.cancel();
+            synthesizer.resume();
+            const speech=new SpeechSynthesisUtterance(phrase);
+            speech.lang='cs-CZ';
+            speech.rate=Math.min(2,(host.rate||1.05)+(kind==='warning'?.12:0));
+            speech.pitch=host.pitch??1;
+            try{const voice=window.__pickVoice();if(voice)speech.voice=voice}catch(error){}
+            synthesizer.speak(speech);
+        }catch(error){}
     }
     function speakRandom(kind){
         speakText(takeSpeechPhrase(kind),kind);
@@ -366,14 +516,14 @@ html,body{background:#132d35!important}
     }
     function speakHandoff(){
         const team=teamVoice[Number(activeTeam)];
-        const phrase=`${team.color} tým. ${window.__modeSay()} ${takeSpeechPhrase('handoff')}`;
+        const phrase=`${window.__scoreLine()} ${window.__teamCall(team.color)} ${window.__modeSay()} ${takeSpeechPhrase('handoff')}`.trim();
         speakText(phrase,'handoff');
     }
     function speakPhoneStats(){
         if(statsVoiceSpoken)return;
         statsVoiceSpoken=true;
-        const summary=Object.entries(scores).filter(([t])=>Number(t)<=(window.teamCount||4)).map(([team,score])=>`Tým ${team}: ${scoreLabel(score)}`).join('. ');
-        speakText(`Konec hry. Skóre je na obrazovce. ${summary}. ${(()=>{const w=window.__winners();return w.length===1?`Vítězí tým ${w[0]}! Ostatní mají nárok na odvetu.`:w.length?'Remíza! To chce odvetu.':'Nikdo nebodoval. Karty slaví.'})()}`,'stats');
+        const summary=Object.entries(scores).filter(([t])=>Number(t)<=(window.teamCount||4)).map(([team,score])=>`${window.__teamName(team)} ${scoreLabel(score)}`).join(', ');
+        speakText(`Konec hry! Skóre: ${summary}. ${window.__winLine()}`,'stats');
     }
     function celebratePhoneCorrect(){
         const game=$('phone-game');
@@ -417,7 +567,7 @@ html,body{background:#132d35!important}
         phoneGame.remaining=window.mobileRoundSeconds||60;
         renderPhoneCard();
         updatePhoneTimer();
-        if(firstTurn&&!gameRulesSpoken){gameRulesSpoken=true;speakText(`${gameRules} Začíná červený tým. ${window.__modeSay()}`,'instruction')}else speakHandoff();
+        if(firstTurn&&!gameRulesSpoken){gameRulesSpoken=true;speakText(`${window.__hostIntro()} ${window.__teamCall('Červený')} ${window.__modeSay()}`,'instruction')}else speakHandoff();
     }
     function startPhoneTurn(){
         if(turnFinished||phoneGame.running)return;
@@ -427,11 +577,11 @@ html,body{background:#132d35!important}
         phoneGame.running=true;
         phoneGame.warningSpoken=false;renderPhoneCard();
         $('phone-status').textContent=`${teamVoice[Number(activeTeam)].color} tým hádá! Trefa = Uhádli.`;
-        speakText(`${takeSpeechPhrase('start')} Trefa? Klepni Uhádli.`,'start');
+        speakText(takeSpeechPhrase('start'),'start');
         playPhoneTone([520,660,780]);
         updatePhoneTimer();
         clearInterval(phoneGame.timer);
-        phoneGame.timer=setInterval(()=>{phoneGame.remaining=Math.ceil(Math.max(0,phoneGame.deadline-Date.now())/1000);updatePhoneTimer();if(phoneGame.remaining<=10&&!phoneGame.warningSpoken&&phoneGame.remaining>0){phoneGame.warningSpoken=true;speakRandom('warning');playPhoneTone([760,620])}if(phoneGame.remaining<=0){saveGameEvent('timeout');speakText(`${takeSpeechPhrase('timeout')} Předat telefon.`,'timeout');finishPhoneTurn('Čas vypršel.',false)}},250);
+        phoneGame.timer=setInterval(()=>{phoneGame.remaining=Math.ceil(Math.max(0,phoneGame.deadline-Date.now())/1000);updatePhoneTimer();if(phoneGame.remaining<=10&&!phoneGame.warningSpoken&&phoneGame.remaining>0){phoneGame.warningSpoken=true;speakRandom('warning');playPhoneTone([760,620])}if(phoneGame.remaining<=0){saveGameEvent('timeout');speakText(takeSpeechPhrase('timeout'),'timeout');finishPhoneTurn('Čas vypršel.',false)}},250);
     }
     function isLastPhoneCard(){return phoneGame.index>=currentCards.length-1}
     function saveGameEvent(result){
@@ -446,13 +596,13 @@ html,body{background:#132d35!important}
         if(autoPass)setTimeout(preparePhoneTurn,1200);
     }
     function showPhoneStats(){
-        clearInterval(phoneGame.timer);phoneGame.running=false;gameFinished=true;$('phone-answer-controls').classList.add('hidden');$('phone-handoff').classList.add('hidden');$('phone-prompt').parentElement.classList.add('hidden');$('phone-timer').classList.add('hidden');$('phone-status').classList.add('hidden');$('phone-round').textContent='KONEC HRY';$('phone-stats').classList.remove('hidden');$('phone-stats').innerHTML='<h2>Výsledky</h2>'+Object.entries(scores).filter(([t])=>Number(t)<=(window.teamCount||4)).map(([team,score])=>`<div class="phone-score${window.__winners().includes(team)?' qs-win':''}"><span>${window.__winners().includes(team)?'🏆 ':''}Tým ${team}</span><strong>${score} ${score===1?'bod':'bodů'}</strong></div>`).join('')+'<button id="phone-stats-close" class="phone-handoff">🔁 Nová hra</button>';$('phone-stats-close').onclick=closePhoneGame;if(gameSessionId)api(`/api/game-sessions/${gameSessionId}/finish`,{method:'POST',body:JSON.stringify({scores})}).catch(()=>{gameSyncState='offline';renderPhoneSync()});
+        clearInterval(phoneGame.timer);phoneGame.running=false;gameFinished=true;$('phone-answer-controls').classList.add('hidden');$('phone-handoff').classList.add('hidden');$('phone-prompt').parentElement.classList.add('hidden');$('phone-timer').classList.add('hidden');$('phone-status').classList.add('hidden');$('phone-round').textContent='KONEC HRY';$('phone-stats').classList.remove('hidden');$('phone-stats').innerHTML='<h2>Výsledky</h2>'+Object.entries(scores).filter(([t])=>Number(t)<=(window.teamCount||4)).map(([team,score])=>`<div class="phone-score${window.__winners().includes(team)?' qs-win':''}"><span>${window.__winners().includes(team)?'🏆 ':''}${teamVoice[Number(team)].color} tým</span><strong>${score} ${score===1?'bod':'bodů'}</strong></div>`).join('')+'<button id="phone-stats-close" class="phone-handoff">🔁 Nová hra</button>';$('phone-stats-close').onclick=closePhoneGame;if(gameSessionId)api(`/api/game-sessions/${gameSessionId}/finish`,{method:'POST',body:JSON.stringify({scores})}).catch(()=>{gameSyncState='offline';renderPhoneSync()});
     }
     window.launchPhoneGame=async function(){if(!currentCards.length)return;Object.keys(scores).forEach(team=>scores[team]=0);activeTeam='1';gameFinished=false;gameSessionId=null;gameSyncState='unknown';phoneGame.index=-1;$('phone-game').style.display='flex';$('phone-prompt').parentElement.classList.remove('hidden');$('phone-timer').classList.remove('hidden');$('phone-status').classList.remove('hidden');$('phone-stats').classList.add('hidden');renderPhoneSync();try{const session=await api('/api/game-sessions',{method:'POST',body:JSON.stringify({mode:document.getElementById('mode').value,card_count:currentCards.length})});gameSessionId=session.id;gameSyncState='connected'}catch(error){gameSyncState='offline'}renderPhoneSync();const request=$('phone-game').requestFullscreen?.();if(request)request.catch(()=>{});preparePhoneTurn();requestPhoneWakeLock()};
-    document.querySelectorAll('.phone-team').forEach(button=>button.onclick=()=>{if(gameFinished)return;activeTeam=button.dataset.team;renderPhoneCard();const team=teamVoice[Number(activeTeam)];speakText(`${team.color} tým, jste na řadě. Telefon a Start.`,'instruction')});
+    document.querySelectorAll('.phone-team').forEach(button=>button.onclick=()=>{if(gameFinished)return;activeTeam=button.dataset.team;renderPhoneCard();const team=teamVoice[Number(activeTeam)];speakText(window.__teamCall(team.color),'instruction')});
     $('phone-start').onclick=startPhoneTurn;
-    $('phone-correct').onclick=()=>{if(!phoneGame.running)return;scores[activeTeam]++;saveGameEvent('correct');speakText(`${takeSpeechPhrase('correct')} Další karta.`,'correct');playPhoneTone([660,820]);celebratePhoneCorrect();if(isLastPhoneCard()){showPhoneStats();return}phoneGame.index++;renderPhoneCard();$('phone-status').textContent='BOD! Trefa!';setTimeout(()=>{if(phoneGame.running)renderPhoneCard()},520)};
-    $('phone-miss').onclick=()=>{if(!phoneGame.running)return;saveGameEvent('miss');speakText(`${takeSpeechPhrase('miss')} Předat telefon.`,'miss');playPhoneTone([330,240]);finishPhoneTurn('Odpověď nebyla správná.')};
+    $('phone-correct').onclick=()=>{if(!phoneGame.running)return;scores[activeTeam]++;saveGameEvent('correct');speakText(takeSpeechPhrase('correct'),'correct');playPhoneTone([660,820]);celebratePhoneCorrect();if(isLastPhoneCard()){showPhoneStats();return}phoneGame.index++;renderPhoneCard();$('phone-status').textContent='BOD! Trefa!';setTimeout(()=>{if(phoneGame.running)renderPhoneCard()},520)};
+    $('phone-miss').onclick=()=>{if(!phoneGame.running)return;saveGameEvent('miss');speakText(takeSpeechPhrase('miss'),'miss');playPhoneTone([330,240]);finishPhoneTurn('Odpověď nebyla správná.')};
     $('phone-handoff').onclick=preparePhoneTurn;
     $('phone-close').onclick=showPhoneStats;
     new MutationObserver(()=>{const stats=$('phone-stats');if(stats.classList.contains('hidden')){statsVoiceSpoken=false;return}stats.querySelectorAll('.phone-score strong').forEach((node,index)=>{node.textContent=scoreLabel(scores[index+1])});speakPhoneStats()}).observe($('phone-stats'),{attributes:true,attributeFilter:['class']});
