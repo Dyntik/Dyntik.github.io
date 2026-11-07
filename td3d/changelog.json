@@ -1,11 +1,11 @@
 {
- "generated": "2026-11-06T22:35:42Z",
- "total": 649,
+ "generated": "2026-11-07T09:30:59Z",
+ "total": 677,
  "versions": [
   {
    "version": "1.0.0",
    "date": "2026-11-06",
-   "count": 114,
+   "count": 142,
    "notes": [
     "Full 3D port of Dynty Tower Defense up to tin: towers, ores iron, copper and tin, with the same rules and balance as the 2D game.",
     "Wardens (spawners) that you control: raise or lower the pressure on your base with the spawn control.",
@@ -21,6 +21,230 @@
  ],
  "unreleased": [],
  "entries": [
+  {
+   "date": "2026-11-07",
+   "sha": "74e2a292",
+   "subject": "feat(render): collectors and haulers animate their parts",
+   "type": "feat",
+   "scope": "render",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-07",
+   "sha": "5f9486da",
+   "subject": "feat(render): collectors and haulers glow on the ground",
+   "type": "feat",
+   "scope": "render",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-07",
+   "sha": "6870b535",
+   "subject": "fix(sim): unit snapshot refreshes when a unit is added while paused",
+   "type": "fix",
+   "scope": "sim",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-07",
+   "sha": "04b8e13e",
+   "subject": "feat(sim): collectors and haulers publish their visual state",
+   "type": "feat",
+   "scope": "sim",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-07",
+   "sha": "735b2dcd",
+   "subject": "fix(ui): toasts keep clear of the HUD and open windows",
+   "type": "fix",
+   "scope": "ui",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-07",
+   "sha": "dadca657",
+   "subject": "feat(build): towers priced in ingots can be bought, starting with Frost",
+   "type": "feat",
+   "scope": "build",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-07",
+   "sha": "3131d380",
+   "subject": "feat(ui): every tooltip shows the icon of its subject",
+   "type": "feat",
+   "scope": "ui",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-07",
+   "sha": "99a0d3d9",
+   "subject": "fix(ui): windows and panels fit their text at every size",
+   "type": "fix",
+   "scope": "ui",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-07",
+   "sha": "fc3980e7",
+   "subject": "fix(ui): pinned windows scroll inside the screen at large UI scale",
+   "type": "fix",
+   "scope": "ui",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-07",
+   "sha": "780ab2d5",
+   "subject": "fix(ui): HUD elements no longer overlap",
+   "type": "fix",
+   "scope": "ui",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-07",
+   "sha": "deae115d",
+   "subject": "feat(audio): refining runs silently",
+   "type": "feat",
+   "scope": "audio",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-07",
+   "sha": "35df5ae2",
+   "subject": "feat(ui): the talent bar shows unspent points and opens the tree",
+   "type": "feat",
+   "scope": "ui",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-07",
+   "sha": "b2fd2238",
+   "subject": "fix(online): the request queue only carries the player's own requests",
+   "type": "fix",
+   "scope": "online",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-07",
+   "sha": "315ae853",
+   "subject": "tools(dev): agent runs use their own user data folder",
+   "type": "tools",
+   "scope": "dev",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-07",
+   "sha": "566a9076",
+   "subject": "feat(audio): projectile hits are silent, tower shots stay",
+   "type": "feat",
+   "scope": "audio",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-07",
+   "sha": "ba175047",
+   "subject": "fix(online): leaderboard news shows only real players",
+   "type": "fix",
+   "scope": "online",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-07",
+   "sha": "de818d5f",
+   "subject": "docs(state): W59 and W60 wave end",
+   "type": "docs",
+   "scope": "state",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-07",
+   "sha": "ffc80869",
+   "subject": "test(sim): timing guards keep a safe margin",
+   "type": "test",
+   "scope": "sim",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-07",
+   "sha": "462b7b29",
+   "subject": "fix(ui): stat rows find their icons",
+   "type": "fix",
+   "scope": "ui",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-07",
+   "sha": "42cd66af",
+   "subject": "fix(ui): closing a window while it re-centres no longer logs an error",
+   "type": "fix",
+   "scope": "ui",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-07",
+   "sha": "be5e2e85",
+   "subject": "perf(render): the sky is ready before the run starts",
+   "type": "perf",
+   "scope": "render",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-07",
+   "sha": "762eccf7",
+   "subject": "fix(save): hauler prices work right after loading a save",
+   "type": "fix",
+   "scope": "save",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-07",
+   "sha": "311562f2",
+   "subject": "perf(ui): the interface skips work while the shown state is unchanged",
+   "type": "perf",
+   "scope": "ui",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-07",
+   "sha": "e5a134e1",
+   "subject": "perf(sim): mass changes patch the path field instead of rebuilding",
+   "type": "perf",
+   "scope": "sim",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-07",
+   "sha": "95d351ef",
+   "subject": "perf(web): smoother first seconds of a new run",
+   "type": "perf",
+   "scope": "web",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-07",
+   "sha": "f2ac7a84",
+   "subject": "perf(tooltips): cold card builds reuse prewarmed spares, sections and stat head/bar nodes built on demand",
+   "type": "perf",
+   "scope": "tooltips",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-07",
+   "sha": "c002dc06",
+   "subject": "docs(state): W46-W57 wave end with performance and audio notes",
+   "type": "docs",
+   "scope": "state",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-07",
+   "sha": "9a2572b8",
+   "subject": "chore(online): remove test profiles created by automated runs",
+   "type": "chore",
+   "scope": "online",
+   "version": "1.0.0"
+  },
   {
    "date": "2026-11-06",
    "sha": "0a9805df",
