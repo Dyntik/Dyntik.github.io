@@ -1,11 +1,11 @@
 {
- "generated": "2026-11-11T18:11:44Z",
- "total": 863,
+ "generated": "2026-11-11T18:16:22Z",
+ "total": 869,
  "versions": [
   {
    "version": "1.1.7",
    "date": "2026-11-08",
-   "count": 133,
+   "count": 139,
    "notes": [
     "Online scores and gift requests no longer pile up: a refused request is dropped at once, and a run submit goes ahead of waiting polls.",
     "Gift inbox checks run on their normal schedule again, instead of retrying every few seconds."
@@ -100,6 +100,54 @@
  ],
  "unreleased": [],
  "entries": [
+  {
+   "date": "2026-11-11",
+   "sha": "4c4c8d8a",
+   "subject": "feat(art): Buffer Unit V3 model (modern style)",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "ccc8d81a",
+   "subject": "feat(art): Buffer Unit V3 model (modern style)",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "db8bde33",
+   "subject": "feat(art): Tin Buffer V3 emitter crown and fins",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "c4a96926",
+   "subject": "feat(art): Tin Buffer V3 model (modern style)",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "b460ae8e",
+   "subject": "feat(render): visible object shadows on the arena deck (modern style)",
+   "type": "feat",
+   "scope": "render",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "a0c0ec7e",
+   "subject": "feat(art): War Machine V3 hull plates, sensor dish and nozzles",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
   {
    "date": "2026-11-11",
    "sha": "ba499ad7",
