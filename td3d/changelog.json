@@ -1,11 +1,11 @@
 {
- "generated": "2026-11-11T12:05:05Z",
- "total": 795,
+ "generated": "2026-11-11T12:17:06Z",
+ "total": 801,
  "versions": [
   {
    "version": "1.1.7",
    "date": "2026-11-08",
-   "count": 65,
+   "count": 71,
    "notes": [
     "Online scores and gift requests no longer pile up: a refused request is dropped at once, and a run submit goes ahead of waiting polls.",
     "Gift inbox checks run on their normal schedule again, instead of retrying every few seconds."
@@ -100,6 +100,54 @@
  ],
  "unreleased": [],
  "entries": [
+  {
+   "date": "2026-11-11",
+   "sha": "c2fd59ca",
+   "subject": "feat(art): Refiner V3 base slab and tap spout",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "63075170",
+   "subject": "feat(art): Refiner V3 model (modern style)",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "94ca5b12",
+   "subject": "feat(art): Tank enemy V3 detail pass (armour slabs, reactor lid)",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "0342a87a",
+   "subject": "feat(art): Tank enemy V3 model (modern style)",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "d9934421",
+   "subject": "feat(art): Basic Tower V3 in the game (modern style)",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "92e3d4ae",
+   "subject": "feat(render): modern towers with LOD2 and animated parts",
+   "type": "feat",
+   "scope": "render",
+   "version": "1.1.7"
+  },
   {
    "date": "2026-11-11",
    "sha": "c6900e85",
