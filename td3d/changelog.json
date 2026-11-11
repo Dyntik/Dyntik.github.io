@@ -1,11 +1,11 @@
 {
- "generated": "2026-11-11T13:50:01Z",
- "total": 844,
+ "generated": "2026-11-11T14:17:30Z",
+ "total": 853,
  "versions": [
   {
    "version": "1.1.7",
    "date": "2026-11-08",
-   "count": 114,
+   "count": 123,
    "notes": [
     "Online scores and gift requests no longer pile up: a refused request is dropped at once, and a run submit goes ahead of waiting polls.",
     "Gift inbox checks run on their normal schedule again, instead of retrying every few seconds."
@@ -100,6 +100,78 @@
  ],
  "unreleased": [],
  "entries": [
+  {
+   "date": "2026-11-11",
+   "sha": "81b4c40b",
+   "subject": "feat(art): Seraph boss V3 lower drive housings",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "5520c738",
+   "subject": "feat(art): Seraph boss V3 pods and emitter lenses",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "fdec09fb",
+   "subject": "feat(art): Seraph boss V3 model (modern style)",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "aa2b0021",
+   "subject": "fix(art): arena deck lights are small recessed status lights",
+   "type": "fix",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "b1117379",
+   "subject": "feat(art): Colossus boss V3 model (modern style)",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "1c2a86c2",
+   "subject": "fix(render): deck keeps no shadows after quality changes and sits darker",
+   "type": "fix",
+   "scope": "render",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "58ff84e0",
+   "subject": "fix(render): arena deck pieces never cast shadows and sit on the grid",
+   "type": "fix",
+   "scope": "render",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "9d3f0b24",
+   "subject": "feat(render): sky reflections and core light in the modern look",
+   "type": "feat",
+   "scope": "render",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "38880fbb",
+   "subject": "feat(render): arena deck under the playfield (modern style)",
+   "type": "feat",
+   "scope": "render",
+   "version": "1.1.7"
+  },
   {
    "date": "2026-11-11",
    "sha": "06104665",
