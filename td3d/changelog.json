@@ -1,11 +1,11 @@
 {
- "generated": "2026-11-11T14:17:30Z",
- "total": 853,
+ "generated": "2026-11-11T14:21:54Z",
+ "total": 857,
  "versions": [
   {
    "version": "1.1.7",
    "date": "2026-11-08",
-   "count": 123,
+   "count": 127,
    "notes": [
     "Online scores and gift requests no longer pile up: a refused request is dropped at once, and a run submit goes ahead of waiting polls.",
     "Gift inbox checks run on their normal schedule again, instead of retrying every few seconds."
@@ -100,6 +100,38 @@
  ],
  "unreleased": [],
  "entries": [
+  {
+   "date": "2026-11-11",
+   "sha": "8ad4cb72",
+   "subject": "feat(art): Wraith boss V3 model (modern style)",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "0c806821",
+   "subject": "feat(render): animated parts on V3 units and structures",
+   "type": "feat",
+   "scope": "render",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "5ac6bde0",
+   "subject": "fix(render): V3 enemy part spin axes",
+   "type": "fix",
+   "scope": "render",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "6da409c8",
+   "subject": "feat(render): animated parts on V3 enemies",
+   "type": "feat",
+   "scope": "render",
+   "version": "1.1.7"
+  },
   {
    "date": "2026-11-11",
    "sha": "81b4c40b",
