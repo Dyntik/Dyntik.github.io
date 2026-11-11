@@ -1,11 +1,11 @@
 {
- "generated": "2026-11-11T13:22:30Z",
- "total": 833,
+ "generated": "2026-11-11T13:45:10Z",
+ "total": 837,
  "versions": [
   {
    "version": "1.1.7",
    "date": "2026-11-08",
-   "count": 103,
+   "count": 107,
    "notes": [
     "Online scores and gift requests no longer pile up: a refused request is dropped at once, and a run submit goes ahead of waiting polls.",
     "Gift inbox checks run on their normal schedule again, instead of retrying every few seconds."
@@ -100,6 +100,38 @@
  ],
  "unreleased": [],
  "entries": [
+  {
+   "date": "2026-11-11",
+   "sha": "d2e16d22",
+   "subject": "feat(art): Ore generator structure V3 model (modern style)",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "16bbf848",
+   "subject": "feat(art): arena deck tiles V3 (modern style)",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "2110b7f2",
+   "subject": "feat(art): V3 towers and Grunt re-exported with hull occlusion",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "048e65eb",
+   "subject": "test(art): budget ignores the albedo fix primitive",
+   "type": "test",
+   "scope": "art",
+   "version": "1.1.7"
+  },
   {
    "date": "2026-11-11",
    "sha": "d029a930",
