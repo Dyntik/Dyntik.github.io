@@ -1,11 +1,11 @@
 {
- "generated": "2026-11-11T18:16:22Z",
- "total": 869,
+ "generated": "2026-11-11T18:28:29Z",
+ "total": 870,
  "versions": [
   {
    "version": "1.1.7",
    "date": "2026-11-08",
-   "count": 139,
+   "count": 140,
    "notes": [
     "Online scores and gift requests no longer pile up: a refused request is dropped at once, and a run submit goes ahead of waiting polls.",
     "Gift inbox checks run on their normal schedule again, instead of retrying every few seconds."
@@ -100,6 +100,14 @@
  ],
  "unreleased": [],
  "entries": [
+  {
+   "date": "2026-11-11",
+   "sha": "0e7c2617",
+   "subject": "feat(art): Tin Tower V3 model (modern style)",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
   {
    "date": "2026-11-11",
    "sha": "4c4c8d8a",
