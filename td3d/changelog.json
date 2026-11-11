@@ -1,11 +1,11 @@
 {
- "generated": "2026-11-11T12:17:06Z",
- "total": 801,
+ "generated": "2026-11-11T12:21:01Z",
+ "total": 803,
  "versions": [
   {
    "version": "1.1.7",
    "date": "2026-11-08",
-   "count": 71,
+   "count": 73,
    "notes": [
     "Online scores and gift requests no longer pile up: a refused request is dropped at once, and a run submit goes ahead of waiting polls.",
     "Gift inbox checks run on their normal schedule again, instead of retrying every few seconds."
@@ -100,6 +100,22 @@
  ],
  "unreleased": [],
  "entries": [
+  {
+   "date": "2026-11-11",
+   "sha": "14da3f12",
+   "subject": "fix(art): Rapid Tower V3 warning strips stay inside the base",
+   "type": "fix",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "808551d0",
+   "subject": "feat(art): Rapid Tower V3 model (modern style)",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
   {
    "date": "2026-11-11",
    "sha": "c2fd59ca",
