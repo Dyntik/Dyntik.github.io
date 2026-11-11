@@ -1,11 +1,11 @@
 {
- "generated": "2026-11-11T12:21:01Z",
- "total": 803,
+ "generated": "2026-11-11T13:09:28Z",
+ "total": 822,
  "versions": [
   {
    "version": "1.1.7",
    "date": "2026-11-08",
-   "count": 73,
+   "count": 92,
    "notes": [
     "Online scores and gift requests no longer pile up: a refused request is dropped at once, and a run submit goes ahead of waiting polls.",
     "Gift inbox checks run on their normal schedule again, instead of retrying every few seconds."
@@ -100,6 +100,158 @@
  ],
  "unreleased": [],
  "entries": [
+  {
+   "date": "2026-11-11",
+   "sha": "aee0891d",
+   "subject": "feat(art): ore piles V3 rebuilt as raw ore rock",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "a04480dd",
+   "subject": "feat(art): ore piles V3 models (modern style)",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "a2f4325e",
+   "subject": "feat(art): Divider enemy V3 model (modern style)",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "8bd0a620",
+   "subject": "feat(art): Divider enemy V3 model (modern style)",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "36ac5088",
+   "subject": "feat(art): Collector unit V3 model (modern style)",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "be6350f7",
+   "subject": "feat(art): Hauler unit V3 model (modern style)",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "87895624",
+   "subject": "feat(art): War Machine boss V3 model (modern style)",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "b56cfa00",
+   "subject": "feat(art): Rapid, Tank, Refiner and Core V3 re-exported with occlusion",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "1ee6912b",
+   "subject": "fix(art): Core V3 LOD2 has no empty mesh",
+   "type": "fix",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "7136ce14",
+   "subject": "chore(tools): close render lights the front and fills the frame",
+   "type": "chore",
+   "scope": "tools",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "34c029d5",
+   "subject": "fix(tools): every V3 material slot keeps the baked occlusion",
+   "type": "fix",
+   "scope": "tools",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "0a9f542d",
+   "subject": "feat(render): animated parts for the core and enemies",
+   "type": "feat",
+   "scope": "render",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "ffa1b0fe",
+   "subject": "feat(art): V3 towers, core and enemies in the game (modern style)",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "49464385",
+   "subject": "docs(skills): art burst lessons for graphics V3",
+   "type": "docs",
+   "scope": "skills",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "882afde4",
+   "subject": "docs(roadmap): graphics V3 handoff and wave history",
+   "type": "docs",
+   "scope": "roadmap",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "7c8aa474",
+   "subject": "feat(art): V3 models re-exported with baked occlusion",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "175107b0",
+   "subject": "chore(tools): V3 library helpers from the first art burst",
+   "type": "chore",
+   "scope": "tools",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "3c458ad8",
+   "subject": "chore(tools): standard close render and V3 lint caps",
+   "type": "chore",
+   "scope": "tools",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "33df5212",
+   "subject": "fix(tools): baked occlusion reaches the exported V3 models",
+   "type": "fix",
+   "scope": "tools",
+   "version": "1.1.7"
+  },
   {
    "date": "2026-11-11",
    "sha": "14da3f12",
