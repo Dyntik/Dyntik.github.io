@@ -1,11 +1,90 @@
 {
- "generated": "2026-11-07T09:30:59Z",
- "total": 677,
+ "generated": "2026-11-11T12:05:05Z",
+ "total": 795,
  "versions": [
+  {
+   "version": "1.1.7",
+   "date": "2026-11-08",
+   "count": 65,
+   "notes": [
+    "Online scores and gift requests no longer pile up: a refused request is dropped at once, and a run submit goes ahead of waiting polls.",
+    "Gift inbox checks run on their normal schedule again, instead of retrying every few seconds."
+   ]
+  },
+  {
+   "version": "1.1.6",
+   "date": "2026-11-08",
+   "count": 4,
+   "notes": [
+    "Right click and Esc cancel the refinery placement.",
+    "Runs with achievements are accepted again: the achievement catalogue is seeded on the server, so scores reach the boards.",
+    "Weekly challenge runs send their challenge result, so they show on the week board."
+   ]
+  },
+  {
+   "version": "1.1.5",
+   "date": "2026-11-08",
+   "count": 6,
+   "notes": [
+    "Warden bosses show a health bar and a shield bar above them in the world."
+   ]
+  },
+  {
+   "version": "1.1.4",
+   "date": "2026-11-08",
+   "count": 3,
+   "notes": [
+    "Right click switches auto buy off again; the AUTO label and the active strip follow the click at once."
+   ]
+  },
+  {
+   "version": "1.1.3",
+   "date": "2026-11-08",
+   "count": 3,
+   "notes": [
+    "Wardens spawn at the full spawn radius again and walk the maze instead of getting stuck in one-cell gaps.",
+    "Every enemy follows the maze, flyers included.",
+    "The enemy speed in the info card shows the slowed value while a slow is active."
+   ]
+  },
+  {
+   "version": "1.1.2",
+   "date": "2026-11-08",
+   "count": 4,
+   "notes": [
+    "Collectors are drawn smaller, and the unit auras sit tight around the model.",
+    "Unit auras take the colour of the ore they carry.",
+    "The arena has a plain black background with the grid only; the space backdrop is switched off for now.",
+    "Failed score uploads show in the leaderboard, so you can see when a run did not reach the server."
+   ]
+  },
+  {
+   "version": "1.1.1",
+   "date": "2026-11-08",
+   "count": 6,
+   "notes": [
+    "Run submits reach the leaderboards again: the game now sends the four-part version the server expects, so your runs appear on the Champion, This week and Weekly boards."
+   ]
+  },
+  {
+   "version": "1.1.0",
+   "date": "2026-11-07",
+   "count": 3,
+   "notes": [
+    "Graphics quality presets Low, Medium (the default, the 1.0 look) and High (desktop only, extra effects such as shadows, glow, particles and sparkle).",
+    "Sound effects for towers, hits, deaths, boss, core, ore, building, selling, upgrades, refining, levels, achievements and wave starts, with volume settings.",
+    "Collectors and haulers have their own unit models, drawn larger and animated.",
+    "Smoother play on large maps: the flow field, the tooltips and the UI update only when something changed, and the sky nebula builds over several frames.",
+    "Ore piles and pickups, and enemies and shots, move on the GPU between simulation steps.",
+    "Drag and mass select show the ingot price of ingot towers.",
+    "Ingot towers place one at a time, as in the 2D game.",
+    "Web build loads the sky without a long stall."
+   ]
+  },
   {
    "version": "1.0.0",
    "date": "2026-11-06",
-   "count": 142,
+   "count": 166,
    "notes": [
     "Full 3D port of Dynty Tower Defense up to tin: towers, ores iron, copper and tin, with the same rules and balance as the 2D game.",
     "Wardens (spawners) that you control: raise or lower the pressure on your base with the spawn control.",
@@ -21,6 +100,950 @@
  ],
  "unreleased": [],
  "entries": [
+  {
+   "date": "2026-11-11",
+   "sha": "c6900e85",
+   "subject": "feat(art): Frost Tower V3 model (modern style)",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "6168336b",
+   "subject": "feat(art): Frost Tower V3 model (modern style)",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "afe682db",
+   "subject": "feat(art): Frost Tower V3 model (modern style)",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "421fd885",
+   "subject": "feat(art): Core V3 glowing crystal heart",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "a759a515",
+   "subject": "feat(art): Core V3 value pass and crystal heart",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "aa66ce13",
+   "subject": "feat(art): Core V3 greeble pass and symmetric arms",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "27a3cdab",
+   "subject": "feat(art): Core V3 model (modern style)",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "23369fb7",
+   "subject": "feat(art): Poison Tower V3 fixes: inset chevrons, east pump, stub",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "a08ce527",
+   "subject": "feat(art): Poison Tower V3 detail pass and launcher mount (modern style)",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "54ddf94d",
+   "subject": "feat(art): Poison Tower V3 model (modern style)",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "3b06c32a",
+   "subject": "feat(art): Wall V3 model with full detail (modern style)",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "8123d476",
+   "subject": "feat(art): Wall V3 model (modern style)",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "63a73634",
+   "subject": "feat(art): Grunt enemy V3 model redo (layered hull, detailed nacelles)",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "76298b4c",
+   "subject": "feat(art): Grunt enemy V3 model (modern style)",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "9f482079",
+   "subject": "feat(art): AntiShield Tower V3 model (modern style)",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "e98d3af3",
+   "subject": "feat(art): Sniper Tower V3 model (modern style)",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "46570d9b",
+   "subject": "feat(art): Sniper Tower V3 model (modern style)",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "640e9b32",
+   "subject": "feat(art): Basic Tower V3 redesign with a faceted hull",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "6596abe5",
+   "subject": "feat(render): desktop uses the Forward+ renderer",
+   "type": "feat",
+   "scope": "render",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "82a6a5ab",
+   "subject": "fix(render): grid and combat particles on Forward+",
+   "type": "fix",
+   "scope": "render",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "8c696bdd",
+   "subject": "refactor(render): model registry reads the graphics style from GraphicsQuality",
+   "type": "refactor",
+   "scope": "render",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "71077c09",
+   "subject": "fix(tests): arena tests no longer depend on the saved graphics quality",
+   "type": "fix",
+   "scope": "tests",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "388ee148",
+   "subject": "feat(render): model registry with a modern style overlay and V3 budgets",
+   "type": "feat",
+   "scope": "render",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "65d3959b",
+   "subject": "feat(art): Basic Tower V3 model (modern style)",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "e26b3f9c",
+   "subject": "chore(tools): Blender V3 library and export flags",
+   "type": "chore",
+   "scope": "tools",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "f86c6024",
+   "subject": "feat(render): modern graphics style with shadows, glow and AO",
+   "type": "feat",
+   "scope": "render",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "a0a87253",
+   "subject": "docs(skills): renderer and V3 art pipeline rules",
+   "type": "docs",
+   "scope": "skills",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "257ca427",
+   "subject": "docs(roadmap): graphics V3 plan, style and interfaces",
+   "type": "docs",
+   "scope": "roadmap",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "c19e8952",
+   "subject": "fix(sim): sniper pierce lives in the tower's shot effect",
+   "type": "fix",
+   "scope": "sim",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "ac9c3cc2",
+   "subject": "feat(sim): workshop keeps pause and per-entry repeat",
+   "type": "feat",
+   "scope": "sim",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "917f8cff",
+   "subject": "feat(sim): splitter modules fire extra shots",
+   "type": "feat",
+   "scope": "sim",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "d3ba30ce",
+   "subject": "fix(sim): sniper shots ignore half of the armor",
+   "type": "fix",
+   "scope": "sim",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "8c73f5ff",
+   "subject": "feat(ui): compact research cards",
+   "type": "feat",
+   "scope": "ui",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "b600e987",
+   "subject": "feat(ui): workshop queue auto toggle and compact rows",
+   "type": "feat",
+   "scope": "ui",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "9194fc19",
+   "subject": "feat(ui): workshop section in the build menu",
+   "type": "feat",
+   "scope": "ui",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "c3c4eeba",
+   "subject": "feat(ui): HUD chip and toasts for crafting and research",
+   "type": "feat",
+   "scope": "ui",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "cb637444",
+   "subject": "docs(roadmap): crafting 1.1 progress and session state",
+   "type": "docs",
+   "scope": "roadmap",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-08",
+   "sha": "39c65b60",
+   "subject": "fix(render): shot reach follows the tower's effective range",
+   "type": "fix",
+   "scope": "render",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-08",
+   "sha": "e42b82e6",
+   "subject": "feat(sim): towers carry crafted modules",
+   "type": "feat",
+   "scope": "sim",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-08",
+   "sha": "1ede98c8",
+   "subject": "feat(ui): bridge views and actions for the workshop and research",
+   "type": "feat",
+   "scope": "ui",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-08",
+   "sha": "838d02cd",
+   "subject": "feat(ui): research window with branches and timers",
+   "type": "feat",
+   "scope": "ui",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-08",
+   "sha": "14caf459",
+   "subject": "feat(sim): module effects reach combat (pierce, shields, multi-target, heal block)",
+   "type": "feat",
+   "scope": "sim",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-08",
+   "sha": "16ef5a5f",
+   "subject": "feat(ui): workshop window with recipes, queue and salvage",
+   "type": "feat",
+   "scope": "ui",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-08",
+   "sha": "e06a7475",
+   "subject": "test(sim): owner save from 1.0 loads in v2",
+   "type": "test",
+   "scope": "sim",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-08",
+   "sha": "5968fcdd",
+   "subject": "feat(sim): saves keep the workshop and research (save v2)",
+   "type": "feat",
+   "scope": "sim",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-08",
+   "sha": "1984d714",
+   "subject": "feat(sim): workshop and research run inside the world",
+   "type": "feat",
+   "scope": "sim",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-08",
+   "sha": "878cccdf",
+   "subject": "feat(sim): tower modules with sockets and materials",
+   "type": "feat",
+   "scope": "sim",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-08",
+   "sha": "4070af11",
+   "subject": "feat(data): tower module families for crafting 1.1",
+   "type": "feat",
+   "scope": "data",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-08",
+   "sha": "678d8e58",
+   "subject": "feat(sim): research tree with timed nodes",
+   "type": "feat",
+   "scope": "sim",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-08",
+   "sha": "47518aca",
+   "subject": "feat(sim): workshop crafts components from ingots",
+   "type": "feat",
+   "scope": "sim",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-08",
+   "sha": "f5e9258c",
+   "subject": "feat(sim): tower stat pipeline for crafting modifiers",
+   "type": "feat",
+   "scope": "sim",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-08",
+   "sha": "72e4a057",
+   "subject": "chore(tools): crafting pacing calculator",
+   "type": "chore",
+   "scope": "tools",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-08",
+   "sha": "003c1115",
+   "subject": "docs(roadmap): crafting interfaces frozen for 1.1",
+   "type": "docs",
+   "scope": "roadmap",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-08",
+   "sha": "95c96b36",
+   "subject": "docs(roadmap): crafting 1.x plan v2",
+   "type": "docs",
+   "scope": "roadmap",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-08",
+   "sha": "36b09e09",
+   "subject": "docs(roadmap): crafting 1.x plan and owner decisions",
+   "type": "docs",
+   "scope": "roadmap",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-08",
+   "sha": "b7968867",
+   "subject": "test(sim): refined ingots match the payouts of every auto job",
+   "type": "test",
+   "scope": "sim",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-08",
+   "sha": "369ce360",
+   "subject": "feat(ui): statistics show the slow applied by Frost",
+   "type": "feat",
+   "scope": "ui",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-08",
+   "sha": "c030f9fd",
+   "subject": "fix(sim): every damage source counts for its tower",
+   "type": "fix",
+   "scope": "sim",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-08",
+   "sha": "8ca1460e",
+   "subject": "docs(roadmap): crafting 1.x proposal",
+   "type": "docs",
+   "scope": "roadmap",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-08",
+   "sha": "64a1a2ab",
+   "subject": "feat(ui): achievements after tin wait for 2.0",
+   "type": "feat",
+   "scope": "ui",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-08",
+   "sha": "6a1746b5",
+   "subject": "fix(sim): achievement triggers match the 2D conditions",
+   "type": "fix",
+   "scope": "sim",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-08",
+   "sha": "f6c92ea6",
+   "subject": "feat(tools): local diagnostics recorder for balance tracing",
+   "type": "feat",
+   "scope": "tools",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-08",
+   "sha": "057df66b",
+   "subject": "feat(ui): world tooltips open on click instead of hover",
+   "type": "feat",
+   "scope": "ui",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-08",
+   "sha": "93e35cce",
+   "subject": "docs(state): W70-Q gift loop and queue fix, web 1.1.7",
+   "type": "docs",
+   "scope": "state",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-08",
+   "sha": "7ce4e06a",
+   "subject": "release: 1.1.7",
+   "type": "release",
+   "scope": "",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-08",
+   "sha": "db742cc6",
+   "subject": "fix(online): gift inbox polls stop looping on a refused read",
+   "type": "fix",
+   "scope": "online",
+   "version": "1.1.6"
+  },
+  {
+   "date": "2026-11-08",
+   "sha": "bff6c8e4",
+   "subject": "fix(online): rejected requests no longer clog the upload queue",
+   "type": "fix",
+   "scope": "online",
+   "version": "1.1.6"
+  },
+  {
+   "date": "2026-11-08",
+   "sha": "07e4961d",
+   "subject": "docs(state): W70 online boards fix and web 1.1.6",
+   "type": "docs",
+   "scope": "state",
+   "version": "1.1.6"
+  },
+  {
+   "date": "2026-11-08",
+   "sha": "91385a60",
+   "subject": "release: 1.1.6",
+   "type": "release",
+   "scope": "",
+   "version": "1.1.6"
+  },
+  {
+   "date": "2026-11-08",
+   "sha": "d4a3a64f",
+   "subject": "test(backend): retention keeps the seeded achievement catalogue",
+   "type": "test",
+   "scope": "backend",
+   "version": "1.1.5"
+  },
+  {
+   "date": "2026-11-08",
+   "sha": "f6150133",
+   "subject": "fix(online): weekly challenge runs send their challenge fields",
+   "type": "fix",
+   "scope": "online",
+   "version": "1.1.5"
+  },
+  {
+   "date": "2026-11-08",
+   "sha": "fa3ea045",
+   "subject": "fix(online): seed the achievement catalogue so runs with unlocks count",
+   "type": "fix",
+   "scope": "online",
+   "version": "1.1.5"
+  },
+  {
+   "date": "2026-11-08",
+   "sha": "3dc41085",
+   "subject": "fix(ui): right click and Esc cancel the refinery placement",
+   "type": "fix",
+   "scope": "ui",
+   "version": "1.1.5"
+  },
+  {
+   "date": "2026-11-08",
+   "sha": "e1d40984",
+   "subject": "docs(state): W69 boss bars and web 1.1.5",
+   "type": "docs",
+   "scope": "state",
+   "version": "1.1.5"
+  },
+  {
+   "date": "2026-11-08",
+   "sha": "b75def8d",
+   "subject": "release: 1.1.5",
+   "type": "release",
+   "scope": "",
+   "version": "1.1.5"
+  },
+  {
+   "date": "2026-11-08",
+   "sha": "fe621cc1",
+   "subject": "feat(render): Warden bosses show health and shield bars",
+   "type": "feat",
+   "scope": "render",
+   "version": "1.1.4"
+  },
+  {
+   "date": "2026-11-08",
+   "sha": "43083b8f",
+   "subject": "docs(state): W68 auto buy fix and web 1.1.4",
+   "type": "docs",
+   "scope": "state",
+   "version": "1.1.4"
+  },
+  {
+   "date": "2026-11-08",
+   "sha": "9181e8a3",
+   "subject": "release: 1.1.4",
+   "type": "release",
+   "scope": "",
+   "version": "1.1.4"
+  },
+  {
+   "date": "2026-11-08",
+   "sha": "4123200a",
+   "subject": "fix(ui): right-click switches auto buy off again",
+   "type": "fix",
+   "scope": "ui",
+   "version": "1.1.3"
+  },
+  {
+   "date": "2026-11-08",
+   "sha": "6e25133e",
+   "subject": "docs(state): W67 maze fix and web 1.1.3",
+   "type": "docs",
+   "scope": "state",
+   "version": "1.1.3"
+  },
+  {
+   "date": "2026-11-08",
+   "sha": "da64a6bb",
+   "subject": "release: 1.1.3",
+   "type": "release",
+   "scope": "",
+   "version": "1.1.3"
+  },
+  {
+   "date": "2026-11-08",
+   "sha": "cd66cf46",
+   "subject": "fix(ui): enemy speed shows the slowed value",
+   "type": "fix",
+   "scope": "ui",
+   "version": "1.1.2"
+  },
+  {
+   "date": "2026-11-08",
+   "sha": "82431518",
+   "subject": "fix(sim): wardens and every enemy follow the maze",
+   "type": "fix",
+   "scope": "sim",
+   "version": "1.1.2"
+  },
+  {
+   "date": "2026-11-08",
+   "sha": "ff36f763",
+   "subject": "docs(state): W66 leaderboard fix and web 1.1.2",
+   "type": "docs",
+   "scope": "state",
+   "version": "1.1.2"
+  },
+  {
+   "date": "2026-11-08",
+   "sha": "ac0b872a",
+   "subject": "release: 1.1.2",
+   "type": "release",
+   "scope": "",
+   "version": "1.1.2"
+  },
+  {
+   "date": "2026-11-08",
+   "sha": "afb30d72",
+   "subject": "style(render): black background with the grid only, space backdrop switched off",
+   "type": "style",
+   "scope": "render",
+   "version": "1.1.1"
+  },
+  {
+   "date": "2026-11-08",
+   "sha": "e967fce8",
+   "subject": "style(render): unit auras hug the model and use the ore colour",
+   "type": "style",
+   "scope": "render",
+   "version": "1.1.1"
+  },
+  {
+   "date": "2026-11-08",
+   "sha": "9cf9a939",
+   "subject": "fix(online): failed score uploads show in the leaderboard",
+   "type": "fix",
+   "scope": "online",
+   "version": "1.1.1"
+  },
+  {
+   "date": "2026-11-08",
+   "sha": "0aa53883",
+   "subject": "test(online): client version matches the server check",
+   "type": "test",
+   "scope": "online",
+   "version": "1.1.1"
+  },
+  {
+   "date": "2026-11-08",
+   "sha": "80368902",
+   "subject": "style(render): smaller collectors and a subtler aura",
+   "type": "style",
+   "scope": "render",
+   "version": "1.1.1"
+  },
+  {
+   "date": "2026-11-08",
+   "sha": "278b7c37",
+   "subject": "release: 1.1.1",
+   "type": "release",
+   "scope": "",
+   "version": "1.1.1"
+  },
+  {
+   "date": "2026-11-08",
+   "sha": "6fab9776",
+   "subject": "fix(online): run submits go out with a version the server accepts",
+   "type": "fix",
+   "scope": "online",
+   "version": "1.1.0"
+  },
+  {
+   "date": "2026-11-07",
+   "sha": "6d408d3e",
+   "subject": "docs(state): W65 polish wave and web 1.1.0",
+   "type": "docs",
+   "scope": "state",
+   "version": "1.1.0"
+  },
+  {
+   "date": "2026-11-07",
+   "sha": "388c22bc",
+   "subject": "release: 1.1.0",
+   "type": "release",
+   "scope": "",
+   "version": "1.1.0"
+  },
+  {
+   "date": "2026-11-07",
+   "sha": "c5a432c1",
+   "subject": "chore(audio): drop the removed hit sound recipes",
+   "type": "chore",
+   "scope": "audio",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-07",
+   "sha": "6f45cffd",
+   "subject": "test(online): pulse test matches the key list in any locale",
+   "type": "test",
+   "scope": "online",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-07",
+   "sha": "6ca7cb38",
+   "subject": "fix(tools): local Postgres starts without hanging",
+   "type": "fix",
+   "scope": "tools",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-07",
+   "sha": "b45b1a41",
+   "subject": "fix(ui): drag and mass select show ingot prices",
+   "type": "fix",
+   "scope": "ui",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-07",
+   "sha": "5f5220f0",
+   "subject": "perf(render): the nebula bake spreads over several frames",
+   "type": "perf",
+   "scope": "render",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-07",
+   "sha": "3725e0cd",
+   "subject": "test(render): Medium and Low keep glow and key-light shadows off",
+   "type": "test",
+   "scope": "render",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-07",
+   "sha": "bfb13fa6",
+   "subject": "docs(skills): coordinator lessons from W59-W64 agent runs",
+   "type": "docs",
+   "scope": "skills",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-07",
+   "sha": "1f9b29b8",
+   "subject": "docs(state): W61-W64 wave end and the UI upgrade goal",
+   "type": "docs",
+   "scope": "state",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-07",
+   "sha": "61c1ed2c",
+   "subject": "fix(render): fx particles stay off on the Compatibility renderer",
+   "type": "fix",
+   "scope": "render",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-07",
+   "sha": "4edc5caf",
+   "subject": "feat(render): collectors and haulers are drawn larger",
+   "type": "feat",
+   "scope": "render",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-07",
+   "sha": "57c95647",
+   "subject": "feat(render): graphics quality drives particles, space detail and sparkle",
+   "type": "feat",
+   "scope": "render",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-07",
+   "sha": "8dcfbad1",
+   "subject": "fix(render): unit clock uniform is added once per run",
+   "type": "fix",
+   "scope": "render",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-07",
+   "sha": "f06653f8",
+   "subject": "perf(render): enemies and shots move on the GPU between steps",
+   "type": "perf",
+   "scope": "render",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-07",
+   "sha": "f45eb57f",
+   "subject": "feat(render): GPU particle effects for hits and explosions",
+   "type": "feat",
+   "scope": "render",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-07",
+   "sha": "c6db0ce1",
+   "subject": "feat(settings): graphics quality presets",
+   "type": "feat",
+   "scope": "settings",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-07",
+   "sha": "81998952",
+   "subject": "perf(render): ore piles and pickups animate on the GPU",
+   "type": "perf",
+   "scope": "render",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-07",
+   "sha": "468e9315",
+   "subject": "feat(render): an asteroid belt and dust around the arena",
+   "type": "feat",
+   "scope": "render",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-07",
+   "sha": "a7fcec16",
+   "subject": "tools(bench): GPU time per scenario",
+   "type": "tools",
+   "scope": "bench",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-07",
+   "sha": "0441bb80",
+   "subject": "feat(render): collectors and haulers glow brighter",
+   "type": "feat",
+   "scope": "render",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-07",
+   "sha": "ec700979",
+   "subject": "perf(render): unit parts animate on the GPU",
+   "type": "perf",
+   "scope": "render",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-07",
+   "sha": "ab2fd2c1",
+   "subject": "fix(art): hauler model matches its gameplay footprint",
+   "type": "fix",
+   "scope": "art",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-07",
+   "sha": "ec9c941f",
+   "subject": "feat(art): new collector and hauler models",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-07",
+   "sha": "15f2b2f3",
+   "subject": "tools(blender): unit parts export with their interface names",
+   "type": "tools",
+   "scope": "blender",
+   "version": "1.0.0"
+  },
+  {
+   "date": "2026-11-07",
+   "sha": "3aec8cbb",
+   "subject": "chore(online): remove test profiles flushed from an old request queue",
+   "type": "chore",
+   "scope": "online",
+   "version": "1.0.0"
+  },
   {
    "date": "2026-11-07",
    "sha": "74e2a292",
