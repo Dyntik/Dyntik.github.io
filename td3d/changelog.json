@@ -1,11 +1,11 @@
 {
- "generated": "2026-11-11T18:06:53Z",
- "total": 858,
+ "generated": "2026-11-11T18:11:44Z",
+ "total": 863,
  "versions": [
   {
    "version": "1.1.7",
    "date": "2026-11-08",
-   "count": 128,
+   "count": 133,
    "notes": [
     "Online scores and gift requests no longer pile up: a refused request is dropped at once, and a run submit goes ahead of waiting polls.",
     "Gift inbox checks run on their normal schedule again, instead of retrying every few seconds."
@@ -100,6 +100,46 @@
  ],
  "unreleased": [],
  "entries": [
+  {
+   "date": "2026-11-11",
+   "sha": "ba499ad7",
+   "subject": "feat(art): Bomber V3 roof plates, warhead glow and nozzles",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "a6ea40a1",
+   "subject": "feat(art): Hauler V3 cab and light sockets",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "461a2fcf",
+   "subject": "feat(art): Collector V3 deck plates and hopper",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "ad6480f0",
+   "subject": "feat(art): Necromancer V3 orb under the cowl and hull detail",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "ed5deca7",
+   "subject": "feat(art): Medic V3 ring struts and socketed lenses",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
   {
    "date": "2026-11-11",
    "sha": "c3b1cdb7",
