@@ -1,11 +1,11 @@
 {
- "generated": "2026-11-12T04:45:34Z",
- "total": 955,
+ "generated": "2026-11-12T04:54:18Z",
+ "total": 962,
  "versions": [
   {
    "version": "1.1.7",
    "date": "2026-11-08",
-   "count": 225,
+   "count": 232,
    "notes": [
     "Online scores and gift requests no longer pile up: a refused request is dropped at once, and a run submit goes ahead of waiting polls.",
     "Gift inbox checks run on their normal schedule again, instead of retrying every few seconds."
@@ -100,6 +100,62 @@
  ],
  "unreleased": [],
  "entries": [
+  {
+   "date": "2026-11-12",
+   "sha": "9fabdab4",
+   "subject": "feat(render): spawn-in warp and exploder detonation hooks in the arena",
+   "type": "feat",
+   "scope": "render",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "b23d0693",
+   "subject": "feat(render): combat detail particles on Forward+ desktop",
+   "type": "feat",
+   "scope": "render",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "193bf8e6",
+   "subject": "feat(art): sky nebula drifts, stars twinkle and a ship light crosses",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "2653e68c",
+   "subject": "feat(art): deck vents breathe, conduits pulse, edge blinkers blink",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "63da462e",
+   "subject": "feat(art): ore piles glint and animate on drop, merge and collect",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "9cadb43d",
+   "subject": "docs(render): document the pulse part kind in the V3 interfaces",
+   "type": "docs",
+   "scope": "render",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "b1d56957",
+   "subject": "feat(render): pulse part kind and a breathing core with a hit flash",
+   "type": "feat",
+   "scope": "render",
+   "version": "1.1.7"
+  },
   {
    "date": "2026-11-12",
    "sha": "6948f9c2",
