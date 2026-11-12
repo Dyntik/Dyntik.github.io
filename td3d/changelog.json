@@ -1,11 +1,11 @@
 {
- "generated": "2026-11-12T05:00:59Z",
- "total": 964,
+ "generated": "2026-11-12T18:44:10Z",
+ "total": 1005,
  "versions": [
   {
    "version": "1.1.7",
    "date": "2026-11-08",
-   "count": 234,
+   "count": 275,
    "notes": [
     "Online scores and gift requests no longer pile up: a refused request is dropped at once, and a run submit goes ahead of waiting polls.",
     "Gift inbox checks run on their normal schedule again, instead of retrying every few seconds."
@@ -100,6 +100,334 @@
  ],
  "unreleased": [],
  "entries": [
+  {
+   "date": "2026-11-12",
+   "sha": "ad56a500",
+   "subject": "tests(sim): re-pin the seeded fight digests on current main",
+   "type": "other",
+   "scope": "sim",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "da2321a7",
+   "subject": "perf(game): smoother frames with diagnostics on and faster first arena frames",
+   "type": "perf",
+   "scope": "game",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "b14592da",
+   "subject": "perf(render): enemies stop casting shadows",
+   "type": "perf",
+   "scope": "render",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "2152e573",
+   "subject": "perf(render): faster enemy and tower updates in big late-game fights",
+   "type": "perf",
+   "scope": "render",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "2e60c55c",
+   "subject": "perf(sim): faster enemy movement and projectile hits in big waves",
+   "type": "perf",
+   "scope": "sim",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "df7135c5",
+   "subject": "perf(render): fewer shadow draws and lighter late-game fights",
+   "type": "perf",
+   "scope": "render",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "7d364325",
+   "subject": "fix(render): stop the RGB float warning on arena start",
+   "type": "fix",
+   "scope": "render",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "4e640283",
+   "subject": "tools: agent game windows always open on the second monitor",
+   "type": "tools",
+   "scope": "",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "94125b9b",
+   "subject": "feat(art): builder drone gets a folding arm, bladed fans and feed hoppers",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "6f2c6c5a",
+   "subject": "feat(game): buy drone thrusters for faster builder flights",
+   "type": "feat",
+   "scope": "game",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "edd62513",
+   "subject": "feat(game): cancel a construction with right click and see its time left",
+   "type": "feat",
+   "scope": "game",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "6b56985c",
+   "subject": "feat(art): builder drone with spinning fans, construction arm, lights",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "95e932a2",
+   "subject": "docs(state): handoff for the builder mechanic and the perf burst",
+   "type": "docs",
+   "scope": "state",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "c4731de8",
+   "subject": "feat(game): placed buildings wait for a builder drone to construct them",
+   "type": "feat",
+   "scope": "game",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "21b6e268",
+   "subject": "feat(ui): builder drones in the build menu, HUD queue chip and construction tooltips",
+   "type": "feat",
+   "scope": "ui",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "21aa807c",
+   "subject": "feat(render): construction ghosts, progress bars and builder beams",
+   "type": "feat",
+   "scope": "render",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "c7ab3b68",
+   "subject": "feat(art): builder drone model",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "b5b9bbb3",
+   "subject": "docs: builder mechanic design",
+   "type": "docs",
+   "scope": "",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "20dd6b48",
+   "subject": "feat(sim): builder drones queue and build placed structures",
+   "type": "feat",
+   "scope": "sim",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "ccf51bf7",
+   "subject": "docs(state): session handoff for waves W93-W94",
+   "type": "docs",
+   "scope": "state",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "178bfe2a",
+   "subject": "test(arena): enemy churn adds no nodes to the arena view",
+   "type": "test",
+   "scope": "arena",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "7b37b7c0",
+   "subject": "tools(bench): node census and capped samples in the memory run",
+   "type": "tools",
+   "scope": "bench",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "24fe9d53",
+   "subject": "feat(art): unit and structure lights pulse from the registry",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "58ff71c6",
+   "subject": "feat(render): modern shot tracers are thinner with a brighter core",
+   "type": "feat",
+   "scope": "render",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "1630bc9b",
+   "subject": "perf(render): cut arena view CPU cost for enemies and towers",
+   "type": "perf",
+   "scope": "render",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "eef8ce73",
+   "subject": "docs(state): session handoff for waves W85-W92",
+   "type": "docs",
+   "scope": "state",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "ad931bb8",
+   "subject": "fix(sim): piles no longer leak their reuse rows, cutting memory growth",
+   "type": "fix",
+   "scope": "sim",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "873e7d93",
+   "subject": "fix(bench): owner_late bench script parses again",
+   "type": "fix",
+   "scope": "bench",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "b0173cf6",
+   "subject": "perf(render): units and piles stop casting shadows",
+   "type": "perf",
+   "scope": "render",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "4a208757",
+   "subject": "tools(bench): hide scene families to attribute draw calls",
+   "type": "tools",
+   "scope": "bench",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "97cee42e",
+   "subject": "fix(game): desktop graphics default is High, web and phones keep Medium",
+   "type": "fix",
+   "scope": "game",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "39f7420a",
+   "subject": "feat(render): exploder detonation ring also shows on Medium",
+   "type": "feat",
+   "scope": "render",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "98dacbf3",
+   "subject": "fix(render): deck vent and conduit glow dimmer, no blurred smudge",
+   "type": "fix",
+   "scope": "render",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "6cccc48d",
+   "subject": "tools(showcase): units_turn figure-eight stage for turn review",
+   "type": "tools",
+   "scope": "showcase",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "5216490a",
+   "subject": "tools(showcase): units close frames a hauler, build fx shows the refused ghost",
+   "type": "tools",
+   "scope": "showcase",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "a1fa5039",
+   "subject": "fix(render): halo rings are hairlines, not thick soft bands",
+   "type": "fix",
+   "scope": "render",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "789ebafa",
+   "subject": "fix(render): units lean into their turns",
+   "type": "fix",
+   "scope": "render",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "cd76f3d7",
+   "subject": "fix(render): build feedback rings are dim hairlines and a sale is one dim spark burst",
+   "type": "fix",
+   "scope": "render",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "b91aa787",
+   "subject": "fix(render): calmer pile glint, visible drop and merge pop, detonation ring",
+   "type": "fix",
+   "scope": "render",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "516b3015",
+   "subject": "tools(showcase): live close presets and frame sequences for animation review",
+   "type": "tools",
+   "scope": "showcase",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "76633322",
+   "subject": "feat(art): emissive lights breathe on towers, enemies and generators",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
   {
    "date": "2026-11-12",
    "sha": "7dfbaeae",
