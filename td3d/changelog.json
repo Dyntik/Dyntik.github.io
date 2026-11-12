@@ -1,11 +1,11 @@
 {
- "generated": "2026-11-12T04:58:15Z",
- "total": 963,
+ "generated": "2026-11-12T05:00:59Z",
+ "total": 964,
  "versions": [
   {
    "version": "1.1.7",
    "date": "2026-11-08",
-   "count": 233,
+   "count": 234,
    "notes": [
     "Online scores and gift requests no longer pile up: a refused request is dropped at once, and a run submit goes ahead of waiting polls.",
     "Gift inbox checks run on their normal schedule again, instead of retrying every few seconds."
@@ -100,6 +100,14 @@
  ],
  "unreleased": [],
  "entries": [
+  {
+   "date": "2026-11-12",
+   "sha": "7dfbaeae",
+   "subject": "feat(art): rapid tower barrels kick back on each shot",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
   {
    "date": "2026-11-12",
    "sha": "f332b616",
