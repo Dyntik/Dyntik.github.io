@@ -1,11 +1,11 @@
 {
- "generated": "2026-11-12T18:44:10Z",
- "total": 1005,
+ "generated": "2026-11-12T18:53:07Z",
+ "total": 1013,
  "versions": [
   {
    "version": "1.1.7",
    "date": "2026-11-08",
-   "count": 275,
+   "count": 283,
    "notes": [
     "Online scores and gift requests no longer pile up: a refused request is dropped at once, and a run submit goes ahead of waiting polls.",
     "Gift inbox checks run on their normal schedule again, instead of retrying every few seconds."
@@ -100,6 +100,70 @@
  ],
  "unreleased": [],
  "entries": [
+  {
+   "date": "2026-11-12",
+   "sha": "d4c79974",
+   "subject": "tests: suite runs in its own user folder and cleans up temp saves",
+   "type": "other",
+   "scope": "",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "8bd91596",
+   "subject": "feat(art): tower lenses pulse on all six V3 towers",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "dd14492e",
+   "subject": "feat(art): split tower lenses into own nodes on basic, rapid, sniper",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "8734dce2",
+   "subject": "fix(render): workshops are drawn in the arena",
+   "type": "fix",
+   "scope": "render",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "352e3e16",
+   "subject": "fix(art): trim workshop LOD2 to the V3 triangle cap",
+   "type": "fix",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "79fbcd1b",
+   "subject": "feat(art): open workshop bay with gantry, fabricator arm and silos",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "93d21758",
+   "subject": "feat(art): workshop fabrication bay model",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "57974114",
+   "subject": "feat(art): tin warrior becomes a hover sentinel with blade arms",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
   {
    "date": "2026-11-12",
    "sha": "ad56a500",
