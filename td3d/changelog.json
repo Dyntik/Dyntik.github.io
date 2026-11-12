@@ -1,11 +1,11 @@
 {
- "generated": "2026-11-12T19:33:35Z",
- "total": 1033,
+ "generated": "2026-11-12T21:13:22Z",
+ "total": 1050,
  "versions": [
   {
    "version": "1.1.7",
    "date": "2026-11-08",
-   "count": 303,
+   "count": 320,
    "notes": [
     "Online scores and gift requests no longer pile up: a refused request is dropped at once, and a run submit goes ahead of waiting polls.",
     "Gift inbox checks run on their normal schedule again, instead of retrying every few seconds."
@@ -100,6 +100,142 @@
  ],
  "unreleased": [],
  "entries": [
+  {
+   "date": "2026-11-12",
+   "sha": "2dbea509",
+   "subject": "tests(sim): re-pin seeded digests for balance v2 and party waves",
+   "type": "other",
+   "scope": "sim",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "ecdfa94c",
+   "subject": "fix(render): party links join neighbours and role marks sit under enemies",
+   "type": "fix",
+   "scope": "render",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "4a24c10b",
+   "subject": "feat(render): enemy parties read as groups with heal beams and role marks",
+   "type": "feat",
+   "scope": "render",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "c56f9465",
+   "subject": "feat(game): waves arrive as parties from all sides of the map",
+   "type": "feat",
+   "scope": "game",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "4dbea00f",
+   "subject": "feat(game): balance v2 - calm start, steeper late waves and real boss fights",
+   "type": "feat",
+   "scope": "game",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "df2a7563",
+   "subject": "docs: game vision for parties, raids and the build loop",
+   "type": "docs",
+   "scope": "",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "d17ad054",
+   "subject": "feat(ui): clear spawn toggles with one pause-all key",
+   "type": "feat",
+   "scope": "ui",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "872bf6fb",
+   "subject": "feat(game): waves, Wardens and generators toggle on their own",
+   "type": "feat",
+   "scope": "game",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "45fbb589",
+   "subject": "feat(game): party roles and party wave bands in the data",
+   "type": "feat",
+   "scope": "game",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "31bbf633",
+   "subject": "feat(sim): enemies can march at their party's pace",
+   "type": "feat",
+   "scope": "sim",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "bf1091b6",
+   "subject": "feat(sim): party planner schedules staggered arrivals from all sides",
+   "type": "feat",
+   "scope": "sim",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "882b74d9",
+   "subject": "docs(skills): lessons from waves W95-W98",
+   "type": "docs",
+   "scope": "skills",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "40576a49",
+   "subject": "docs(state): handoff for waves W95-W98",
+   "type": "docs",
+   "scope": "state",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "b5e0bb9a",
+   "subject": "fix(ui): Workshop texts name iron ingots and wave 60",
+   "type": "fix",
+   "scope": "ui",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "9d71489b",
+   "subject": "feat(game): Workshop costs iron ingots and opens at wave 60",
+   "type": "feat",
+   "scope": "game",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "a11a7695",
+   "subject": "tools(land): pull LFS assets before the import",
+   "type": "tools",
+   "scope": "land",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "52ac4e04",
+   "subject": "fix(render): smaller builder drone and a slimmer construction bar",
+   "type": "fix",
+   "scope": "render",
+   "version": "1.1.7"
+  },
   {
    "date": "2026-11-12",
    "sha": "3e486e5b",
