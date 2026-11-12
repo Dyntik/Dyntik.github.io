@@ -1,11 +1,11 @@
 {
- "generated": "2026-11-11T18:28:29Z",
- "total": 870,
+ "generated": "2026-11-12T04:45:34Z",
+ "total": 955,
  "versions": [
   {
    "version": "1.1.7",
    "date": "2026-11-08",
-   "count": 140,
+   "count": 225,
    "notes": [
     "Online scores and gift requests no longer pile up: a refused request is dropped at once, and a run submit goes ahead of waiting polls.",
     "Gift inbox checks run on their normal schedule again, instead of retrying every few seconds."
@@ -100,6 +100,686 @@
  ],
  "unreleased": [],
  "entries": [
+  {
+   "date": "2026-11-12",
+   "sha": "6948f9c2",
+   "subject": "feat(art): units bob, bank into turns and walk; rotors never stop",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "9291c080",
+   "subject": "feat(game): structures show what they are doing",
+   "type": "feat",
+   "scope": "game",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "c20d0728",
+   "subject": "perf(ui): menu backdrop sky recomputes radiance only on change",
+   "type": "perf",
+   "scope": "ui",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "f831fb07",
+   "subject": "feat(art): bosses and the Warden get small moving details",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "eac7ae6f",
+   "subject": "feat(ui): main menu core spins, breathes and drifts slowly in modern",
+   "type": "feat",
+   "scope": "ui",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "efb1f56c",
+   "subject": "feat(render): enemies bank into turns, flicker drives and flash on hits",
+   "type": "feat",
+   "scope": "render",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "8c48eeb9",
+   "subject": "perf(render): tower head aim is computed once per frame",
+   "type": "perf",
+   "scope": "render",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "c6dd9f5e",
+   "subject": "feat(ui): material and Mk badge on module picker and socket rows",
+   "type": "feat",
+   "scope": "ui",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "acfe2342",
+   "subject": "tools(bench): owner_late scenario with per-phase sim timing",
+   "type": "tools",
+   "scope": "bench",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "b0f4693b",
+   "subject": "feat(ui): module picker rows fit on one line with a hover stat delta",
+   "type": "feat",
+   "scope": "ui",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "5a19013f",
+   "subject": "fix(diag): crafting counters and workshop use survive a save load",
+   "type": "fix",
+   "scope": "diag",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "681bb7cd",
+   "subject": "test(refine): auto-refine keeps the queue full on the owner save",
+   "type": "test",
+   "scope": "refine",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "4646f23b",
+   "subject": "tools(diag): owner-save bot arms only ingots under the tin cap",
+   "type": "tools",
+   "scope": "diag",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "def2cbde",
+   "subject": "docs(playtests): owner-save playtest to wave 365, crafting numbers",
+   "type": "docs",
+   "scope": "playtests",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "f5001d15",
+   "subject": "tools(diag): owner-save bot OS plays 52 waves from the late game",
+   "type": "tools",
+   "scope": "diag",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "050c46b3",
+   "subject": "feat(art): ore generator crystals keep their ore colour in modern",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "0afb7aeb",
+   "subject": "docs(playtests): mark playtest findings 9, 11, 12 and 13 fixed",
+   "type": "docs",
+   "scope": "playtests",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "5a9bdb85",
+   "subject": "fix(ui): pinned card moves up so the module picker has room at 720p",
+   "type": "fix",
+   "scope": "ui",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "da54de51",
+   "subject": "feat(ui): refine strip explains itself while no ore is refining",
+   "type": "feat",
+   "scope": "ui",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "23e19008",
+   "subject": "fix(ui): wave chip says why the wave clock stopped",
+   "type": "fix",
+   "scope": "ui",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "46ccf0d1",
+   "subject": "feat(ui): explain refused placements and the wave-clock pause",
+   "type": "feat",
+   "scope": "ui",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "d8eaab49",
+   "subject": "feat(ui): add NEW GAME to the main menu",
+   "type": "feat",
+   "scope": "ui",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "d474e7dd",
+   "subject": "tools(diag): reference bot v2 with core ring, savings and gates",
+   "type": "tools",
+   "scope": "diag",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "ca2d1f4d",
+   "subject": "fix(art): tin warriors draw their far LOD2 model by distance",
+   "type": "fix",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "35b07e2e",
+   "subject": "fix(art): far LODs of tin and unit parts spin, and the core heart keeps its colour",
+   "type": "fix",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "b75ed6c5",
+   "subject": "docs(playtests): regenerate diag findings for the nine bot sessions",
+   "type": "docs",
+   "scope": "playtests",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "f5f7dcb5",
+   "subject": "tools(diag): no heal share without run_end; bots skip idle findings",
+   "type": "tools",
+   "scope": "diag",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "dc6e3dad",
+   "subject": "fix(diag): tag bot runs in session meta, isolate agent crash checks",
+   "type": "fix",
+   "scope": "diag",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "14ab0684",
+   "subject": "fix(diag): leak path progress from the flow field distance",
+   "type": "fix",
+   "scope": "diag",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "287a691e",
+   "subject": "feat(art): show the V3 Tin Warrior model in modern style",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "a1a5aa69",
+   "subject": "tools(data): keep 3D-only achievements when re-exporting the catalogue",
+   "type": "tools",
+   "scope": "data",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "6d5f1a90",
+   "subject": "fix(ui): pinned tower card grows taller so the socket picker keeps three rows",
+   "type": "fix",
+   "scope": "ui",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "1db97527",
+   "subject": "fix(ui): pinned tower card keeps its width, clear of the build menu",
+   "type": "fix",
+   "scope": "ui",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "42bd8ed0",
+   "subject": "feat(art): Tin Warrior V3 polish",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "ba224cac",
+   "subject": "feat(game): add seven achievements for the crafting update",
+   "type": "feat",
+   "scope": "game",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "68051ff5",
+   "subject": "test(game): first hints fire in a fresh run through the bridge",
+   "type": "test",
+   "scope": "game",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "e8d146a1",
+   "subject": "fix(game): help window has an opaque panel like the other windows",
+   "type": "fix",
+   "scope": "game",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "dff0361b",
+   "subject": "fix(game): locked store items say why they are locked; no raw reason keys",
+   "type": "fix",
+   "scope": "game",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "84b39d98",
+   "subject": "tools(diag): reference economy bot RB, economy not validated yet",
+   "type": "tools",
+   "scope": "diag",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "0429a46a",
+   "subject": "feat(art): show the V3 tin tower, tin buffer and buffer unit models",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "6e9b9029",
+   "subject": "feat(art): Tin Warrior V3 model (modern style)",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "491f1df2",
+   "subject": "docs(diag): point CLAUDE.md and the diag skill at the playtest index",
+   "type": "docs",
+   "scope": "diag",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "d68530fc",
+   "subject": "docs(playtests): add the playtest index and refresh findings",
+   "type": "docs",
+   "scope": "playtests",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "294699e1",
+   "subject": "docs(playtests): import the five W85 bot playtests",
+   "type": "docs",
+   "scope": "playtests",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "9ed05c24",
+   "subject": "tools(diag): add the uid file of the economy bot",
+   "type": "tools",
+   "scope": "diag",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "80ca0813",
+   "subject": "tools(diag): fix AFK share above 100 percent in session findings",
+   "type": "tools",
+   "scope": "diag",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "5dde06a4",
+   "subject": "tools(diag): mixed-maze diagnostics bot plays to wave 100",
+   "type": "tools",
+   "scope": "diag",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "64c3ffa7",
+   "subject": "tools(diag): economy and crafting diagnostics bot (EC)",
+   "type": "tools",
+   "scope": "diag",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "a771d3ac",
+   "subject": "tools(diag): add the uid file of the calm collector bot",
+   "type": "tools",
+   "scope": "diag",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "8169d413",
+   "subject": "tools(diag): calm collector bot and first playtest report (CC)",
+   "type": "tools",
+   "scope": "diag",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "d2712f77",
+   "subject": "tools(diag): hard stress diagnostics bot that plays to wave 100",
+   "type": "tools",
+   "scope": "diag",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "d6c28650",
+   "subject": "tools(diag): first-time player playtest bot and report NP",
+   "type": "tools",
+   "scope": "diag",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "e4cb10fe",
+   "subject": "tools(diag): optimizer playtest bot and its report to wave 100",
+   "type": "tools",
+   "scope": "diag",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "cc695001",
+   "subject": "tools(diag): serpentine maze bot for long diagnostic runs",
+   "type": "tools",
+   "scope": "diag",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "b43e999a",
+   "subject": "tools(diag): add the uid of the kill-box diagnostics bot",
+   "type": "tools",
+   "scope": "diag",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "fd0e55c4",
+   "subject": "tools(diag): kill-box diagnostics bot for full runs to wave 100",
+   "type": "tools",
+   "scope": "diag",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "2c43c8a5",
+   "subject": "docs(tools): document silent agent runs",
+   "type": "docs",
+   "scope": "tools",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "28f4f577",
+   "subject": "feat(game): mute the Master bus in windowed agent runs",
+   "type": "feat",
+   "scope": "game",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "a98c5d68",
+   "subject": "tools(audio): agent test and capture runs are silent",
+   "type": "tools",
+   "scope": "audio",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "7884da2d",
+   "subject": "docs(state): wave end W82-W84, graphics paused, diagnostics live",
+   "type": "docs",
+   "scope": "state",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "a778d86e",
+   "subject": "docs(diag): document the session root override and the scripted smoke",
+   "type": "docs",
+   "scope": "diag",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "8eff11ad",
+   "subject": "tools(diag): normal refusals as info, healer share and spam rules in findings",
+   "type": "tools",
+   "scope": "diag",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "71dcbc84",
+   "subject": "tools(diag): scripted autoplay for the diagnostics smoke test",
+   "type": "tools",
+   "scope": "diag",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "0f4387de",
+   "subject": "feat(game): diagnostics write to a chosen folder and tag screenshot frames",
+   "type": "feat",
+   "scope": "game",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "57d3cd4c",
+   "subject": "tools(diag): permanent diagnostics launcher and session finder",
+   "type": "tools",
+   "scope": "diag",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "2f4dedf0",
+   "subject": "feat(game): diagnostics log errors, hitches, crashes and screenshots",
+   "type": "feat",
+   "scope": "game",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "07e3df81",
+   "subject": "feat(diag): diagnostics log leaks, stuck enemies, boss fights and waves",
+   "type": "feat",
+   "scope": "diag",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "383f4245",
+   "subject": "feat(game): diagnostics record player and UI actions",
+   "type": "feat",
+   "scope": "game",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "9d800b10",
+   "subject": "docs(diag): how Claude reads the findings report",
+   "type": "docs",
+   "scope": "diag",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "ff3aa4c8",
+   "subject": "test(diag): findings tests and schema 2 and 3 session fixtures",
+   "type": "test",
+   "scope": "diag",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "3ef08cdc",
+   "subject": "tools(diag): findings report with ranked detectors for a session",
+   "type": "tools",
+   "scope": "diag",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "40c1ea5d",
+   "subject": "feat(diag): diagnostics recorder gets a public record() event API",
+   "type": "feat",
+   "scope": "diag",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "cf836c5e",
+   "subject": "feat(sim): healers heal nearby enemies and workshop unlock is permanent",
+   "type": "feat",
+   "scope": "sim",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "79d8f6c5",
+   "subject": "test(tests): socket swap, cache refresh and stat rows",
+   "type": "test",
+   "scope": "tests",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "f661a488",
+   "subject": "feat(game): module rows show effect, stat changes and swap",
+   "type": "feat",
+   "scope": "game",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "02668616",
+   "subject": "feat(game): swap a socket's module in one action",
+   "type": "feat",
+   "scope": "game",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "1a43e89d",
+   "subject": "tools(diag): crafting section and measured income for crafting pacing",
+   "type": "tools",
+   "scope": "diag",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "601ae8df",
+   "subject": "feat(game): diagnostics record crafting income, workshop, modules and DPS",
+   "type": "feat",
+   "scope": "game",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "5dd0657f",
+   "subject": "feat(sim): healers heal nearby enemies in 3D",
+   "type": "feat",
+   "scope": "sim",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "4ee1b435",
+   "subject": "docs(state): record crafting pacing P1-P4 owner decision",
+   "type": "docs",
+   "scope": "state",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "4c081667",
+   "subject": "feat(crafting): crafting pacing pass: costs, Penetrator, research times",
+   "type": "feat",
+   "scope": "crafting",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "b48a6010",
+   "subject": "feat(game): tower sockets and module picker in the DATA.PIN card",
+   "type": "feat",
+   "scope": "game",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "085257e3",
+   "subject": "docs(docs): say further sockets come from research only",
+   "type": "docs",
+   "scope": "docs",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "3a49debb",
+   "subject": "feat(game): help topics and hint cards for workshop, research and modules",
+   "type": "feat",
+   "scope": "game",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-11",
+   "sha": "31651afd",
+   "subject": "test(crafting): prove the crafting 1.1 loop end to end",
+   "type": "test",
+   "scope": "crafting",
+   "version": "1.1.7"
+  },
   {
    "date": "2026-11-11",
    "sha": "0e7c2617",
