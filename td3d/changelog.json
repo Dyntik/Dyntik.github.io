@@ -1,11 +1,11 @@
 {
- "generated": "2026-11-13T08:46:54Z",
- "total": 1087,
+ "generated": "2026-11-13T09:26:08Z",
+ "total": 1103,
  "versions": [
   {
    "version": "1.1.7",
    "date": "2026-11-08",
-   "count": 357,
+   "count": 373,
    "notes": [
     "Online scores and gift requests no longer pile up: a refused request is dropped at once, and a run submit goes ahead of waiting polls.",
     "Gift inbox checks run on their normal schedule again, instead of retrying every few seconds."
@@ -100,6 +100,134 @@
  ],
  "unreleased": [],
  "entries": [
+  {
+   "date": "2026-11-13",
+   "sha": "9a8d4b20",
+   "subject": "feat(art): warlord stands out as a raid lieutenant",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-13",
+   "sha": "c2bf7932",
+   "subject": "feat(art): revenant looks rebuilt from wreckage",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-13",
+   "sha": "f7da79d3",
+   "subject": "feat(ui): box-select Wardens to set their tier together",
+   "type": "feat",
+   "scope": "ui",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-13",
+   "sha": "b5b02b74",
+   "subject": "feat(ui): pick a Warden's difficulty tier from its window",
+   "type": "feat",
+   "scope": "ui",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-13",
+   "sha": "7286f571",
+   "subject": "feat(art): banner bearer shows its emblem on the flag",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-13",
+   "sha": "49eee632",
+   "subject": "feat(art): siege ram gets a real ram head",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-13",
+   "sha": "ee5d9440",
+   "subject": "feat(art): detailed jammer enemy model",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-13",
+   "sha": "a80e9e41",
+   "subject": "feat(art): detailed banner_bearer enemy model",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-13",
+   "sha": "01e87a7c",
+   "subject": "feat(art): detailed siege_ram enemy model",
+   "type": "feat",
+   "scope": "art",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-13",
+   "sha": "e9e5c14d",
+   "subject": "test(sim): re-pin seeded digests for the boss save key",
+   "type": "test",
+   "scope": "sim",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-13",
+   "sha": "a9111d0f",
+   "subject": "feat(ui): raid and boss state for the UI bridge",
+   "type": "feat",
+   "scope": "ui",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-13",
+   "sha": "1f756e8d",
+   "subject": "feat(online): raids cleared count on the profile",
+   "type": "feat",
+   "scope": "online",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-13",
+   "sha": "5a7e16ca",
+   "subject": "feat(game): bosses fight in phases and enrage at a quarter health",
+   "type": "feat",
+   "scope": "game",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-13",
+   "sha": "47969e5e",
+   "subject": "feat(render): enemy abilities show jams, fields, auras and boss phases",
+   "type": "feat",
+   "scope": "render",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-13",
+   "sha": "da97a5c2",
+   "subject": "feat(ui): enemy tooltips list party abilities",
+   "type": "feat",
+   "scope": "ui",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-13",
+   "sha": "8f370df0",
+   "subject": "feat(ui): raid banner, raid strip and boss card with phases",
+   "type": "feat",
+   "scope": "ui",
+   "version": "1.1.7"
+  },
   {
    "date": "2026-11-13",
    "sha": "d9e2dde5",
