@@ -1,11 +1,11 @@
 {
- "generated": "2026-11-13T07:12:04Z",
- "total": 1066,
+ "generated": "2026-11-13T08:36:55Z",
+ "total": 1084,
  "versions": [
   {
    "version": "1.1.7",
    "date": "2026-11-08",
-   "count": 336,
+   "count": 354,
    "notes": [
     "Online scores and gift requests no longer pile up: a refused request is dropped at once, and a run submit goes ahead of waiting polls.",
     "Gift inbox checks run on their normal schedule again, instead of retrying every few seconds."
@@ -100,6 +100,150 @@
  ],
  "unreleased": [],
  "entries": [
+  {
+   "date": "2026-11-13",
+   "sha": "10c47668",
+   "subject": "feat(sim): tower debuff and boss phase state machines",
+   "type": "feat",
+   "scope": "sim",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-13",
+   "sha": "ddd2d410",
+   "subject": "feat(game): MMO enemy kits and raid boss pool as data",
+   "type": "feat",
+   "scope": "game",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-13",
+   "sha": "9a444698",
+   "subject": "fix(ui): refine queue no longer shows a long hint while idle",
+   "type": "fix",
+   "scope": "ui",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-13",
+   "sha": "fa0d635c",
+   "subject": "fix(tests): seeded digests match on every platform",
+   "type": "fix",
+   "scope": "tests",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-13",
+   "sha": "52d701e9",
+   "subject": "feat(game): show my name switch in online settings",
+   "type": "feat",
+   "scope": "game",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-13",
+   "sha": "06634c35",
+   "subject": "fix(ui): league header no longer shows a stray mark under the division",
+   "type": "fix",
+   "scope": "ui",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-13",
+   "sha": "cb94b0c7",
+   "subject": "feat(ui): end-of-week league result card",
+   "type": "feat",
+   "scope": "ui",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-13",
+   "sha": "1b8f0fa1",
+   "subject": "feat(online): league groups load on live data",
+   "type": "feat",
+   "scope": "online",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-13",
+   "sha": "e7e1847c",
+   "subject": "feat(online): league settle status for live checks",
+   "type": "feat",
+   "scope": "online",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-13",
+   "sha": "d8238f98",
+   "subject": "fix(online): hidden names stay hidden on public profiles",
+   "type": "fix",
+   "scope": "online",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-13",
+   "sha": "debe0b82",
+   "subject": "fix(tests): particle burst counts without a GPU",
+   "type": "fix",
+   "scope": "tests",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-13",
+   "sha": "83395d3b",
+   "subject": "fix(sim): fights are identical on Windows and Linux",
+   "type": "fix",
+   "scope": "sim",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-13",
+   "sha": "9e4e36b4",
+   "subject": "Merge remote-tracking branch 'origin/main'",
+   "type": "other",
+   "scope": "",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-13",
+   "sha": "a39dda69",
+   "subject": "feat(ui): rank badge, leaderboard and profile share live league data",
+   "type": "feat",
+   "scope": "ui",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-13",
+   "sha": "8b67787b",
+   "subject": "fix(game): enemies no longer stall next to the core",
+   "type": "fix",
+   "scope": "game",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-13",
+   "sha": "529606d3",
+   "subject": "tools(live): live check expects 404 for functions not in config",
+   "type": "tools",
+   "scope": "live",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-13",
+   "sha": "35d9e65e",
+   "subject": "feat(online): names opt-out on boards and profile settings",
+   "type": "feat",
+   "scope": "online",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-13",
+   "sha": "c2efdf45",
+   "subject": "fix(online): public profile view answers anon again",
+   "type": "fix",
+   "scope": "online",
+   "version": "1.1.7"
+  },
   {
    "date": "2026-11-13",
    "sha": "1e3214b6",
