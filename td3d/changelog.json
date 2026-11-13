@@ -1,11 +1,11 @@
 {
- "generated": "2026-11-12T21:13:22Z",
- "total": 1050,
+ "generated": "2026-11-13T07:12:04Z",
+ "total": 1066,
  "versions": [
   {
    "version": "1.1.7",
    "date": "2026-11-08",
-   "count": 320,
+   "count": 336,
    "notes": [
     "Online scores and gift requests no longer pile up: a refused request is dropped at once, and a run submit goes ahead of waiting polls.",
     "Gift inbox checks run on their normal schedule again, instead of retrying every few seconds."
@@ -100,6 +100,134 @@
  ],
  "unreleased": [],
  "entries": [
+  {
+   "date": "2026-11-13",
+   "sha": "1e3214b6",
+   "subject": "fix(ui): no rank reminder pop-up, maze sharing is opt-in",
+   "type": "fix",
+   "scope": "ui",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-13",
+   "sha": "5206ddbc",
+   "subject": "fix(ui): no rank reminder pop-up, maze sharing is opt-in",
+   "type": "fix",
+   "scope": "ui",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-13",
+   "sha": "8eb5022a",
+   "subject": "feat(ui): leaderboard with pinned own row, search and six tabs",
+   "type": "feat",
+   "scope": "ui",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-13",
+   "sha": "bc5a924d",
+   "subject": "feat(ui): live league rank badge in the HUD and a weekly result card",
+   "type": "feat",
+   "scope": "ui",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-13",
+   "sha": "869f9de8",
+   "subject": "feat(ui): player profiles show progress, league and achievements",
+   "type": "feat",
+   "scope": "ui",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-13",
+   "sha": "dce8deae",
+   "subject": "feat(ui): league emblems and leaderboard icon set",
+   "type": "feat",
+   "scope": "ui",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-13",
+   "sha": "9ced7eb1",
+   "subject": "feat(online): live rank estimate and league state",
+   "type": "feat",
+   "scope": "online",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-13",
+   "sha": "a5be138e",
+   "subject": "feat(online): leaderboard contract with per-slot weekly cache",
+   "type": "feat",
+   "scope": "online",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-13",
+   "sha": "b0bdafdd",
+   "subject": "feat(online): weekly leagues with group movement and settle job",
+   "type": "feat",
+   "scope": "online",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-13",
+   "sha": "6cdfd4bf",
+   "subject": "feat(online): my rank and board pages for the leaderboard",
+   "type": "feat",
+   "scope": "online",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-13",
+   "sha": "d633c9a4",
+   "subject": "feat(online): public profile fields v3 and opt-in maze sharing",
+   "type": "feat",
+   "scope": "online",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-13",
+   "sha": "86c52505",
+   "subject": "feat(online): leaderboard boards with exact tie-breaks and an achievements board",
+   "type": "feat",
+   "scope": "online",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-13",
+   "sha": "4f55ca92",
+   "subject": "feat(game): raid waves with a ready check and a lockdown until cleared",
+   "type": "feat",
+   "scope": "game",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-13",
+   "sha": "1d8ca0b8",
+   "subject": "feat(game): party synergies switch on by wave band",
+   "type": "feat",
+   "scope": "game",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-13",
+   "sha": "dc8120c4",
+   "subject": "feat(game): party synergies - tank guard, shield bubble, summon reinforcements, rally",
+   "type": "feat",
+   "scope": "game",
+   "version": "1.1.7"
+  },
+  {
+   "date": "2026-11-12",
+   "sha": "a7b4f8e9",
+   "subject": "docs: roadmap for leaderboards, leagues and player profiles",
+   "type": "docs",
+   "scope": "",
+   "version": "1.1.7"
+  },
   {
    "date": "2026-11-12",
    "sha": "2dbea509",
